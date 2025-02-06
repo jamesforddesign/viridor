@@ -1,0 +1,12 @@
+*.log
+npm-debug.*
+*.scssc
+*.log
+.DS_Store
+.sass-cache
+.cache
+node_modules
+dist
+.parcel-cache
+.env
+src/scss/_env.scss

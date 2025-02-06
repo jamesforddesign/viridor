@@ -1,0 +1,73 @@
+{% if title %}
+    {% set pageTitle = title ~ ' - ' ~ api.global.title[page.lang if api.global.title[page.lang] != '' else 'en'] %}
+{% else %}
+    {% set pageTitle = api.global.title[page.lang] %}
+{% endif %}
+
+{% set pageDescription = description or api.global.description[page.lang] or null %}
+{% set currentUrl = env.APP_URL ~ page.url %}
+{% set pageSocialImage = socialImage or api.global.socialImage or null %}
+{% set author = api.global.title[page.lang] %}
+
+{# Site name #}
+<meta property="og:site_name" content="{{ api.global.title[page.lang] }}">
+
+{# Page title #}
+<title>{{ pageTitle }}</title>
+<meta property="og:title" content="{{ pageTitle }}">
+<meta name="twitter:title" content="{{ pageTitle }}">
+<meta property="og:url" content="{{ currentUrl }}">
+<meta name="twitter:url" content="{{ currentUrl }}">
+
+{% if env.MULTILINGUAL == 'true' %}
+    {% for link in page.url | locale_links %}
+        <link
+            rel="alternate"
+            hreflang="{{ page.lang }}"
+            href="{{ env.APP_URL }}{{ page.url }}"
+        />
+    {% endfor %}
+
+    <link
+        rel="alternate"
+        hreflang="x-default"
+        href="{{ env.APP_URL }}{{ page.url | locale_url('en') }}"
+    />
+{% endif %}
+
+<link rel="canonical" href="{{ env.APP_URL }}{{ page.url }}" />
+
+{# Twitter #}
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+
+{# Description #}
+{% if pageDescription %}
+    <meta name="description" content="{{ pageDescription }}">
+    <meta property="og:description" content="{{ pageDescription }}">
+    <meta name="twitter:description" content="{{ pageDescription }}">
+{% endif %}
+
+{# Social image #}
+{% if pageSocialImage %}
+    <meta property="og:image" content="{{ pageSocialImage }}">
+    <meta name="twitter:image" content="{{ pageSocialImage }}">
+{% endif %}
+
+{# Misc #}
+<meta name="author" content="{{ author }}">
+
+{# Published date #}
+<meta name="article:published_time" content="{{ page.date }}">
+
+{# Pagination #}
+{% if nextPage is defined and nextPage|length %}
+	<link rel="next" href="{{ nextPage }}">
+{% endif %}
+
+{% if prevPage is defined and prevPage|length %}
+	<link rel="prev" href="{{ prevPage }}">
+{% endif %}
+
+<link rel="canonical" href="{{ currentUrl }}" />
+<link rel="alternate" href="{{ env.APP_URL }}" hreflang="en-gb" />

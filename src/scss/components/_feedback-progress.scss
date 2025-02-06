@@ -1,0 +1,24 @@
+.feedback-progress {
+    display: none;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    color: $primary;
+    background: $secondary;
+    padding: map-get($spacers, 3);
+    box-shadow: $box-shadow;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        width: auto;
+        top: 180px;
+        bottom: auto;
+        right: 0;
+        border-start-start-radius: $border-radius-sm;
+        border-end-start-radius: $border-radius-sm;
+    }
+}

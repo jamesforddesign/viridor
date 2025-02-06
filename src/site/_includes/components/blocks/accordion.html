@@ -1,0 +1,65 @@
+{% set items = block.data %}
+
+{% if block.data == 'faqs' %}
+    {% set items = api.faqs %}
+{% endif %}
+
+<div class="{% if block.bgColour %}[ bg-{{ block.bgColour }}{{ '-opacity' if block.opacity }} ] {% endif %}{% if block.opacity %}[ bg-opacity-{{ block.opacity }} ] {% endif %}[ py-5 ]"{% if block.anchor %} id="{{ block.anchor[page.lang] }}"{% endif %}>
+    <div class="[ container-xl ]">
+        {% for item in items %}
+            <div data-module="accordion">
+                <div class="[ accordion ]" id="accordion-{{ block.variant }}-{{ loop.index }}">
+                    <div class="[ accordion__item ]">
+                        <div
+                            class="[ accordion__toggle ] [ collapsed ]"
+                            id="heading-{{ block.variant }}-{{ loop.index }}"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapse-{{ block.variant }}-{{ loop.index }}"
+                            aria-controls="collapse-{{ block.variant }}-{{ loop.index }}"
+                            aria-expanded="false"
+                        >
+                            <h3 class="[ accordion__heading ] [ mb-0 ]">{{ item.title[page.lang] }}</h3>
+
+                            {% include "svg/caret.svg" %}
+                        </div>
+
+                        <div
+                            id="collapse-{{ block.variant }}-{{ loop.index }}"
+                            class="collapse"
+                            aria-labelledby="heading-{{ block.variant }}-{{ loop.index }}"
+                            data-parent="#accordion-{{ block.variant }}-{{ loop.index }}"
+                        >
+                            <div class="[ accordion__panel ]">
+                                {% if block.variant == 'downloads' %}
+                                    <div class="[ row ]">
+                                        {% for section in item.sections %}
+                                            <div class="[ col-12 col-lg-4 ]">
+                                                {% if section.title %}
+                                                    <h4 class="[ text-blue-700 mt-2 mb-3 ]">{{ section.title[page.lang] }}:</h4>
+                                                {% endif %}
+
+                                                {% for document in section.documents %}
+                                                    <a href="{{ env.ASSETS_BASE_URL }}{{ document.url[page.lang] }}" target="_blank" rel="noreferrer" class="[ accordion__document ]">
+                                                        <span class="[ accordion__document-icon ]" role="presentation">
+                                                            {% include "svg/download.svg" %}
+                                                        </span>
+
+                                                        <span>{{ document.title[page.lang] }}</span>
+                                                    </a>
+                                                {% endfor %}
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    <div class="[ wysiwyg ]">
+                                        {{ item.text[page.lang]|safe  }}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

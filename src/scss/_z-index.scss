@@ -1,0 +1,21 @@
+.header {
+    z-index: 20;
+}
+
+.nav {
+    z-index: 10;
+
+    &__dropdown-list {
+        z-index: 10;
+    }
+}
+
+.search {
+    &__overlay-container {
+        z-index: 10;
+    }
+
+    &__results {
+        z-index: 20;
+    }
+}

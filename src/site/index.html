@@ -1,0 +1,17 @@
+---
+eleventyExcludeFromCollections: true
+permalink: "{{ '/lang-redirect' if env.MULTILINGUAL == 'false' else '/' }}"
+---
+
+{% block meta %}
+	{% if env.MULTILINGUAL == 'true' %}
+		<meta http-equiv="refresh" content="0;URL='{{ env.DEFAULT_LANG if env.DEFAULT_LANG else 'en' }}/'">
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	{% if env.MULTILINGUAL == 'true' %}
+		<p>Redirecting to English page...</p>
+		<p>If you are not redirected, please go to the <a href="/en/">English page</a> or the <a href="/cy/">Welsh page</a>.</p>
+	{% endif %}
+{% endblock %}

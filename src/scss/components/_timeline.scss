@@ -1,0 +1,155 @@
+.timeline {
+    &__title {
+        display: inline-flex;
+        align-items: center;
+        background: $secondary;
+        color: $white;
+        font-weight: $font-weight-bold;
+        padding: 0 map-get($spacers, 2);
+        height: 40px;
+
+        @include media-breakpoint-up(lg) {
+            height: 50px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        overflow-x: auto;
+        padding-block: map-get($spacers, 5);
+        padding-inline-start: map-get($spacers, 5);
+
+        @include media-breakpoint-up(sm) {
+            padding-block-end: 0;
+        }
+    }
+
+    &__stage {
+        position: relative;
+        min-width: 300px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        @include media-breakpoint-up(sm) {
+            min-width: 400px;
+            min-height: 400px;
+            width: 600px;
+        }
+
+        &--reverse {
+            flex-direction: column-reverse;
+            padding-bottom: map-get($spacers, 3);
+
+            @include media-breakpoint-up(sm) {
+                padding-bottom: map-get($spacers, 5);
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            width: 100%;
+            height: 2px;
+            background: $primary;
+        }
+    }
+
+    &__stage-bullet {
+        align-items: center;
+        background: $primary;
+        border: 2px solid $primary;
+        border-radius: 50%;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        top: calc(50% - 20px);
+        width: 40px;
+    }
+
+    &__stage-bullet-inner {
+        background: $tertiary;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+
+        &.highlight {
+            background: $secondary;
+        }
+    }
+
+    &__stage-year {
+        @include fluid-type(xs, md, 60px, 80px);
+
+        color: $primary;
+        font-weight: $font-weight-bold;
+        line-height: 1;
+    }
+
+    &__stage-description {
+        max-width: 75%;
+        margin: 0;
+    }
+
+    &__scroll-indicator {
+        @include font-size(16px);
+
+        background: $white;
+        font-weight: $font-weight-bold;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $secondary;
+        padding-inline: 10px;
+        height: 40px;
+
+        @include media-breakpoint-up(lg) {
+            height: 50px;
+        }
+    }
+
+    &__scroll-indicator-icon {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bounce 2s infinite;
+	    -webkit-animation: bounce 2s infinite;
+	    -moz-animation: bounce 2s infinite;
+	    -o-animation: bounce 2s infinite;
+
+        svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    @-webkit-keyframes bounce {
+        0%, 25%, 50%, 75%, 100% {-webkit-transform: translateX(0);}
+        50% {-webkit-transform: translateX(5px);}
+    }
+
+    @-moz-keyframes bounce {
+        0%, 25%, 50%, 75%, 100% {-moz-transform: translateX(0);}
+        50% {-moz-transform: translateX(5px);}
+    }
+
+    @-o-keyframes bounce {
+        0%, 25%, 50%, 75%, 100% {-o-transform: translateX(0);}
+        50% {-o-transform: translateX(5px);}
+    }
+    @keyframes bounce {
+        0%, 25%, 50%, 75%, 100% {transform: translateX(0);}
+        50% {transform: translateX(5px);}
+    }
+}

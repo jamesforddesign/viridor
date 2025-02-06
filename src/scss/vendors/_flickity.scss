@@ -1,0 +1,56 @@
+// Flickity
+$flickity-button-colour: $primary;
+$flickity-button-fill-colour: $white;
+$flickity-button-hover-colour: $black;
+$flickity-button-size-is-active-fill-colour: $white;
+$flickity-button-size-tablet: 69px;
+$flickity-button-size-desktop: 92px;
+$flickity-button-gap: calc(50% - 46px);
+$flickity-button-border-radius: calc($flickity-button-size-desktop/2);
+$flickity-button-border-size: 2px;
+$flickity-button-position-mobile: 12px;
+$flickity-button-position-tablet: -12px;
+$flickity-button-position-desktop: -122px;
+$flickity-button-icon-size: 24px;
+$flickity-page-dots-margin-mobile: 75px;
+$flickity-page-dots-margin-desktop: 60px;
+$flickity-page-dots-dot-colour: $primary;
+$flickity-page-dots-dot-size: 12px;
+$flickity-page-dots-dot-border-radius: calc($flickity-page-dots-dot-size/2);
+$flickity-page-dots-dot-gap: 0 calc(16px/2);
+$flickity-page-dots-dot-is-selected-size: 44px;
+$flickity-height: 100%;
+
+.flickity {
+    $self: &;
+
+    &-page-dots {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 89px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: right;
+        }
+
+        .dot {
+            background: rgba($secondary, 0.5);
+            margin: 0 9px;
+            border-radius: 1px;
+
+            @include media-breakpoint-up(lg) {
+                height: 6px;
+                width: 50px;
+            }
+
+            &.is-selected {
+                background: $secondary;
+            }
+
+            &::marker {
+                color: transparent;
+            }
+        }
+    }
+}

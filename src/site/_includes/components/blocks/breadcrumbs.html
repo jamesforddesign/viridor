@@ -1,0 +1,29 @@
+{% set crumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, {allowMissing: true}) %}
+
+<div{% if block.bg_colour %} class="bg-{{ block.bg_colour }}"{% endif %}>
+    <div class="[ container-xl ]">
+        <div class="[ breadcrumbs ]">
+            <ul class="[ breadcrumbs__inner ]">
+                <li class="[ breadcrumbs__item ]">
+                    <a href="/" class="[ breadcrumbs__link ]">Home</a>
+                </li>
+                
+                {% for crumb in crumbs %}
+                <span class="[ breadcrumbs__separator ]">
+                    {% include "svg/caret.svg" %}
+                </span>
+                
+                <li class="[ breadcrumbs__item ]">
+                    <a class="[ breadcrumbs__link ]" href="{{ crumb.url | url }}">{{ crumb.title }}</a>
+                </li>
+                {% endfor %}
+                
+                <span class="[ breadcrumbs__separator ] [ text-green ]">
+                    {% include "svg/caret.svg" %}
+                </span>
+                
+                <li class="[ breadcrumbs__item ]">{{ eleventyNavigation.title }}</li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="[ row ] [ my-5 ]">
+    <div class="[ col-12 col-lg-8 mb-4 ] [ order-2 order-lg-1 ]">
+        <div class="[ feedback-form ]">
+            <form action="/{{ nextPage }}" method="POST" data-module="feedback-save,character-count,feedback-change-tracker,paste-warning" accept-charset="UTF-8">
+                <div data-feedback-form>
+                    <h2 class="[ feedback-form__heading{% if section.colour %} bg-{{ section.colour }} text-white{% endif %} ]" data-module="feedback-progress">
+                        <span>{{ section.title[page.lang] }}</span>
+                        
+                        <span class="[ feedback-form__item-complete ]" data-feedback-section-complete="{{ section.title['en'] | slugify }}">
+                            {% if section.type == 'contact' %}{{ translations.required[page.lang] }}{% endif %}
+                        </span>
+                    </h2>
+
+                    {% if section.description %}
+                        <div class="[ feedback-form__section-description ] [ wysiwyg ]">{{ section.description[page.lang] | safe }}</div>
+                    {% endif %}
+
+                    {% block feedback %}{% endblock %}
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="[ col-12 col-lg-4 ] [ order-1 order-lg-2 ]">
+        {% include "components/feedback/nav.html" %}
+
+        {% include "components/feedback/storage-limit.html" %}
+    </div>
+</div>

@@ -1,0 +1,92 @@
+.feedback-form {
+    &__heading {
+        @include fluid-type(xs, lg, 16px, 24px);
+
+        @extend %flex-between;
+        
+        background: $secondary;
+        padding: map-get($spacers, 3);
+        top: map-get($spacers, 3); // Only applicable when .position-sticky
+        border-radius: $border-radius;
+    }
+
+    &__section-description {
+        @include fluid-type(xs, lg, 14px, 18px);
+
+        font-weight: $font-weight-bold;
+        margin-bottom: map-get($spacers, 3);
+    }
+
+    &__sub-section-heading {
+        @include fluid-type(xs, lg, 14px, 22px);
+    }
+
+    &__group {
+        background: $gray-300;
+        padding: map-get($spacers, 3);
+        margin-bottom: map-get($spacers, 4);
+        border-radius: $border-radius;
+    }
+
+    &__group-heading {
+        @include fluid-type(xs, lg, 12px, 18px);
+
+        color: $black;
+        font-weight: $font-weight-bold;
+        padding-bottom: map-get($spacers, 2);
+    }
+
+    &__item-complete {
+        @include fluid-type(xs, md, 10px, 14px);
+    }
+
+    &__text-input {
+        background: $white;
+        border-radius: $border-radius;
+    }
+
+    &__character-count {
+        @include fluid-type(xs, lg, 12px, 14px);
+
+        color: $gray-600;
+        margin-top: map-get($spacers, 1);
+    }
+
+    &__response-section {
+        margin-bottom: map-get($spacers, 3);
+    }
+
+    &__response-field {
+        background: $white;
+        padding: map-get($spacers, 2);
+        border-radius: $border-radius;
+    }
+
+    &__response-checkmark {
+        @extend %flex-center;
+
+        background: $blue;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+
+    &__notice {
+        @extend .flow-vertical--2;
+
+        background: $gray-200;
+        padding: map-get($spacers, 3);
+        margin-bottom: map-get($spacers, 3);
+        border-radius: $border-radius;
+
+        &--error {
+            background: $danger;
+            color: $white;
+            box-shadow: none;
+        }
+    }
+
+    &__success {
+        padding-block: 100px;
+    }
+}

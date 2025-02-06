@@ -1,0 +1,13 @@
+.btn {
+    &__icon {
+        @extend %flex-center;
+
+        width: 16px;
+        height: 16px;
+
+        svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

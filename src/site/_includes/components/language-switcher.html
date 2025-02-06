@@ -1,0 +1,9 @@
+{% if env.MULTILINGUAL == 'true' %}
+    <nav aria-label="Language switcher" class="[ language-switcher ]">
+        {% for link in languages %}
+            <a class="[ language-switcher__item ]{% if '/' ~ link.url ~ '/' in page.url %} [ is-active ]{% endif %}" href="/{{ link.url }}" lang="{{ link.url }}" hreflang="{{ link.url }}">{{ link.name }}</a>
+
+            {% if not loop.last %}&bull;{% endif %}
+        {% endfor %}
+    </nav>
+{% endif %}

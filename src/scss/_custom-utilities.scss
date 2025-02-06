@@ -1,0 +1,194 @@
+/*-------------------------------------------------*\
+    CUSTOM UTILITIES
+
+    Use this file to modify Bootstrap's
+    existing utilities.
+\*-------------------------------------------------*/
+
+$utilities: map-merge(
+    $utilities,
+    (
+        "background-color": (
+            property: background-color,
+            class: bg,
+            local-vars: (
+                "bg-opacity": 1
+            ),
+            values: map-merge(
+                $theme-colors,
+                (
+                    "transparent": transparent,
+                    "primary": $primary,
+                    "secondary": $secondary,
+                    "tertiary": $tertiary,
+                    "white": $white,
+                    "primary-opacity": $primary-opacity,
+                    "secondary-opacity": $secondary-opacity,
+                )
+            )
+        ),
+        "bg-opacity": (
+            css-var: true,
+            class: bg-opacity,
+            values: (
+                5: .05,
+                10: .1,
+                15: .15,
+                20: .2,
+                25: .25,
+                30: .3,
+                35: .35,
+                40: .4,
+                45: .45,
+                50: .5,
+                55: .55,
+                60: .6,
+                65: .65,
+                70: .7,
+                75: .75,
+                80: .80,
+                85: .85,
+                90: .90,
+                95: .95,
+                100: 1
+            )
+        ),
+        "border-color":
+            map-merge(
+                map-get($utilities, "border-color"),
+                (
+                values:
+                    map-merge(
+                        map-get(map-get($utilities, "border-color"), "values"),
+                        (
+                            "primary": $primary,
+                            "secondary": $secondary,
+                            "tertiary": $tertiary,
+                            "white": $white,
+                        )
+                    ),
+            )
+        ),
+        "color":
+            map-merge(
+                map-get($utilities, "color"),
+                (
+                    values:
+                        map-merge(
+                            map-get(map-get($utilities, "color"), "values"),
+                            (
+                                "primary": $primary,
+                                "secondary": $secondary,
+                                "tertiary": $tertiary,
+                                "white": $white,
+                            )
+                        ),
+                )
+            ),
+        "font-family": (
+            property: font-family,
+            class: ff,
+            responsive: false,
+            values: (
+                base: $font-family-sans-serif,
+                headings: $font-family-headings,
+            ),
+        ),
+        "font-weight": (
+            property: font-weight,
+            class: fw,
+            values: (
+                light: $font-weight-light,
+                normal: $font-weight-normal,
+                bold: $font-weight-bold,
+                heavy: $font-weight-heavy
+            )
+        ),
+        "translate": (
+            property: transform,
+            class: translate,
+            responsive: false,
+            values: (
+                y-50: translateY(50%),
+                y-n50: translateY(-50%),
+                x-50: translateX(50%),
+                x-n50: translateX(-50%)
+            )
+        ),
+        "rounded-top-end": (
+            property: border-top-right-radius,
+            class: rounded-top-end,
+            responsive: true,
+            values: (
+                null: var(--#{$prefix}border-radius),
+                0: 0,
+                1: var(--#{$prefix}border-radius-sm),
+                2: var(--#{$prefix}border-radius),
+                3: var(--#{$prefix}border-radius-lg),
+                4: var(--#{$prefix}border-radius-xl),
+                5: var(--#{$prefix}border-radius-xxl),
+                circle: 50%,
+                pill: var(--#{$prefix}border-radius-pill)
+            )
+        ),
+        "rounded-bottom-end": (
+            property: border-bottom-right-radius,
+            class: rounded-bottom-end,
+            responsive: true,
+            values: (
+                null: var(--#{$prefix}border-radius),
+                0: 0,
+                1: var(--#{$prefix}border-radius-sm),
+                2: var(--#{$prefix}border-radius),
+                3: var(--#{$prefix}border-radius-lg),
+                4: var(--#{$prefix}border-radius-xl),
+                5: var(--#{$prefix}border-radius-xxl),
+                circle: 50%,
+                pill: var(--#{$prefix}border-radius-pill)
+            )
+        ),
+        "rounded-bottom-start": (
+            property: border-bottom-left-radius,
+            class: rounded-bottom-start,
+            responsive: true,
+            values: (
+                null: var(--#{$prefix}border-radius),
+                0: 0,
+                1: var(--#{$prefix}border-radius-sm),
+                2: var(--#{$prefix}border-radius),
+                3: var(--#{$prefix}border-radius-lg),
+                4: var(--#{$prefix}border-radius-xl),
+                5: var(--#{$prefix}border-radius-xxl),
+                circle: 50%,
+                pill: var(--#{$prefix}border-radius-pill)
+            )
+        ),
+        "rounded-top-start": (
+            property: border-top-left-radius,
+            class: rounded-top-start,
+            responsive: true,
+            values: (
+                null: var(--#{$prefix}border-radius),
+                0: 0,
+                1: var(--#{$prefix}border-radius-sm),
+                2: var(--#{$prefix}border-radius),
+                3: var(--#{$prefix}border-radius-lg),
+                4: var(--#{$prefix}border-radius-xl),
+                5: var(--#{$prefix}border-radius-xxl),
+                circle: 50%,
+                pill: var(--#{$prefix}border-radius-pill)
+            )
+        ),
+    )
+);
+
+// Custom colours
+$custom-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "tertiary": $tertiary,
+    "white": $white,
+);
+
+// Merge custom colours into theme colours
+$theme-colors: map-merge($theme-colors, $custom-colors);

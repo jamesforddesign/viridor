@@ -1,0 +1,29 @@
+{% set home = "" %}
+
+{% if env.MULTILINGUAL == 'true' %}
+    {% set home = page.lang %}
+{% endif %}
+
+<header class="[ header ]" data-module="header">
+    <div class="[ header__top ]">
+        <div class="[ header__top-inner ]">
+            <div>{{ api.global.title[page.lang if api.global.title[page.lang] != '' else 'en'] }}</div>
+
+            {% include "components/language-switcher.html" %}
+        </div>
+    </div>
+
+    <div class="[ header__inner ]">
+        <a href="/{{ home }}" class="[ header__brand ]">
+            <img src="https://placehold.co/140x60" />
+
+            <span class="visually-hidden">Back to home page</span>
+        </a>
+
+        <div class="[ header__actions-inner ]">
+            {% include "components/search.html" %}
+
+            {% include "components/nav.html" %}
+        </div>
+    </div>
+</header>

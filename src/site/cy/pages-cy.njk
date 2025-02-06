@@ -1,0 +1,29 @@
+---
+lang: cy
+tags:
+    - searchCy
+pagination:
+    data: api.pages
+    size: 1
+    alias: nav
+    addAllPagesToCollections: true
+eleventyComputed:
+    title: "{{ nav.title['cy'] }}"
+    socialImage: "{{ nav.socialImage }}"
+    permalink: "/{{ 'cy/' ~ nav.permalink['cy'] }}/"
+    eleventyNavigation:
+        key: "{{ nav.permalink['cy'] }}"
+        title: "{{ nav.title['cy'] }}"
+        parent: "{{ nav.parent['cy'] }}"
+        order: "{{ nav.navOrder }}"
+        lang: "cy"
+        anchor: "{{ nav.anchor['cy'] }}"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    {% for block in nav.blocks %}
+        {% include "components/blocks/" ~ block.type ~ ".html" %}
+    {% endfor %}
+{% endblock %}

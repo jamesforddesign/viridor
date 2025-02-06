@@ -1,0 +1,93 @@
+.accordion {
+    $self: &;
+
+    @extend .flow-vertical--3;
+
+    &__toggle {
+        @extend %transition;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: map-get($spacers, 2);
+        padding: map-get($spacers, 2);
+        background: $primary;
+        border-bottom: 1.5px solid transparent;
+        overflow: hidden;
+        cursor: pointer;
+
+        @include media-breakpoint-up($navigation-breakpoint) {
+            gap: map-get($spacers, 3);
+            padding: map-get($spacers, 3);
+        }
+
+        svg {
+            @extend %transition;
+
+            transform: rotate(-180deg);
+            width: 25px;
+            height: 25px;
+            min-width: 25px;
+            color: $secondary;
+        }
+
+        &.collapsed {
+            background: transparent;
+            border-bottom: 1.5px solid $gray-300;
+
+            #{$self}__heading {
+                color: $primary;
+            }
+
+            @include hover() {
+                border-bottom-color: $primary;
+            }
+
+            svg {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+    &__panel {
+        padding-block: map-get($spacers, 3);
+    }
+
+    &__heading {
+        color: $white;
+        line-height: 1;
+    }
+
+    &__document {    
+        @extend %transition;
+    
+        display: flex;
+        align-items: center;
+        gap: map-get($spacers, 2);
+        color: $black;
+        text-decoration: none;
+        margin-block-end: map-get($spacers, 3);
+    
+        @include hover() {
+            color: $secondary;
+            
+            #{$self}__document-icon {
+                color: darken($secondary, 5%)
+            }
+        }
+    }
+
+    &__document-icon {
+        @extend %transition;
+
+        width: 24px;
+        height: 24px;
+        color: $secondary;
+
+        svg {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}

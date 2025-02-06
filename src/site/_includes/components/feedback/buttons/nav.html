@@ -1,0 +1,10 @@
+<div class="d-flex justify-content-between">
+    {% if pagination.page.previous.permalink[page.lang] %}
+        <a class="btn btn-outline-secondary" href="/{{ prevPage }}" tabindex="-1" data-save-button-back>{{ translations.back[page.lang] }}</a>
+    {% else %}
+        {# Maintain flex layout #}
+        <div></div>
+    {% endif %}
+
+    {% include "components/feedback/buttons/continue.html" %}
+</div>

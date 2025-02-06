@@ -1,0 +1,70 @@
+.header {
+    $self: &;
+
+    position: relative;
+    background: $header-bg-color;
+    box-shadow: 0 4px 8px 0 rgba($black, 0.15);
+    // has z-index
+
+    &__top {
+        background: $top-header-bg-color;
+        color: $top-header-text-color;
+        padding: map-get($spacers, 2) 0;
+    }
+
+    &__top-inner {
+        @extend .container-xl;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: $font-weight-bold;
+
+        @include fluid-type(xs, lg, 14px, 18px);
+    }
+
+    &__inner {
+        @extend .container-xl;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: map-get($spacers, 2);
+
+        @include media-breakpoint-up($navigation-breakpoint) {
+            padding-block: map-get($spacers, 3);
+        }
+    }
+
+    &__actions-inner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: map-get($spacers, 3);
+
+        @include media-breakpoint-up($navigation-breakpoint) {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    &__brand {
+        @extend %transition;
+        
+        display: flex;
+        width: auto;
+        height: 60px;
+        padding-block: map-get($spacers, 2);
+        object-fit: cover;
+
+        @include media-breakpoint-up($navigation-breakpoint) {
+            height: 80px;
+        }
+
+        #{$self}.is-shrunk & {
+            @include media-breakpoint-up($navigation-breakpoint) {
+                height: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{% extends "layouts/feedback.html" %}
+
+{% block feedback %}
+    {% for subSection in section.subSections %}
+        {% if subSection.title %}
+            <h3 class="[ feedback-form__sub-section-heading{% if section.colour %} text-{{ section.colour }}{% endif %} ]">{{ subSection.title[page.lang] | safe }}</h3>
+        {% endif %}
+
+        {% for group in subSection.groups %}
+            <div class="[ feedback-form__group ]">
+                {% if group.title %}
+                    <h4 class="[ feedback-form__group-heading ]">{{ group.title[page.lang] | safe }}</h4>
+                {% endif %}
+
+                {% if group.description %}
+                    <div class="[ feedback-form__section-description ] [ wysiwyg ]">{{ group.description[page.lang] | safe }}</div>
+                {% endif %}
+
+                {% for field in group.questions %}
+                    <div class="[ feedback-response ] [ mb-3 ]{% if field.additionalClasses %} {{ field.additionalClasses }}{% endif %}" data-module="field-validation">
+                        <p class="{% if loop.index == 1 %}[ mb-2 ]{% else %}[ my-2 ]{% endif %}">{{ field.label[page.lang] }}{% if field.required == true %}<span class="text-purple">*</span>{% endif %}</p>
+
+                        {% if field.options %}
+                            <div class="{% if field.multiple == true %}grid--1 grid--md-2 gap-2 {% endif %}mt-2">
+                                {% for option in field.options %}
+                                    <div class="form-check form-check-inline">
+                                        <input
+                                            data-section="{{ section.title['en'] | slugify }}"
+                                            type="{{ field.type if field.type else 'radio' }}"
+                                            id="{{ field.name }}-{{ option['en'] }}"
+                                            name="{{ field.name }}"
+                                            value="{{ option['en'] }}"
+                                            data-translated-value="{{ option[page.lang] }}"
+                                            data-label="{{ field.label['en'] }}"
+                                            class="[ form-check-input ]"
+                                            {% if field.multiple == true %}data-multiple-checkbox {% endif %}
+                                            {% if field.required == true %}required {% endif %}
+                                            data-validate-field
+                                        />
+
+                                        <label class="form-check-label" for="{{ field.name }}-{{ option['en'] }}">{{ option[page.lang] }}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+
+                            <div data-validation-message class="d-none invalid-feedback"></div>
+                        {% else %}
+                            <input
+                                class="[ feedback-form__text-input ] [ form-control ]"
+                                id="{{ field.name }}"
+                                name="{{ field.name }}"
+                                data-section="{{ section.title['en'] | slugify }}"
+                                data-label="{{ field.label['en'] }}"
+                                placeholder="{{ field.placeholder[page.lang] }}"
+                                type="{{ field.type }}"
+                                {% if field.required == true %}required{% endif %}
+                                data-validate-field
+                            />
+
+                            <div data-validation-message class="d-none invalid-feedback"></div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    {% include "components/feedback/buttons/nav.html" %}
+{% endblock %}

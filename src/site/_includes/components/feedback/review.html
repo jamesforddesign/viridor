@@ -1,0 +1,123 @@
+<div class="[ row ] [ my-5 ]">
+    <div class="[ col-12 col-lg-8 mb-4 ] [ order-2 order-lg-1 ]">
+        <form class="[ feedback-form ]" data-module="feedback-review" accept-charset="UTF-8" data-lang="{{ page.lang }}">
+            {% for section in api.feedback | feedbackSections %}
+                <div class="[ feedback-form__response-section ]">
+                    <h2 class="[ feedback-form__heading{% if section.colour %} bg-{{ section.colour }} text-white{% endif %} ] [ position-sticky ]" data-module="feedback-progress">
+                        <span>{{ section.title[page.lang] | safe }}</span>
+
+                        <span class="[ feedback-form__item-complete ]" data-feedback-section-complete="{{ section.title['en'] | slugify }}">
+                            {% if section.type == 'contact' %}{{ translations.required[page.lang] }}{% endif %}
+                        </span>
+                    </h2>
+
+                    {% for subSection in section.subSections %}
+                        {% if subSection.title %}
+                            <h3 class="[ feedback-form__sub-section-heading{% if section.colour %} text-{{ section.colour }}{% endif %} ]{% if loop.index > 1 %} [ mt-3 ]{% endif %}">{{ subSection.title[page.lang] | safe }}</h3>
+                        {% endif %}
+
+                        {% for group in subSection.groups %}
+                            <div class="[ feedback-form__group ]">
+                                {% if group.title %}
+                                    <h4 class="[ feedback-form__group-heading ]">{{ group.title[page.lang] | safe }}</h4>
+                                {% endif %}
+
+                                {% for question in group.questions %}
+                                    <div class="[ feedback-form__response ]">
+                                        <p class="{% if loop.index > 1%}[ my-2 ] {% else %}[ mb-2 ] {% endif %}[ fw-bold ]">
+                                            {% if question.number %}
+                                                {{ question.number }}.
+                                            {% endif %}
+
+                                            {{ question.label[page.lang] | safe }}{% if question.required == true %}<span class="text-purple">*</span>{% endif %}</strong>
+                                        </p>
+
+                                        <div{% if question.type in ['text','email'] %} class="[ feedback-form__response-field{% if section.colour %} border-start border-5 border-{{ section.colour }}{% endif %} ]"{% endif %} data-response="{% if section.type == 'contact' %}{{ question.name }}{% else %}{{ question.number }}-question{% endif %}" data-module="feedback-response">
+                                            <span class="[ text-gray-300 ] [ fst-italic ]">{{ translations.noResponse[page.lang] }}</span>
+                                        </div>
+
+                                        {% if question.additionalQuestions %}
+                                            {% for additional in question.additionalQuestions %}
+                                                <div class="ps-2 ps-lg-3">
+                                                    <p class="my-2 fw-bold">
+                                                        {% if question.number and additional.number %}
+                                                            {{ question.number }}.{{ additional.number }}.
+                                                        {% endif %}
+
+                                                        {{ additional.label[page.lang] | safe }}
+                                                    </p>
+
+                                                    <div class="[ feedback-form__response-field{% if section.colour %} border-start border-5 border-{{ section.colour }}{% endif %} ]" data-response="{{ question.number }}-question-{{ additional.number }}" data-module="feedback-response">
+                                                        <span class="fst-italic">{{ translations.noResponse[page.lang] }}</span>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+
+            <div data-required-fields class="[ feedback-form__notice ] d-none">
+                <h3>{{ translations.completeDetailsTitle[page.lang] }}</h3>
+
+                <p class="mt-2">{{ translations.completeDetailsText[page.lang] }}</p>
+            </div>
+
+            {% include "components/feedback/storage-limit.html" %}
+
+            <div data-feedback-ready>
+                {% if env.FEEDBACK_CAPTCHA %}
+                    <div data-cookies-confirmed data-sitekey="{{ env.FEEDBACK_CAPTCHA }}" class="[ g-recaptcha ] [ mb-3 ] d-none" data-callback="recaptchaCallback"></div>
+                {% endif %}
+
+                <div class="[ feedback-form__notice ]" data-cookies-pending>
+                    <h4>{{ translations.enableCookiesTitle[page.lang] }}</h4>
+
+                    <p>{{ translations.enableCookiesText[page.lang] }}</p>
+                </div>
+
+                <div data-form-error class="[ feedback-form__notice feedback-form__notice--error ] d-none"></div>
+
+                {% if env.RELEASE_ENV == 'dev' and env.FEEDBACK_TYPE == 'catcher' %}
+                    <div data-sitekey="{{ env.FEEDBACK_CAPTCHA }}" class="[ g-recaptcha ] [ mb-3 ]" data-callback="recaptchaCallback"></div>
+                {% endif %}
+
+                <div class="[ d-flex justify-content-between ]">
+                    <a class="[ btn btn-outline-secondary ]" href="/{{ prevPage }}" tabindex="-1" data-save-button-back>Go back</a>
+
+                    <button aria-label="{{ translations.submitFeedback[page.lang] }}" type="submit" class="[ btn btn-primary ]" data-save-button{% if env.RELEASE_ENV != 'dev' %} disabled{% endif %}>
+                        <span data-feedback-default>{{ translations.submitFeedback[page.lang] }}</span>
+
+                        <span class="d-none" data-feedback-submitting>
+                            {% include "svg/loading.svg" %}
+
+                            {{ translations.submitting[page.lang] }}
+                        </span>
+                    </button>
+
+                    <script>function recaptchaCallback() { document.querySelector('[data-save-button]').disabled = false; }</script>
+                </div>
+            </div>
+
+            {% if env.FEEDBACK_TYPE == 'catcher' %}
+                {% if page.lang == 'en' %}
+                    {% set honeypot = env.FEEDBACK_HONEYPOT_EN %}
+                {% elseif page.lang == 'cy' %}
+                    {% set honeypot = env.FEEDBACK_HONEYPOT_CY %}
+                {% endif %}
+
+                <input aria-label="Honeypot" name="{{ honeypot }}" style="position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;" type="text">
+            {% endif %}
+        </form>
+    </div>
+
+    <div class="[ col-12 col-lg-4 ] [ order-1 order-lg-2 ]">
+        {% include "components/feedback/nav.html" %}
+
+        {% include "components/feedback/storage-limit.html" %}
+    </div>
+</div>

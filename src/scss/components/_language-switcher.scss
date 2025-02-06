@@ -1,0 +1,25 @@
+.language-switcher {
+    @extend %flex-center;
+
+    position: relative;
+    gap: 5px;
+
+    &__item {
+        @extend %transition;
+        @extend %flex-center;
+
+        color: $top-header-text-color;
+        text-decoration: none;
+
+        @include fluid-type(xs, md, 10px, 12px);
+
+        @include hover() {
+            color: $white;
+        }
+
+        &.is-active {
+            pointer-events: none;
+            color: $secondary;
+        }
+    }
+}

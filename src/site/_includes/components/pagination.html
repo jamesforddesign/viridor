@@ -1,0 +1,19 @@
+{% if pagination.pages | length > 1 %}
+    <div class="[ d-flex align-items-center justify-content-between ] [ my-3 ] [ pt-3 ] [ border-top border-1 border-gray-300 ]">
+        <div>
+            {% if pagination.href.previous %}
+                <a class="[ btn btn-outline-green ]" href="{{ pagination.href.previous }}">Previous</a>
+            {% else %}
+                <span class="[ btn btn-outline-gray-400 ] [ disabled ]">Previous</span>
+            {% endif %}
+        </div>
+
+        <div>
+            {% if pagination.href.next %}
+                <a class="[ btn btn-outline-green ]" href="{{ pagination.href.next }}">Next</a>
+            {% else %}
+            <span class="[ btn btn-outline-gray-400 ] [ disabled ]">Next</span>
+            {% endif %}
+        </li>
+    </div>
+{% endif %}

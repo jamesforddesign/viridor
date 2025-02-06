@@ -1,0 +1,28 @@
+{# Filter paginated article data #}
+{% switch page.lang %}
+    {% case 'en' %}
+        {% set articles = api.newsEn | reverse %}
+
+    {% case 'cy' %}
+        {% set articles = api.newsCy | reverse %}
+{% endswitch %}
+
+<div class="{% if block.bgColour %}[ bg-{{ block.bgColour }}{{ '-opacity' if block.opacity }} ] {% endif %}{% if block.opacity %}[ bg-opacity-{{ block.opacity }} ] {% endif %}[ py-5 ]"{% if block.anchor %} id="{{ block.anchor[page.lang] }}"{% endif %}>
+    <div class="[ container-xl ]">
+        {% if block.title %}
+            <h2 class="[ text-{{ block.textColour if block.textColour else 'primary' }} ] [ mb-3 mb-lg-5 ]">{{ block.title[page.lang] }}</h2>
+        {% endif %}
+
+        {% if articles | length %}
+            <div class="[ grid--1 grid--md-2 grid--lg-3 ]">
+                {% for article in articles %}
+                    {% include "components/cards/article.html" %}
+                {% endfor %}
+            </div>
+
+            {# include "components/pagination.html" #}
+        {% else %}
+            <div class="[ text-center mb-5 ]">{{ translations.noResults[page.lang] }}</div>
+        {% endif %}
+    </div>
+</div>

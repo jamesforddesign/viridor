@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ page.lang }}" dir="{{ languages[page.lang].dir or 'ltr' }}">
+    {% include "components/head.html" %}
+
+    <body>
+        {% if env.RELEASE_ENV === 'production' %}
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ env.TAG_MANAGER_KEY }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        {% endif %}
+
+        <a class="skip-link" href="#main">Skip to content</a>
+
+        {% include "components/feedback/progress.html" %}
+
+        {% if env.HOLDING_PAGE == 'false' %}
+            {% include "components/header.html" %}
+
+            <main id="main">
+                {% block content %}{% endblock %}
+            </main>
+
+            {% include "components/footer.html" %}
+        {% else %}
+            {% include "components/holding.html" %}
+        {% endif %}
+
+        {% if env.RELEASE_ENV === 'dev' %}
+            <div class="breakpoint-helper"></div>
+        {% endif %}
+
+        <script src="/assets/js/bundle.js?{% assetVersion %}"></script>
+    </body>
+</html>

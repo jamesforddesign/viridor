@@ -1,0 +1,24 @@
+@mixin hover($include-active: false) {
+    @if ($include-active) {
+        &:active,
+        &:focus {
+            @content;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                @content;
+            }
+        }
+    } @else {
+        &:focus {
+            @content;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                @content;
+            }
+        }
+    }
+}

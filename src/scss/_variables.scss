@@ -1,0 +1,113 @@
+/*-------------------------------------------------*\
+    VARIABLES
+
+    Use this file to declare variables.
+
+    You can create your own variables or override
+    Bootstrap variables.
+\*-------------------------------------------------*/
+// Spacing
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 4,
+    7: $spacer * 5,
+    8: $spacer * 6,
+    9: $spacer * 7,
+    10: $spacer * 8
+);
+
+// Headings
+$margin-bottom-headings: 0;
+$font-weight-headings: $font-weight-heavy;
+$line-height-headings: 1.3;
+
+// Colours
+$primary: #322855;
+$secondary: #FD9D2D;
+$tertiary: #149ece;
+
+$grey-25: #ecf0f1;
+$grey-50: #7f8c8d;
+
+// Opacity
+$primary-opacity: rgba($primary, var(--bs-bg-opacity));
+$secondary-opacity: rgba($secondary, var(--bs-bg-opacity));
+$tertiary-opacity: rgba($tertiary, var(--bs-bg-opacity));
+
+$body-bg: #f8f8f8;
+$text-color: $primary;
+
+$border-radius-sm: 10px;
+$border-radius: 30px;
+$border-radius-lg: 50px;
+
+// Header
+$header-bg-color: $white;
+$header-text-color: $primary;
+$top-header-bg-color: $primary;
+$top-header-text-color: $white;
+
+// Navigation
+$nav-bg-color: $gray-100;
+$nav-text-color: $primary;
+$nav-dropdown-text-color: $primary;
+$nav-radius: $border-radius-sm;
+$navigation-breakpoint: lg;
+
+// Search
+$search-radius: $border-radius-sm;
+$search-text-color: $primary;
+$search-bg-color: $gray-100;
+
+// Hamburger
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: 24px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 6px;
+$hamburger-layer-color: $primary;
+$hamburger-layer-border-radius: 1.5px;
+$hamburger-active-layer-color: $hamburger-layer-color;
+
+// Buttons
+$input-btn-font-family: $font-family-sans-serif;
+$input-font-size: 18px;
+$input-btn-padding-x: 1.25rem; // 20px
+$input-btn-padding-y: 10.44px;
+$input-btn-font-size: 1.13rem; // 18px
+$btn-padding-y: 12px;
+$btn-padding-x: 30px;
+$btn-font-weight: $font-weight-bold;
+$btn-disabled-opacity: 0.5;
+$btn-border-width: 2px;
+$btn-border-radius: $btn-border-radius;
+
+// Forms
+$focus-ring-opacity: 0.5;
+$focus-ring-color: rgba($secondary, $focus-ring-opacity);
+
+// Feedback form
+$feedback-nav-breakpoint: lg;
+
+// Miscellaneous
+$stretched-link-pseudo-element: before;
+
+// Footer
+$footer-bg-color: $white;
+$footer-text-color: $primary;
+
+// Map
+$map-body-height-mobile: 900px;
+$map-body-height-desktop: 1000px;
+$map-marker-info-mobile: 200px;
+$map-marker-info-desktop: 400px;
+$map-breakdown-background-color: $primary;
+$map-breakdown-border-color: $primary;
+$map-breakdown-item-icon-height: 53px;
+$map-breakdown-item-icon-width: 41px;
+$map-breakdown-width-desktop: 345px;

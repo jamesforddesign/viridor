@@ -1,0 +1,43 @@
+<div class="{% if block.bgColour %}[ bg-{{ block.bgColour }}{{ '-opacity' if block.opacity }} ] {% endif %}{% if block.opacity %}[ bg-opacity-{{ block.opacity }} ] {% endif %}[ py-5 ]">
+    <div class="[ container-xl ]">
+        <div class="[ grid--1 grid--lg-2 ] [ gap-3 gap-lg-5 ]">
+            <div class="{% if block.invert %}[ order-lg-2 ] {% endif %}[ mb-2 mb-lg-0 ]">
+                <h2 class="[ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ block.title[page.lang] }}</h2>
+
+                <div class="[ wysiwyg ] [ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ block.content[page.lang] | safe }}</div>
+            </div>
+            
+            {% if env.FEEDBACK_ACTIVE == 'true' and env.FEEDBACK_INLINE == 'true' %}
+                <div class="{% if block.invert %}[ order-lg-1 ] [ mb-3 mb-lg-0 ] {% endif %}">
+                    {% set section = api.feedback[block.section] %}
+                    {% set subSection = section.subSections[block.subSection] %}
+                    {% set group = subSection.groups[block.group] %}
+
+                    <div class="[ feedback-form ]">
+                        <form action="" method="POST" data-module="feedback-save,character-count,feedback-change-tracker,paste-warning" accept-charset="UTF-8">
+                            <div data-feedback-form>
+                                <h2 class="[ feedback-form__heading{% if section.colour %} bg-{{ section.colour }} text-white{% endif %} ] [ mb-3 ]" data-module="feedback-progress">
+                                    <span>{{ section.title[page.lang] }}</span>
+                                    
+                                    <span class="[ feedback-form__item-complete ]" data-feedback-section-complete="{{ section.title['en'] | slugify }}">
+                                        {% if section.type == 'contact' %}{{ translations.required[page.lang] }}{% endif %}
+                                    </span>
+                                </h2>
+            
+                                <div class="[ feedback-form__group ]">
+                                    {% for question in group.questions %}
+                                        {% include "components/feedback/fields.html" %}
+                                    {% endfor %}
+
+                                    <div class="d-flex justify-content-end">
+                                        {% include "components/feedback/buttons/save.html" %}
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

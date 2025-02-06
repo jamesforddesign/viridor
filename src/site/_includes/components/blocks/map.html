@@ -1,0 +1,79 @@
+{% if block.sections %}
+    {% set sections = block.sections %}
+
+    {% if block.sections == "one" %}
+        {% set sections = api.maps %}
+    {% endif %}
+{% endif %}
+
+<div data-module="map" data-key="{{ env.MAP_API_KEY }}" data-lang="{{ page.lang }}">
+    {% if block.search or sections %}
+        <div class="[ container-xl ]">
+            {% if block.search %}
+                <div class="[ map__search ]">
+                    <form class="[ map__search-form ]" data-map-address-form>
+                        <label class="[ d-none ]" for="address">{{ translations.mapEnterAddressFieldLabel[page.lang] }}:</label>
+                        <input class="[ map__search-input ]" type="text" name="address" placeholder="{{ translations.mapEnterAddressFieldPlaceholder[page.lang] }}" required data-map-address-form-input>
+
+                        <button class="[ map__search-button ]" type="submit">
+                            <span aria-hidden="true" role="presentation">{% include "svg/pin.svg" %}</span>
+                            <span class="[ visually-hidden ]">{{ translations.mapEnterAddressButton[page.lang] }}</span>
+                        </button>
+                    </form>
+                </div>
+            {% endif %}
+
+            {% if sections %}
+                <nav class="[ map-sections ]">
+                    <ul class="[ map-sections__items ]">
+                        {% for item in sections %}
+                            <li class="[ map-sections__item ] [ {{ item.bgColour }} ]">
+                                <button class="[ map-sections__button ]" data-section-item data-section="{{ item.sectionHandle }}" data-section-name="{{ item.sectionName[page.lang] }}" data-section-lat="{{ item.centerPoint.lat }}" data-section-lng="{{ item.centerPoint.lng }}" data-section-activities="{{ item.activities|dump }}" data-lang="{{ page.lang }}">{{ item.sectionName[page.lang] }}</button>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div class="[ map ]">
+        <div class="[ map__body ]">
+            <div class="[ map__body-inner ]" data-map data-map-center-lat="{{ block.center['lat'] }}" data-map-center-lng="{{ block.center['lng'] }}"{% if block.maxZoom and block.zoom %} data-map-max-zoom="{{ block.maxZoom }}" data-map-zoom="{{ block.zoom }}{% endif %}" data-map-overlay="{{ block.overlay }}"></div>
+        </div>
+
+        {% if sections %}
+            {% for item in sections %}
+                <div class="[ map-breakdown ]{% if loop.index == 1 %} is-active{% endif %}" data-section-breakdown data-section="{{ item.sectionHandle }}">
+                    <div class="[ map-breakdown__header ]">
+                        <h2 class="[ map-breakdown__heading ]">{{ translations.mapBreakdown[page.lang] }}</h2>
+
+                        <button class="[ map-breakdown__close-button ] [ stretched-link ]" title="{{ translations.mapBreakdownButton[page.lang] }}" aria-expanded="false" aria-controls="section-breakdown-main" data-section-breakdown-button>
+                            {% include "svg/close.svg" %}
+                            <span class="[ visually-hidden ]">{{ translations.mapBreakdownClose[page.lang] }}</span>
+                        </button>
+                    </div>
+
+                    <div class="[ map-breakdown__main ]">
+                        <ul class="[ map-breakdown__items ] [ list-unstyled ]">
+                            {% for activity in item.activities %}
+                                <li class="[ map-breakdown__item ]">
+                                    <span class="[ map-breakdown__item-icon ]" style="color: {{ activity.color }}">
+                                        {% if activity.svg %}
+                                            {% include "svg/" ~ activity.svg ~ ".svg" %}
+                                        {% else %}
+                                            {% include "svg/marker.svg" %}
+                                            <span class="[ map-breakdown__item-icon-number ]" style="color: {{ activity.textColor }}">{{ activity.number }}</span>
+                                        {% endif %}
+                                    </span>
+
+                                    <button class="[ map-breakdown__button ] [ stretched-link ]" type="button" data-section-breakdown-item-btn data-breakdown-lat="{{ activity.centerPoint.lat }}" data-breakdown-lng="{{ activity.centerPoint.lng }}">{{ activity.summary[page.lang] }}</button>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>

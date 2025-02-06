@@ -1,0 +1,36 @@
+---
+tags:
+    - searchCy
+pagination:
+    data: api.newsCy
+    size: 1
+    alias: article
+    addAllPagesToCollections: true
+eleventyComputed:
+    lang: cy
+    title: "{{ article.title }}"
+    socialImage: "{{ article.image }}"
+    description: "{{ article.description }}"
+    permalink: "/cy/{{ article.permalink }}/"
+    parent: "{{ article.parent }}"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <div class="[ container-xl ] [ my-5 ]">
+        <div class="[ row ]">
+            <div class="[ col-12 col-lg-8 ] [ wysiwyg ]">
+                <div class="[ mb-4 ]">
+                    <h1>{{ title }}</h1>
+
+                    <p class="[ h4 ] [ text-secondary ]">{{ date | eventDate }}</p>
+                </div>
+
+                {{ article.content | safe }}
+
+                <a href="/{{ page.lang ~ '/' if env.MULTILINGUAL == 'true' }}{{ parent }}" class="[ btn btn-secondary ]">{{ translations.backToNews[page.lang] }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+---
+permalink: search-cy.json
+eleventyExcludeFromCollections: true
+---
+
+[
+    {% for page in collections.searchCy %}
+        {
+            "title": "{{ page.data.renderData.title if page.data.renderData.title else page.data.title }}",
+            "path": "{{ page.url | url }}"
+        }{% if not loop.last %},{% endif %}
+    {% endfor %}
+]

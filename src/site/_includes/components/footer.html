@@ -1,0 +1,45 @@
+<footer class="[ footer ]">
+    <div class="[ footer__inner ]">
+        <a href="{{ '/' | url }}" class="[ footer__brand ]">
+            {# include "svg/brand.svg" #}
+        </a>
+
+        <div class="[ d-flex flex-column flex-lg-row align-items-start align-items-lg-end justify-content-between gap-3 ]">
+            <div class="[ footer__brand-info ]">
+                {% if api.global.company.number %}
+                    <div><span class="[ fw-bold ]">{{ translations.companyNumber[page.lang] }}:</span> {{ api.global.company.number }}</div>
+                {% endif %}
+
+                {% if api.global.company.vatNumber %}
+                    <div><span class="[ fw-bold ]">{{ translations.vatNumber[page.lang] }}:</span> {{ api.global.company.vatNumber }}</div>
+                {% endif %}
+
+                {% if api.global.company.address %}
+                    <div>
+                        <span class="[ fw-bold ]">{{ translations.registeredOffice[page.lang] }}:</span> {{ api.global.company.address }}
+                    </div>
+                {% endif %}
+            </div>
+
+            {% set navigation = collections.all | eleventyNavigation | ignoreHome | navigationLanguage(page.lang) %}
+    
+            <ul class="[ footer__list ]">
+                {% for item in navigation %}
+                    <li class="footer__list-item">
+                        <a href="{{ item.url }}"{% if item.external == 'true' %} target="_blank"{% endif %} class="footer__list-item-link{% if item.url in page.url %} is-active{% endif %}">
+                            <span>{{ item.title }}</span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="[ footer__sub ]">
+            <div class="[ footer__copyright ]">{{ translations.allRightsReserved[page.lang] }} &copy; {% year %} {{ api.global.title[page.lang] }}</div>
+
+            <a href="https://camargue.uk" target="_blank" rel="noreferrer" class="[ footer__powered-by ]">
+                {% include "svg/camargue.svg" %}
+            </a>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,33 @@
+<div class="{% if block.bgColour %}[ bg-{{ block.bgColour }}{{ '-opacity' if block.opacity }} ] {% endif %}{% if block.opacity %}[ bg-opacity-{{ block.opacity }} ] {% endif %}[ py-5 ]"{% if block.anchor %} id="{{ block.anchor[page.lang] }}"{% endif %}>
+    <div class="[ container-xl ]">
+        <div class="[ grid--1 grid--lg-2 ] [ gap-3 gap-lg-5 ]">
+            <div class="{% if block.invert %}[ order-lg-2 ] {% endif %}[ mb-2 mb-lg-0 ] [ d-flex align-items-center ]">
+                <div>
+                    <h2 class="[ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ block.title[page.lang] }}</h2>
+
+                    <div class="[ wysiwyg ] [ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ block.content[page.lang] | safe }}</div>
+
+                    {% if block.ctas | length %}
+                        <div class="[ my-2 mt-lg-4 mb-lg-0 ] [ d-flex gap-3 flex-wrap ]">
+                            {% for cta in block.ctas %}
+                                {% set button = {
+                                    title: cta.title[page.lang],
+                                    url: cta.url[page.lang],
+                                    external: cta.external,
+                                    bgColour: cta.bgColour,
+                                    outline: cta.outline
+                                } %}
+
+                                {% include "components/button.html" %}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="[ wysiwyg ] [ d-flex align-items-center ] {% if block.invert %}[ order-lg-1 ] [ mb-3 mb-lg-0 ] {% endif %}" {% if block.zoomable %} data-module="image-zoom"{% endif %}>
+                <img src="{{ env.ASSETS_BASE_URL }}{{ block.image }}" alt="{{ block.title[page.lang] }}"  {% if block.zoomable %} data-zoomable="{{ block.image }}"{% endif %} />
+            </div>
+        </div>
+    </div>
+</div>

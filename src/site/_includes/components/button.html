@@ -1,0 +1,9 @@
+<a href="{{ button.url }}"{% if button.external %} target="_blank" rel="noreferrer"{% endif %} class="[ btn btn-{{ 'outline-' if button.outline }}{{ button.bgColour if button.bgColour else 'secondary' }} ] [ d-flex align-items-center justify-content-center gap-2 ]">
+    <span>{{ button.title }}</span>
+
+    {% if button.external %}
+        <span class="[ btn__icon ]" role="presentation">
+            {% include "svg/external.svg" %}
+        </span>
+    {% endif %}
+</a>

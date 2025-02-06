@@ -1,0 +1,15 @@
+{% set home = "" %}
+
+{% if env.MULTILINGUAL == 'true' %}
+    {% set home = page.lang %}
+{% endif %}
+
+<div class="[ feedback-form__success ]">
+    <div class="[ container-xl ] [ wysiwyg ]">
+        <h1>{{ translations.feedbackSuccessfulTitle[page.lang] }}</h1>
+        
+        <div class="[ fs-4 ]">{{ translations.feedbackSuccessfulText[page.lang] }}</div>
+    </div>
+    
+    <a href="/{{ home }}" class="[ btn btn-secondary btn-lg ] [ mt-4 ]">{{ translations.backHome[page.lang] }}</a>
+</div>

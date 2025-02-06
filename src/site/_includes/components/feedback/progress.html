@@ -1,0 +1,11 @@
+{% if env.FEEDBACK_ACTIVE == 'true' and env.FEEDBACK_INLINE == 'true' %}
+    <div class="[ feedback-progress ] [ gap-3 ]" data-module="feedback-section-progress">
+        <div class="flow-vertical--1">
+            <h5 class="[ mb-0 ]">{{ translations.feedbackProgressTitle[page.lang] }}</h5>
+            
+            <div data-progress-indicator></div>
+        </div>
+
+        <a href="/{% if env.MULTILINGUAL == 'true' %}{{ page.lang }}{% endif %}/{{ api.feedback[api.feedback.length - 2].permalink[page.lang] }}" class="btn btn-outline-primary">{{ translations.reviewFeedback[page.lang] }}</a>
+    </div>
+{% endif %}

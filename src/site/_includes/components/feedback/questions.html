@@ -1,0 +1,27 @@
+{% extends "layouts/feedback.html" %}
+
+{% block feedback %}
+    {% for subSection in section.subSections %}
+        {% if subSection.title %}
+            <h3 class="[ feedback-form__sub-section-heading{% if section.colour %} text-{{ section.colour }}{% endif %} ]">{{ subSection.title[page.lang] | safe }}</h3>
+        {% endif %}
+
+        {% for group in subSection.groups %}
+            <div class="[ feedback-form__group ]">
+                {% if group.title %}
+                    <h4 class="[ feedback-form__group-heading ]">{{ group.title[page.lang] | safe }}</h4>
+                {% endif %}
+
+                {% if group.description %}
+                    <div class="[ feedback-form__section-description ] [ wysiwyg ]">{{ group.description[page.lang] | safe }}</div>
+                {% endif %}
+
+                {% for question in group.questions %}
+                    {% include "components/feedback/fields.html" %}
+                {% endfor %}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    {% include "components/feedback/buttons/nav.html" %}
+{% endblock %}

@@ -1,0 +1,41 @@
+{% set navigation = collections.all | eleventyNavigation | ignoreHome | navigationLanguage(page.lang) %}
+
+<div>
+    <button class="[ hamburger ]" type="button" data-nav-toggle>
+        <span class="[ hamburger__box ]">
+            <span class="[ hamburger__inner ]"></span>
+        </span>
+    </button>
+
+    <div class="[ nav ]" data-nav>
+        <div class="[ nav__inner ] [ container-xl ]">
+            <ul class="[ nav__list ]">
+                {% for item in navigation %}
+                    <li class="nav__list-item"{% if item.children.length %} data-dropdown-item{% endif %}>
+                        <{% if item.children.length %}button role="button" aria-haspopup="true" aria-expanded="false" data-dropdown-trigger{% else %}a href="{{ item.url }}"{% endif %}{% if item.external == 'true' %} target="_blank"{% endif %} class="nav__list-item-link{% if item.url in page.url %} is-active{% endif %}">
+                            <span>{{ item.title }}</span>
+
+                            {% if item.children.length %}
+                                <span class="[ nav__list-item-icon ]" role="presentation">
+                                    {% include "svg/caret.svg" %}
+                                </span>
+                            {% endif %}
+                        </{% if item.children.length %}button{%else%}a{% endif %}>
+
+                        {% if item.children.length %}
+                            <ul class="nav__dropdown-list" data-nav-dropdown>
+                                {% for child in item.children %}
+                                    <li class="[ nav__dropdown-list-item ]{% if child.url in page.url %} [ is-active ]{% endif %}">
+                                        <a class="[ nav__dropdown-list-item-link ] [ stretched-link ]" href="{% if child.anchor %}{{ item.url }}#{{ child.anchor }}{% else %}{{ child.url }}{% endif %}"{% if child.external %} target="_blank"{% endif %}>
+                                            <span>{{ child.title }}</span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

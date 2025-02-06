@@ -1,0 +1,29 @@
+---
+lang: en
+tags:
+    - searchEn
+pagination:
+    data: api.pages
+    size: 1
+    alias: nav
+    addAllPagesToCollections: true
+eleventyComputed:
+    title: "{{ nav.title['en'] }}"
+    socialImage: "{{ nav.socialImage }}"
+    permalink: "{{ '/en/' ~ nav.permalink['en'] if env.MULTILINGUAL == 'true' else nav.permalink['en'] }}/"
+    eleventyNavigation:
+        key: "{{ nav.permalink['en'] }}"
+        title: "{{ nav.title['en'] }}"
+        parent: "{{ nav.parent['en'] }}"
+        order: "{{ nav.navOrder }}"
+        lang: "en"
+        anchor: "{{ nav.anchor['en'] }}"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    {% for block in nav.blocks %}
+        {% include "components/blocks/" ~ block.type ~ ".html" %}
+    {% endfor %}
+{% endblock %}

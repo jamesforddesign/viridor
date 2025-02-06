@@ -1,0 +1,23 @@
+<div class="{% if block.bgColour %}[ bg-{{ block.bgColour }}{{ '-opacity' if block.opacity }} ] {% endif %}{% if block.opacity %}[ bg-opacity-{{ block.opacity }} ] {% endif %}[ py-5 ]"{% if block.anchor %} id="{{ block.anchor[page.lang] }}"{% endif %}>
+    {% if block.title %}
+        <div class="[ container-xl ]">
+            <h2 class="[ text-{{ block.textColour if block.textColour else 'primary' }} ] [ mb-3 mb-lg-5 ]">{{ block.title[page.lang] }}</h2>
+        </div>
+    {% endif %}
+
+    <div class="[ timeline ]">
+        <div class="[ timeline__inner ]">
+            {% for year in block.content %}
+                <div class="[ timeline__stage{% if year.reverse %} timeline__stage--reverse{% endif %} ]">
+                    <p class="[ timeline__stage-description ] [ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ year.description[page.lang] }}</p>
+
+                    <div class="[ timeline__stage-year ]">{{ year.title[page.lang] }}</div>
+
+                    <div class="[ timeline__stage-bullet ]{% if block.bgColour %} [ bg-{{ block.bgColour }} ]{% endif %}" role="presentation" aria-hidden="true" tabindex="-1">
+                        <div class="[ timeline__stage-bullet-inner ]{% if year.highlight %} [ highlight ]{% endif %}"></div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

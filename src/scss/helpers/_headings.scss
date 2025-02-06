@@ -1,0 +1,35 @@
+%heading {
+    font-family: $font-family-headings;
+    font-weight: $font-weight-headings;
+}
+
+%display {
+    @include fluid-type(sm, xxl, 45px, 65px);
+
+    @extend %heading;
+    line-height: 1.1;
+}
+
+%h1 {
+    @include fluid-type(sm, xxl, 32px, 42px);
+
+    @extend %heading;
+}
+
+%h2 {
+    @include fluid-type(sm, xxl, 30px, 40px);
+
+    @extend %heading;
+}
+
+%h3 {
+    @include fluid-type(sm, xxl, 20px, 30px);
+
+    @extend %heading;
+}
+
+%h4 {
+    @include fluid-type(sm, xxl, 18px, 24px);
+
+    @extend %heading;
+}

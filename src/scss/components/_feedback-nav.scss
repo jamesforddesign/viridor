@@ -1,0 +1,54 @@
+.feedback-nav {
+    background: $gray-300;
+    margin-bottom: map-get($spacers, 3);
+    overflow: hidden;
+    border-radius: $border-radius;
+
+    @include media-breakpoint-up($feedback-nav-breakpoint) {
+        position: sticky;
+        top: map-get($spacers, 3);
+    }
+
+    &__heading {
+        @include fluid-type(xs, lg, 16px, 24px);
+
+        color: $black;
+        padding-inline: map-get($spacers, 3);
+        padding-block-start: map-get($spacers, 3);
+        padding-block-end: map-get($spacers, 2);
+    }
+    
+    &__list {
+        @extend %list-reset;
+    }
+
+    &__item {
+        @extend %transition;
+        @extend %flex-between;
+
+        position: relative;
+        padding: map-get($spacers, 3);
+        color: $black;
+
+        @include hover() {
+            background: $secondary;
+        }
+
+        &.is-active {
+            background: $secondary;
+        }
+    }
+
+    &__item-link {
+        @extend .stretched-link;
+        @extend %flex-between;
+
+        color: inherit;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+    }
+
+    &__item-complete {
+        @include fluid-type(xs, md, 10px, 14px);
+    }
+}

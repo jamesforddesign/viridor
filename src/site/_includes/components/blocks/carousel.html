@@ -1,0 +1,41 @@
+<div class="{% if block.bgColour %}[ bg-{{ block.bgColour }}{{ '-opacity' if block.opacity }} ] {% endif %}{% if block.opacity %}[ bg-opacity-{{ block.opacity }} ] {% endif %}[ py-5 ]"{% if block.anchor %} id="{{ block.anchor[page.lang] }}"{% endif %}>
+    <div class="[ container-xl ]">
+        <div class="[ carousel {{ 'carousel--' ~ block.variant if block.variant }} ]" data-module="carousel">
+            {% if block.variant == 'text' %}
+                {% for item in block.items %}
+                    <div class="[ carousel__item ]">
+                        <p class="[ carousel__title ]">{{ item.title[page.lang] }}</p>
+
+                        <div class="[ carousel__text-container ]">
+                            <div>
+                                <p class="[ carousel__text ]">{{ item.text[page.lang] }}</p>
+
+                                {% if item.ctas | length %}
+                                    <div class="[ d-flex align-items-center gap-3 flex-wrap ] [ mt-3 ]">
+                                        {% for cta in item.ctas %}
+                                            {% set button = {
+                                                title: cta.title[page.lang],
+                                                url: cta.url[page.lang],
+                                                external: cta.external,
+                                                bgColour: cta.bgColour,
+                                                outline: cta.outline
+                                            } %}
+
+                                            {% include "components/button.html" %}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% elseif block.variant == 'image' %}
+                {% for item in block.items %}
+                    <div class="[ carousel__item ]">
+                        <img src="{{ env.ASSETS_BASE_URL }}{{ item.url }}" />
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+---
+lang: cy
+pagination:
+    data: api.feedback
+    size: 1
+    alias: section
+eleventyComputed:
+    title: "{{ section.title['cy'] }}"
+    permalink: "{{ '/cy/' ~ section.permalink['cy'] }}/"
+    eleventyNavigation:
+        key: "{{ section.permalink['cy'] }}"
+        title: Ffurflen adborth
+        parent: "{{ section.parent['cy'] }}"
+        lang: "cy"
+---
+
+{% set prevPage = page.lang ~ '/' ~ pagination.page.previous.permalink['cy'] if env.MULTILINGUAL == 'true' else pagination.page.previous.permalink['cy'] %}
+{% set nextPage = page.lang ~ '/' ~ pagination.page.next.permalink['cy'] if env.MULTILINGUAL == 'true' else pagination.page.next.permalink['cy'] %}
+
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <div class="[ container-xl ] [ flow-vertical--3 ]">        
+        {% if env.FEEDBACK_ACTIVE == 'true' %}
+            {% include "components/feedback/unavailable.html" %}
+
+            {% include 'components/feedback/' ~ section.type ~ '.html' %}
+        {% else %}
+            {% include "components/feedback/closed.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

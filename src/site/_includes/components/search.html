@@ -1,0 +1,17 @@
+{% if env.HAS_SEARCH == 'true' %}
+    <div class="search" data-module="search">
+        <button role="button" class="search__toggle" data-search-toggle>
+            {% include "svg/search.svg" %}
+
+            <span class="visually-hidden">{{ translations.search[page.lang] }}</span>
+        </button>
+
+        <div class="[ d-none d-lg-block ] [ search__overlay-container ]" data-search-container>
+            <div class="[ position-relative ]">
+                <input class="[ search__control ]" type="text" placeholder="{{ translations.search[page.lang] }}..." autocomplete="off" data-search-input />
+
+                <div class="[ search__results ] [ d-none ]" data-search-results></div>
+            </div>
+        </div>
+    </div>
+{% endif %}

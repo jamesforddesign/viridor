@@ -1,0 +1,26 @@
+---
+eleventyComputed:
+    title: "{{ translations.notFoundTitle[page.lang] }}"
+    description: "{{ translations.notFoundText[page.lang] }}"
+permalink: 404.html
+eleventyExcludeFromCollections: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% set home = "" %}
+
+{% if env.MULTILINGUAL == 'true' %}
+    {% set home = page.lang %}
+{% endif %}
+
+{% block content %}
+    <div class="container-xl my-5">
+        <div class="wysiwyg">
+            <h1 class="heading heading--primary">{{ title }}</h1>
+            <p class="lead text-purple">{{ description }}</p>
+        </div>
+
+        <a href="/{{ home }}" class="[ btn btn-secondary btn-lg ] [ mt-4 ]">{{ translations.backHome[page.lang] }}</a>
+    </div>
+{% endblock %}

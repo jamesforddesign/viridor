@@ -1,0 +1,60 @@
+<div class="feedback-response" data-module="character-count">
+    <p class="{% if loop.index == 1 %}[ mb-2 ]{% else %}[ my-2 ]{% endif %}">{{ question.number }}. {{ question.label[page.lang] | safe }}</p>
+
+    {% if question.options %}
+        <div class="{% if (question.options | length) > 2 %}grid--1 grid--md-2 gap-2 {% endif %}mt-2">
+            {% for option in question.options %}
+                <div class="form-check form-check-inline">
+                    <input
+                        data-section="{{ section.title['en'] | slugify }}"
+                        type="{{ question.type if question.type else 'radio' }}"
+                        id="{{ question.number }}-question-{{ option[page.lang] }}"
+                        name="{{ question.number }}-question"
+                        value="{{ option['en'] }}"
+                        data-translated-value="{{ option[page.lang] }}"
+                        class="[ form-check-input ]"
+                        {% if (question.options | length) > 2 %}data-multiple-checkbox{% endif %}
+                    />
+
+                    <label class="form-check-label" for="{{ question.number }}-question-{{ option[page.lang] }}">{{ option[page.lang] }}</label>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <textarea
+            data-input-soft-limit-counter=".character-count-{{ question.number }}"
+            data-input-soft-limit="7000"
+            maxlength="7010"
+            class="[ feedback-form__text-input{% if section.colour %} border-start border-5 border-{{ section.colour }}{% endif %} ] [ form-control ] [ input-soft-limit ]{% if question.additionalClasses %} {{ question.additionalClasses }}{% endif %}"
+            id="{{ question.number }}-question"
+            name="{{ question.number }}-question"
+            rows="3"
+            data-section="{{ section.title['en'] | slugify }}"
+            placeholder="{{ question.placeholder[page.lang] if question.placeholder[page.lang] else translations.enterFeedback[page.lang] }}"
+        ></textarea>
+
+        <p class="[ feedback-form__character-count ]">{{ translations.charactersRemaining[page.lang] }}: <strong class="character-count-{{ question.number }}"></strong></p>
+    {% endif %}
+
+    {% if question.additionalQuestions %}
+        {% for additional in question.additionalQuestions %}
+            <div class="ps-2 ps-lg-3">
+                <p class="my-2">{{ additional.label[page.lang] | safe }}</p>
+
+                <textarea
+                    data-input-soft-limit-counter=".character-count-additional-{{ question.number }}-{{ additional.number }}"
+                    data-input-soft-limit="7000"
+                    maxlength="7010"
+                    class="[ feedback-form__text-input{% if section.colour %} border-start border-5 border-{{ section.colour }}{% endif %} ] [ form-control ] [ input-soft-limit ]{% if question.additionalClasses %} {{ question.additionalClasses }}{% endif %}"
+                    id="{{ question.number }}-question-{{ additional.number }}"
+                    name="{{ question.number }}-question-{{ additional.number }}"
+                    rows="2"
+                    data-section="{{ section.title['en'] | slugify }}"
+                    placeholder="{{ additional.placeholder[page.lang] if additional.placeholder[page.lang] else translations.enterFeedback[page.lang] }}"
+                ></textarea>
+
+                <p class="[ feedback-form__character-count ]">{{ translations.charactersRemaining[page.lang] }}: <strong class="character-count-additional-{{ question.number }}-{{ additional.number }}"></strong></p>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>

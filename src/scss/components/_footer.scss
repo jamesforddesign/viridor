@@ -1,0 +1,96 @@
+.footer {
+    background-color: $footer-bg-color;
+    color: $footer-text-color;
+
+    @include font-size(14px);
+
+    &__inner {
+        @extend .container-xl;
+
+        @include fluid-type(xs, $navigation-breakpoint, 14px, 16px);
+
+        display: flex;
+        flex-direction: column;
+        gap: map-get($spacers, 3);
+        padding-block: map-get($spacers, 4) map-get($spacers, 3);
+        line-height: 1.15;
+
+        @include media-breakpoint-up($navigation-breakpoint) {
+            padding-block: map-get($spacers, 3) map-get($spacers, 2);
+        }
+    }
+
+    &__brand {
+        display: none;
+
+        @include media-breakpoint-up($navigation-breakpoint) {
+            display: flex;
+            width: 90px;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    &__brand-info {
+        @extend .flow-vertical--1;
+
+        @include fluid-type(xs, md, 11px, 14px);
+    }
+
+    &__list {
+        @extend %list-reset;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: map-get($spacers, 3);
+
+        @include media-breakpoint-up($navigation-breakpoint) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+
+    &__list-item-link {
+        @extend %transition;
+
+        color: $footer-text-color;
+        text-decoration: none;
+        padding-block-end: 3px;
+
+        @include fluid-type(xs, md, 11px, 14px);
+
+        @include hover() {
+            color: $secondary;
+        }
+
+        &.is-active {
+           color: $secondary;
+        }
+    }
+
+    &__sub {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: map-get($spacers, 3);
+        padding-block: map-get($spacers, 3);
+        margin-top: map-get($spacers, 3);
+        border-top: 1px solid $gray-300;
+
+        @include media-breakpoint-up($navigation-breakpoint) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__copyright {
+        @include fluid-type(xs, $navigation-breakpoint, 11px, 14px);
+    }
+
+    &__powered-by {
+        color: $footer-text-color;
+    }
+}

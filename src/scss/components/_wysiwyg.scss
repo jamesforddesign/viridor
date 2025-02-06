@@ -1,0 +1,48 @@
+.wysiwyg {
+    // Vertical flow
+    > * + * {
+        margin-top: map-get($spacers, 2);
+    }
+
+    // Tight vertical flow
+    &--tight {
+        > * + * {
+            margin-top: map-get($spacers, 2);
+        }
+    }
+
+    // Horizontally balance flow into columns
+    &--multi-column {
+        @include media-breakpoint-up($navigation-breakpoint) {
+            gap: map-get($spacers, 3);
+            column-count: 2;
+            column-fill: balance;
+        }
+    }
+
+    .lead {
+        font-weight: $font-weight-bold;
+        
+        @include fluid-type(sm, xxl, 18px, 24px);
+    }
+
+    p, li {
+        font-size: $font-size-base;
+    }
+
+    a {
+        @extend %transition;
+
+        text-decoration: none;
+        color: $primary;
+
+        @include hover() {
+            text-decoration: underline;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

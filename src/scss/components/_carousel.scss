@@ -1,0 +1,76 @@
+.carousel {
+    $self: &;
+
+    position: relative;
+    z-index: 2;
+
+    @include media-breakpoint-up(lg) {
+        overflow-x: hidden;
+    }
+
+    &--map {
+        @extend .carousel--image;
+
+        .flickity-page-dots {
+            margin-top: $spacer;
+        }
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &__item {
+        #{$self}--text & {
+            padding: 40px 45px;
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                padding: 82px 92px 0;
+            }
+        }
+
+        #{$self}--image & {
+            width: 100%;
+
+            img {
+                height: 100%;
+                max-height: 100%;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        #{$self}--map & {
+            img {
+                margin-bottom: $spacer;
+            }
+        }
+    }
+
+    &__title {
+        #{$self}--text & {
+            @include fluid-type(xs, lg, 24px, 40px);
+            color: $secondary;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        #{$self}--text & {
+            font-weight: 500;
+            color: $secondary;
+            letter-spacing: -.02em;
+            margin-bottom: 0;
+        }
+    }
+
+    &__text-container {
+        #{$self}--text & {
+            display: flex;
+            margin-top: 10px;
+        }
+    }
+}

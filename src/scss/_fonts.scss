@@ -1,0 +1,50 @@
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-heavy: 800;
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proxima-nova/light.otf') format('opentype');
+    font-weight: $font-weight-light;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proxima-nova/regular.otf') format('opentype');
+    font-weight: $font-weight-normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proxima-nova/semibold.otf') format('opentype');
+    font-weight: $font-weight-semibold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proxima-nova/bold.otf') format('opentype');
+    font-weight: $font-weight-bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/proxima-nova/extrabold.otf') format('opentype');
+    font-weight: $font-weight-heavy;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font-family-headings: '';
+
+$font-family-sans-serif: 'Proxima Nova', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

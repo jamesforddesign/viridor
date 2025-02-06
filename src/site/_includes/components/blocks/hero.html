@@ -1,0 +1,29 @@
+<div class="[ hero ]" style="background-image: url('{{ env.ASSETS_BASE_URL }}{{ block.background }}')">
+    <div class="[ container-xl ] {{ '[ hero__inner ]' if block.variant not in ['block', 'gradient'] }}">
+        <div class="[ hero__content ] {{ 'hero__content--' ~ block.variant if block.variant }}">
+            <div class="[ position-relative ]">
+                <h1 class="{{ 'display' if block.variant == 'gradient' }}">{{ block.title[page.lang] if env.MULTILINGUAL == 'true' and block.title else block.title['en'] }}</h1>
+                
+                {% if block.subtitle %}
+                    <p class="[ hero__subtitle ]">{{ block.subtitle[page.lang] }}</p>
+                {% endif %}
+                
+                {% if block.ctas | length %}
+                    <div class="[ d-flex align-items-center gap-3 flex-wrap ]">
+                        {% for cta in block.ctas %}
+                            {% set button = {
+                                title: cta.title[page.lang],
+                                url: cta.url[page.lang],
+                                external: cta.external,
+                                bgColour: cta.bgColour,
+                                outline: cta.outline
+                            } %}    
+                        
+                            {% include "components/button.html" %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

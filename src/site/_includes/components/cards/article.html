@@ -1,0 +1,19 @@
+<article class="[ card ]">
+    <div class="[ card__thumbnail ]">
+        <img src="{{ article.image }}" class="[ card__thumbnail-image ]" alt="{{ article.title }}" />
+    </div>
+
+    <div class="[ card__inner ]">
+        <div>
+            <span class="[ category category--{{ article.data.category }} ]" role="presentation">{{ article.data.category }}</span>
+        </div>
+        
+        <h4 class="[ text-primary ]">{{ article.title }}</h4>
+
+        <time class="[ card__date ]">{{ article.date | eventDate }}</time>
+
+        <p class="[ card__description mt-1 ]">{{ article.description | safe }}</p>
+
+        <a class="[ btn btn-secondary ] [ stretched-link mt-auto ]" href="/{{ page.lang ~ '/' if env.MULTILINGUAL == 'true' }}{{ article.permalink }}">{{ translations.readMore[page.lang] }}</a>
+    </div>
+</article>

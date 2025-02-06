@@ -1,0 +1,32 @@
+---
+lang: en
+pagination:
+    data: api.feedback
+    size: 1
+    alias: section
+eleventyComputed:
+    title: "{{ section.title['en'] }}"
+    permalink: "{{ '/en/' ~ section.permalink['en'] if env.MULTILINGUAL == 'true' else section.permalink['en'] }}/"
+    eleventyNavigation:
+        key: "{{ section.permalink['en'] }}"
+        title: Feedback form
+        parent: "{{ section.parent['en'] }}"
+        lang: "en"
+---
+
+{% set prevPage = page.lang ~ '/' ~ pagination.page.previous.permalink['en'] if env.MULTILINGUAL == 'true' else pagination.page.previous.permalink['en'] %}
+{% set nextPage = page.lang ~ '/' ~ pagination.page.next.permalink['en'] if env.MULTILINGUAL == 'true' else pagination.page.next.permalink['en'] %}
+
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <div class="[ container-xl ] [ flow-vertical--3 ]">        
+        {% if env.FEEDBACK_ACTIVE == 'true' %}
+            {% include "components/feedback/unavailable.html" %}
+
+            {% include 'components/feedback/' ~ section.type ~ '.html' %}
+        {% else %}
+            {% include "components/feedback/closed.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

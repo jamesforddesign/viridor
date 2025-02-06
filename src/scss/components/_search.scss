@@ -1,0 +1,124 @@
+.search {
+    $self: &;
+
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: map-get($spacers, 1);
+    border-radius: $search-radius;
+
+    @include media-breakpoint-up(lg) {
+        flex-grow: 1;
+        flex-direction: row-reverse;
+    }
+
+    &__toggle {
+        @extend %button-reset;
+
+        position: relative;
+        color: $text-color;
+
+        svg {
+            height: 24px;
+            width: 24px;
+        }
+
+        @include media-breakpoint-up($navigation-breakpoint) {
+            display: none;
+        }
+    }
+
+    &__control {
+        width: 100%;
+        display: block;
+        padding: map-get($spacers, 2) map-get($spacers, 3);
+        font-weight: $font-weight-semibold;
+        color: $search-text-color;
+        background-color: $search-bg-color;
+        background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 21.5L15 15.5M17 10.5C17 14.366 13.866 17.5 10 17.5C6.13401 17.5 3 14.366 3 10.5C3 6.63401 6.13401 3.5 10 3.5C13.866 3.5 17 6.63401 17 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        background-size: 24px;
+        background-repeat: no-repeat;
+        background-position: 98% center;
+        background-clip: padding-box;
+        border: 2px solid rgba($search-text-color , 0.1);
+        border-radius: $search-radius;
+
+        &::placeholder {
+            color: rgba($search-text-color , 0.3);
+        }
+
+        &.is-active {
+            outline: 0;
+            border: 2px solid $secondary;
+        }
+
+        &.has-results {
+            @include media-breakpoint-up($navigation-breakpoint) {
+                border-radius: $search-radius $search-radius 0 0;
+                border-bottom: 0;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            border: 2px solid transparent;
+            min-width: 300px;
+        }
+    }
+
+    &__overlay-container {
+        @include media-breakpoint-down(lg) {
+            position: fixed;
+            top: 115px;
+            left: 0;
+            width: 100vw;
+            height: calc(100vh - 115px);
+            padding: map-get($spacers, 3);
+            background: $search-bg-color;
+            box-shadow: inset 0 4px 8px 0 rgba($black, 0.15);
+            // has z-index
+        }
+    }
+
+    &__results {
+        margin-top: map-get($spacers, 2);
+
+        @include media-breakpoint-up($navigation-breakpoint) {
+            position: absolute;
+            overflow: hidden;
+            width: 100%;
+            top: 100%;
+            right: 0;
+            margin-top: 0;
+            background: $search-bg-color;
+            border-radius: 0 0 $search-radius $search-radius;
+            border: 2px solid $secondary;
+            border-top: 0;
+            box-shadow: $box-shadow;
+            // has z-index
+        }
+    }
+
+    &__results-item {
+        @extend %transition;
+
+        position: relative;
+        padding: map-get($spacers, 3);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $search-text-color;
+        font-weight: $font-weight-semibold;
+        text-decoration: none;
+
+        &:hover {
+            font-weight: $font-weight-bold;
+            background: $secondary;
+            text-decoration: none;
+        }
+
+        &.disabled {
+            color: rgba($search-text-color, 0.25);
+        }
+    }
+}
