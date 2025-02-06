@@ -1,10 +1,10 @@
 module.exports = {
     title: {
         en: "Contact",
-        cy: "Cyswllt",
+        cy: "Cyswllt"
     },
 
-    navOrder: 6,
+    navOrder: 4,
 
     permalink: {
         en: "contact",
@@ -13,7 +13,7 @@ module.exports = {
 
     parent: {
         en: "",
-        cy: "",
+        cy: ""
     },
 
     blocks: [
@@ -21,11 +21,11 @@ module.exports = {
             type: "hero",
             title: {
                 en: "Contact",
-                cy: "Cyswllt",
-            },
+                cy: "Cyswllt"
+            }
         },
         {
             type: "breadcrumbs"
-        },
+        }
     ]
 };

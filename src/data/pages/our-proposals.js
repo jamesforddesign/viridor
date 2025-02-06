@@ -1,14 +1,16 @@
 module.exports = {
     title: {
-        en: "Home",
-        cy: "Cartref",
+        en: "Our proposals",
+        cy: "Our proposals",
     },
+
+    navOrder: 2,
 
     socialImage: "https://placehold.co/700x400",
 
     permalink: {
-        en: "",
-        cy: ""
+        en: "our-proposals",
+        cy: "our-proposals-cy"
     },
 
     parent: {
@@ -22,13 +24,8 @@ module.exports = {
             variant: "rounded", // rounded, square, block, gradient
 
             title: {
-                en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                cy: "CY Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            },
-
-            subtitle: {
-                en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus, tellus nec molestie cursus.",
-                cy: "CY Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus, tellus nec molestie cursus.",
+                en: "Our proposals",
+                cy: "",
             },
 
             background: "/placeholder.jpg"
@@ -38,7 +35,7 @@ module.exports = {
             textColour: "secondary",
             bgColour: "white",
             title: {
-                en: "Who is Viridor?",
+                en: "Construction methodology",
                 cy: ""
             },
             image: "/placeholder.jpg"
@@ -50,7 +47,7 @@ module.exports = {
             opacity: "10",
             invert: true,
             title: {
-                en: "Story so far",
+                en: "Supporting the local economy",
                 cy: ""
             },
             image: "/placeholder.jpg"
@@ -60,7 +57,7 @@ module.exports = {
             textColour: "secondary",
             bgColour: "white",
             title: {
-                en: "Background",
+                en: "Site layout",
                 cy: ""
             },
             image: "/placeholder.jpg"
@@ -72,7 +69,29 @@ module.exports = {
             opacity: "10",
             invert: true,
             title: {
-                en: "Why we need carbon capture",
+                en: "Traffic and transport",
+                cy: ""
+            },
+            image: "/placeholder.jpg"
+        },
+        {
+            type: "text",
+            textColour: "secondary",
+            bgColour: "white",
+            title: {
+                en: "Air quality impacts",
+                cy: ""
+            },
+            image: "/placeholder.jpg"
+        },
+        {
+            type: "text",
+            textColour: "secondary",
+            bgColour: "tertiary",
+            opacity: "10",
+            invert: true,
+            title: {
+                en: "Noise impacts",
                 cy: ""
             },
             image: "/placeholder.jpg"

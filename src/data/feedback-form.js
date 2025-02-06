@@ -4,24 +4,24 @@ module.exports = [
             en: "Section 1",
             cy: "Section 1 welsh"
         },
-    
+
         permalink: {
             en: "have-your-say/feedback-form/section-1",
             cy: "dweud-eich-dweud/ffurflen-adborth/section-1-welsh"
         },
-    
+
         parent: {
             en: "have-your-say",
             cy: "dweud-eich-dweud"
         },
-    
+
         type: "questions", // questions, contact
-    
+
         description: {
             en: ``,
             cy: ``,
         },
-    
+
         subSections: [
             {
                 // Optional
@@ -29,13 +29,13 @@ module.exports = [
                     en: "",
                     cy: ""
                 },
-    
+
                 // Optional
                 description: {
                     en: "",
                     cy: ""
                 },
-    
+
                 groups: [
                     {
                         // Optional
@@ -43,45 +43,45 @@ module.exports = [
                             en: "",
                             cy: ""
                         },
-    
+
                         // Optional
                         description: {
                             en: "",
                             cy: ""
                         },
-    
+
                         questions: [
                             {
                                 label: {
                                     en: "",
                                     cy: "",
                                 },
-    
+
                                 number: "", // or name if contact section
-    
+
                                 type: "", // text, radio, checkbox
-    
+
                                 // For radio or checkbox only
                                 options: [
                                     {
                                         en: "",
                                         cy: "",
                                     },
-                                    
+
                                     // ...
                                 ],
-    
+
                                 additionalQuestions: [
                                     {
                                         label: {
                                             en: "",
                                             cy: "",
                                         },
-    
+
                                         type: "text",
-    
+
                                         number: "",
-    
+
                                         placeholder: {
                                             en: "",
                                             cy: ""
@@ -89,15 +89,15 @@ module.exports = [
                                     },
                                 ]
                             },
-                            
+
                             // ...
                         ]
                     },
-                    
+
                     // ...
                 ]
             },
-    
+
             // ...
         ]
     },
@@ -113,7 +113,7 @@ module.exports = [
             en: "have-your-say/feedback-form/review",
             cy: "dweud-eich-dweud/ffurflen-adborth/adolygiad"
         },
-    
+
         parent: {
             en: "have-your-say",
             cy: "dweud-eich-dweud"
@@ -131,7 +131,7 @@ module.exports = [
             en: "have-your-say/feedback-form/success",
             cy: "dweud-eich-dweud/ffurflen-adborth/llwyddiant"
         },
-    
+
         parent: {
             en: "have-your-say",
             cy: "dweud-eich-dweud"

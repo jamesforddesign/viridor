@@ -1,14 +1,16 @@
 module.exports = {
     title: {
-        en: "Home",
-        cy: "Cartref",
+        en: "Consultation",
+        cy: "Consultation",
     },
+
+    navOrder: 1,
 
     socialImage: "https://placehold.co/700x400",
 
     permalink: {
-        en: "",
-        cy: ""
+        en: "consultation",
+        cy: "consultation-cy"
     },
 
     parent: {
@@ -22,13 +24,8 @@ module.exports = {
             variant: "rounded", // rounded, square, block, gradient
 
             title: {
-                en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                cy: "CY Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            },
-
-            subtitle: {
-                en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus, tellus nec molestie cursus.",
-                cy: "CY Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus, tellus nec molestie cursus.",
+                en: "Consultation",
+                cy: "",
             },
 
             background: "/placeholder.jpg"
@@ -38,7 +35,7 @@ module.exports = {
             textColour: "secondary",
             bgColour: "white",
             title: {
-                en: "Who is Viridor?",
+                en: "The TCPA Process",
                 cy: ""
             },
             image: "/placeholder.jpg"
@@ -50,7 +47,7 @@ module.exports = {
             opacity: "10",
             invert: true,
             title: {
-                en: "Story so far",
+                en: "What we’re consulting on",
                 cy: ""
             },
             image: "/placeholder.jpg"
@@ -60,7 +57,7 @@ module.exports = {
             textColour: "secondary",
             bgColour: "white",
             title: {
-                en: "Background",
+                en: "Consultation events",
                 cy: ""
             },
             image: "/placeholder.jpg"
@@ -72,7 +69,7 @@ module.exports = {
             opacity: "10",
             invert: true,
             title: {
-                en: "Why we need carbon capture",
+                en: "How to provide feedback",
                 cy: ""
             },
             image: "/placeholder.jpg"

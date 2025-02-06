@@ -42,7 +42,7 @@ module.exports = [
                                     en: "Description",
                                     cy: "CY Description"
                                 },
-                                url: "mountain-3.jpg"
+                                url: "placeholder.jpg"
                             },
                             {
                                 type: "image",
@@ -54,7 +54,7 @@ module.exports = [
                                     en: "Description",
                                     cy: "CY Description"
                                 },
-                                url: "mountain-3.jpg"
+                                url: "placeholder.jpg"
                             }
                         ]
                     }
