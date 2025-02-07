@@ -98,7 +98,7 @@
 
             @include media-breakpoint-up($navigation-breakpoint) {
                 background: transparent;
-                color: $secondary;
+                color: $primary;
                 font-weight: $font-weight-semibold;
             }
         }
@@ -126,7 +126,7 @@
         }
 
         @include media-breakpoint-up($navigation-breakpoint) {
-            color: $secondary;
+            color: $primary;
         }
     }
 
@@ -156,7 +156,8 @@
         color: $nav-dropdown-text-color;
 
         @include hover() {
-            background: $secondary;
+            background: $primary;
+            color: $white;
         }
     }
 

@@ -50,16 +50,12 @@
 
     &__brand {
         @extend %transition;
-        
+
         display: flex;
         width: auto;
         height: 60px;
         padding-block: map-get($spacers, 2);
         object-fit: cover;
-
-        @include media-breakpoint-up($navigation-breakpoint) {
-            height: 80px;
-        }
 
         #{$self}.is-shrunk & {
             @include media-breakpoint-up($navigation-breakpoint) {

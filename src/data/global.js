@@ -1,12 +1,12 @@
 module.exports = {
     title: {
-        en: "Consultation static",
-        cy: "Ymgynghoriad sefydlog",
+        en: "Viridor consultation",
+        cy: "",
     },
 
     description: {
-        en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis tempus est, vel ornare mi posuere in.",
-        cy: "Welsh Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis tempus est, vel ornare mi posuere in."
+        en: "Viridor consultation",
+        cy: ""
     },
 
     socialImage: "https://placehold.co/600x400",
