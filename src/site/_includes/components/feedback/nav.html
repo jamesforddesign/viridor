@@ -1,9 +1,9 @@
 <div class="[ feedback-nav ]" data-feedback-nav>
     <h3 class="[ feedback-nav__heading ]">{{ translations.feedbackSections[page.lang] }}</h3>
-    
+
     <ul class="[ feedback-nav__list ]" role="navigation">
         {% for section in api.feedback | feedbackSections %}
-            <li class="[ feedback-nav__item ]{% if page.url === '/' ~ section.permalink[page.lang] ~ '/' %} bg-{{ section.colour if section.colour else 'secondary' }}{% endif %}" data-module="feedback-progress">
+            <li class="[ feedback-nav__item ]{% if page.url === '/' ~ section.permalink[page.lang] ~ '/' %} [ bg-{{ section.colour if section.colour else 'primary ] [ text-white ]' }}{% endif %}" data-module="feedback-progress">
                 <a class="[ feedback-nav__item-link ]" href="/{{ page.lang ~ '/' if env.MULTILINGUAL == 'true' }}{{ section.permalink[page.lang] }}">{{ section.title[page.lang] }}</a>
 
                 <span class="[ feedback-nav__item-complete ]" data-feedback-section-complete="{{ section.title['en'] | slugify }}">

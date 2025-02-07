@@ -18,7 +18,7 @@ module.exports = [
         type: "questions", // questions, contact
 
         description: {
-            en: ``,
+            en: `<p>Lorem ipsum</p>`,
             cy: ``,
         },
 
@@ -53,53 +53,79 @@ module.exports = [
                         questions: [
                             {
                                 label: {
-                                    en: "",
-                                    cy: "",
+                                    en: "Question 1?",
+                                    cy: ""
                                 },
-
-                                number: "", // or name if contact section
-
-                                type: "", // text, radio, checkbox
-
-                                // For radio or checkbox only
-                                options: [
-                                    {
-                                        en: "",
-                                        cy: "",
-                                    },
-
-                                    // ...
-                                ],
-
-                                additionalQuestions: [
-                                    {
-                                        label: {
-                                            en: "",
-                                            cy: "",
-                                        },
-
-                                        type: "text",
-
-                                        number: "",
-
-                                        placeholder: {
-                                            en: "",
-                                            cy: ""
-                                        },
-                                    },
-                                ]
-                            },
-
-                            // ...
+                                number: "1", // or name if contact section
+                                type: "text" // text, radio, checkbox
+                            }
                         ]
-                    },
-
-                    // ...
+                    }
                 ]
-            },
-
-            // ...
+            }
         ]
+    },
+    {
+        title: {
+            en: "Your details",
+            cy: ""
+        },
+
+        permalink: {
+            en: "have-your-say/feedback-form/your-details",
+            cy: "dweud-eich-dweud/ffurflen-adborth/your-details"
+        },
+
+        parent: {
+            en: "have-your-say",
+            cy: "dweud-eich-dweud"
+        },
+
+        type: "contact",
+
+        subSections: [
+            {
+                groups: [
+                    {
+                        questions: [
+                            {
+                                label: {
+                                    en: "Full name",
+                                    cy: ""
+                                },
+                                name: "first_name", // or name if contact section
+                                type: "text" // text, radio, checkbox
+                            },
+                            {
+                                label: {
+                                    en: "Email",
+                                    cy: ""
+                                },
+                                name: "email", // or name if contact section
+                                type: "email", // text, radio, checkbox
+                                required: true
+                            },
+                            {
+                                label: {
+                                    en: "Address",
+                                    cy: ""
+                                },
+                                name: "address", // or name if contact section
+                                type: "text" // text, radio, checkbox
+                            },
+                            {
+                                label: {
+                                    en: "Postcode",
+                                    cy: ""
+                                },
+                                name: "postcode", // or name if contact section
+                                type: "text" // text, radio, checkbox
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
     },
 
     // Do not remove these sections!

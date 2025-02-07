@@ -3,8 +3,9 @@
         @include fluid-type(xs, lg, 16px, 24px);
 
         @extend %flex-between;
-        
-        background: $secondary;
+
+        background: $primary;
+        color: $white;
         padding: map-get($spacers, 3);
         top: map-get($spacers, 3); // Only applicable when .position-sticky
         border-radius: $border-radius;
