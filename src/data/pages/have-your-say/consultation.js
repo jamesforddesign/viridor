@@ -135,7 +135,7 @@ module.exports = {
             ],
             content: {
                 en: `
-                    <p>We will also be holding a webinar at 6pm on Tuesday 18 March. You can register by visiting our website <a href="www.runcornccs.com" target="_blank">www.runcornccs.com</a>.  </p>
+                    <p>We will also be holding a webinar at 6pm on Tuesday 18 March. You can register by visiting our website <a class="fw-bold" href="www.runcornccs.com" target="_blank">www.runcornccs.com</a>.  </p>
                     `,
                 cy: ``,
             },
@@ -152,7 +152,7 @@ module.exports = {
             content: {
                 en: `
                     <p>As part of this consultation, we are seeking feedback on our plans for carbon capture at Runcorn. You can submit your feedback by:</p>
-                    <p>Email: info@runcornccs.com</p>
+                    <p>Email: <a class="fw-bold"  href="mailto:info@runcornccs.com">info@runcornccs.com</a></p>
                     <p>Freepost: Freepost VIRIDOR CCS (it’s free and you don’t need a stamp)</p>
                     <p>On this website: using the feedback boxes on each page. </p>
                     <p>At events: there will be feedback postcards available at our in-person events which can be completed and handed to a member of the team or taken away and posted back to us, free of charge. </p>
