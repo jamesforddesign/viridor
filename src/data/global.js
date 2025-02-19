@@ -1,6 +1,6 @@
 module.exports = {
     title: {
-        en: "Consultation static",
+        en: "Viridor",
         cy: "Ymgynghoriad sefydlog",
     },
 

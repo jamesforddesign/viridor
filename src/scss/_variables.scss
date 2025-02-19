@@ -27,19 +27,22 @@ $font-weight-headings: $font-weight-heavy;
 $line-height-headings: 1.3;
 
 // Colours
-$primary: #322855;
-$secondary: #FD9D2D;
+$primary: #004d29;
+$secondary: #773a96;
 $tertiary: #149ece;
 
-$grey-25: #ecf0f1;
-$grey-50: #7f8c8d;
+$primary-light: #00853b;
+$secondary-dark: #462159;
+
+$grey-25: #f2f2f2;
+$grey-50: #e0e0e0;
 
 // Opacity
 $primary-opacity: rgba($primary, var(--bs-bg-opacity));
 $secondary-opacity: rgba($secondary, var(--bs-bg-opacity));
 $tertiary-opacity: rgba($tertiary, var(--bs-bg-opacity));
 
-$body-bg: #f8f8f8;
+$body-bg: $grey-25;
 $text-color: $primary;
 
 $border-radius-sm: 10px;
