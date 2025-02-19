@@ -30,7 +30,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "white",
             title: {
                 en: "The Town and Country Planning Act (1990) Process",
@@ -46,7 +45,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "tertiary",
             opacity: "10",
             invert: true,
@@ -144,7 +142,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "tertiary",
             opacity: "10",
             invert: true,

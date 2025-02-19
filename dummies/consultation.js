@@ -32,7 +32,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "white",
             title: {
                 en: "The TCPA Process",
@@ -42,7 +41,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "tertiary",
             opacity: "10",
             invert: true,
@@ -54,7 +52,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "white",
             title: {
                 en: "Consultation events",
@@ -64,7 +61,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "tertiary",
             opacity: "10",
             invert: true,

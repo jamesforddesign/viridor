@@ -4,11 +4,11 @@
             <h2 class="[ text-{{ block.textColour if block.textColour else 'primary' }} ] [ mb-3 mb-lg-5 ]">{{ block.title[page.lang] }}</h2>
         {% endif %}
 
-        <table class="[ table table-striped ]">
+        <table class="[ table table-bordered  ]">
             <thead>
                 <tr>
                     {% for col in block.columns %}
-                        <th class="[ bg-primary ] [ text-white ]" scope="col" width="{{ col.width }}">{{ col.title[page.lang] }}</th>
+                        <th class="[ table__h ][ bg-primary ] [ text-white ]" scope="col" width="{{ col.width }}">{{ col.title[page.lang] }}</th>
                     {% endfor %}
                 </tr>
             </thead>

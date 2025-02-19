@@ -32,7 +32,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "white",
             invert: true,
             title: {
@@ -68,7 +67,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "white",
             title: {
                 en: "Construction",
@@ -86,7 +84,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "tertiary",
             opacity: "10",
             invert: true,
@@ -104,7 +101,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "white",
             title: {
                 en: "Site layout",
@@ -114,7 +110,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "tertiary",
             opacity: "10",
             invert: true,
@@ -133,7 +128,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "white",
             title: {
                 en: "Air quality impacts",
@@ -149,7 +143,6 @@ module.exports = {
         },
         {
             type: "text",
-            textColour: "secondary",
             bgColour: "tertiary",
             opacity: "10",
             invert: true,

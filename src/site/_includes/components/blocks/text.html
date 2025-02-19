@@ -3,9 +3,9 @@
         <div class="[ grid--1 grid--lg-2 ] [ gap-3 gap-lg-5 ]">
             <div class="{% if block.invert %}[ order-lg-2 ] {% endif %}[ mb-2 mb-lg-0 ] [ d-flex align-items-center ]">
                 <div>
-                    <h2 class="[ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ block.title[page.lang] }}</h2>
+                    <h2 class="[ text-primary ]">{{ block.title[page.lang] }}</h2>
 
-                    <div class="[ wysiwyg ] [ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ block.content[page.lang] | safe }}</div>
+                    <div class="[ wysiwyg ] [ text-{{ block.textColour if block.textColour else 'black' }} ]">{{ block.content[page.lang] | safe }}</div>
 
                     {% if block.ctas | length %}
                         <div class="[ my-2 mt-lg-4 mb-lg-0 ] [ d-flex gap-3 flex-wrap ]">
