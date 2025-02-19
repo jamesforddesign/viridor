@@ -22,7 +22,7 @@ module.exports = {
             variant: "rounded", // rounded, square, block, gradient
 
             title: {
-                en: "Our proposals",
+                en: "Contact",
                 cy: "",
             },
 
@@ -31,7 +31,6 @@ module.exports = {
         {
             type: "text",
             textColour: "secondary",
-            bgColour: "tertiary",
             title: {
                 en: "Supporting the local economy",
                 cy: ""
