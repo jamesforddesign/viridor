@@ -1,12 +1,7 @@
 module.exports = {
     title: {
-<<<<<<< HEAD
         en: "Viridor consultation",
         cy: "",
-=======
-        en: "Viridor",
-        cy: "Ymgynghoriad sefydlog",
->>>>>>> master
     },
 
     description: {
