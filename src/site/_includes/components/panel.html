@@ -1,0 +1,12 @@
+<div class="[ panel ]">
+    {% if panel.title.length %}
+    <h4 class="[ panel__title ] [ text-white ]">
+        {{ panel.title | safe }}
+    </h4>
+    {% endif %}
+    <div class="[ panel__description ]">
+        {{ panel.text | safe }}
+
+    </div>
+
+</div>

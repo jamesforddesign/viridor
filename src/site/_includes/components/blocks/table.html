@@ -23,5 +23,9 @@
                 {% endfor %}
             </tbody>
         </table>
+        {% if block.content %}
+            <div class="[ wysiwyg ] [ text-primary ]">{{ block.content[page.lang] | safe }}</div>
+
+        {% endif %}
     </div>
 </div>
