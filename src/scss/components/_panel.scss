@@ -1,4 +1,13 @@
 .panel {
     padding: $spacer;
-
+    &--no-padding {
+        padding: 0px;
+    }
+    &__heading {
+        margin: 0px;
+        padding: $spacer;
+    }
+    &__description {
+        padding: $spacer;
+    }
 }

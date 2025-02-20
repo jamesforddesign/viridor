@@ -24,10 +24,17 @@
                     {% endif %}
                 </div>
             </div>
+            {% if block.contentInvert[page.lang] | length %}
+            <div class="[ wysiwyg ] [ d-flex align-items-center ] {% if block.invert %}[ order-lg-1 ] [ mb-3 mb-lg-0 ] {% endif %}">
+                <div class="[ wysiwyg ] [ text-{{ block.textColour if block.textColour else 'black' }} ]">{{ block.contentInvert[page.lang] | safe }}</div>
+            </div>
+            {% endif %}
 
+            {% if block.image | length%}
             <div class="[ wysiwyg ] [ d-flex align-items-center ] {% if block.invert %}[ order-lg-1 ] [ mb-3 mb-lg-0 ] {% endif %}" {% if block.zoomable %} data-module="image-zoom"{% endif %}>
                 <img src="{{ env.ASSETS_BASE_URL }}{{ block.image }}" alt="{{ block.title[page.lang] }}"  {% if block.zoomable %} data-zoomable="{{ block.image }}"{% endif %} />
             </div>
+            {% endif %}
         </div>
     </div>
 </div>

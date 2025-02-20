@@ -38,7 +38,7 @@ $grey-25: #f2f2f2;
 $grey-50: #e0e0e0;
 
 // Opacity
-$primary-opacity: rgba($primary, var(--bs-bg-opacity));
+$primary-opacity: rgba($primary-light, var(--bs-bg-opacity));
 $secondary-opacity: rgba($secondary, var(--bs-bg-opacity));
 $tertiary-opacity: rgba($tertiary, var(--bs-bg-opacity));
 
