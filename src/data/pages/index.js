@@ -51,7 +51,7 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/antrobus-st-marks.webp"
+            image: "/antrobus-st-marks.jpg"
         },
         {
             type: "text",
