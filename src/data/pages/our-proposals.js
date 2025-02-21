@@ -80,6 +80,7 @@ module.exports = {
                     `,
                 cy: ``,
             },
+
             image: "/placeholder.jpg"
         },
         {
@@ -101,18 +102,8 @@ module.exports = {
         },
         {
             type: "text",
-            bgColour: "white",
-            title: {
-                en: "Site layout",
-                cy: ""
-            },
-            image: "/placeholder.jpg"
-        },
-        {
-            type: "text",
             bgColour: "tertiary",
             opacity: "10",
-            invert: true,
             title: {
                 en: "Traffic and transport",
                 cy: ""
@@ -133,6 +124,8 @@ module.exports = {
                 en: "Air quality impacts",
                 cy: ""
             },
+            invert: true,
+
             content: {
                 en: `
                     <p>The Environmental Permit for our plans for carbon capture at Runcorn is going through final stages of determination, and we expect it to be issued soon. The Environment Agency has determined that the air quality impacts associated with our proposals are acceptable.</p>
@@ -145,7 +138,6 @@ module.exports = {
             type: "text",
             bgColour: "tertiary",
             opacity: "10",
-            invert: true,
             title: {
                 en: "Noise impacts",
                 cy: ""
