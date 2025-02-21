@@ -71,7 +71,7 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/placeholder.jpg"
+            image: "/home-1.webp"
         },
         {
             type: "text",
@@ -92,7 +92,6 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/placeholder.jpg"
         },
         {
             type: "text",
