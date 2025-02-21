@@ -19,17 +19,7 @@ module.exports = {
     blocks: [
         {
             type: "hero",
-            variant: "rounded", // rounded, square, block, gradient
 
-            title: {
-                en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                cy: "CY Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            },
-
-            subtitle: {
-                en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus, tellus nec molestie cursus.",
-                cy: "CY Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus, tellus nec molestie cursus.",
-            },
 
             background: "/placeholder.jpg"
         },
