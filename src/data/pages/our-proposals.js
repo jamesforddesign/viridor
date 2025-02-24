@@ -94,6 +94,14 @@ module.exports = {
                     `,
                 cy: ``,
             },
+            contentInvert:{
+                en: `
+                    <img src="/assets/images/svg/factory.svg" alt="Factory">
+                `,
+                cy: ``,
+                },
+            invert: true,
+            size: 9,
         },
         {
             type: "text",
@@ -127,6 +135,14 @@ module.exports = {
                     `,
                 cy: ``,
             },
+            size: 9,
+            contentInvert:{
+                en: `
+                    <img src="/assets/images/svg/landfill.svg" alt="Landfill">
+                `,
+                cy: ``,
+                },
+            invert: true,
         },
         {
             type: "text",
@@ -136,6 +152,7 @@ module.exports = {
                 en: "Noise impacts",
                 cy: ""
             },
+            size: 9,
             content: {
                 en: `
                     <p>Extensive baseline noise surveys have been undertaken and the design process is underway, with noise a significant factor in that. The site is being designed so that the noise levels from the new carbon capture plant do not result in any increase in overall noise levels from the ERF. This commitment is in place following consultation with the Environment Agency.</p>
@@ -143,6 +160,12 @@ module.exports = {
                     `,
                 cy: ``,
             },
+            contentInvert:{
+                en: `
+                    <img src="/assets/images/svg/recycle-truck.svg" alt="Recycle Truck">
+                `,
+                cy: ``,
+                },
             invert: true,
         }
     ]
