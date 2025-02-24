@@ -9,13 +9,13 @@ module.exports = {
     socialImage: "https://placehold.co/700x400",
 
     permalink: {
-        en: "have-your-say",
-        cy: "dweud-eich-dweud"
+        en: "have-your-say/feedback",
+        cy: "dweud-eich-dweud/feedback"
     },
 
     parent: {
-        en: "",
-        cy: "",
+        en: "have-your-say",
+        cy: "dweud-eich-dweud",
     },
 
     blocks: [
@@ -23,7 +23,7 @@ module.exports = {
             type: "form",
 
             title: {
-                en: "",
+                en: "Have your say",
                 cy: "CY Lorem ipsum dolor sit amet, consectetur adipiscing elit",
             },
 
@@ -32,10 +32,6 @@ module.exports = {
             content: {
                 en: `
 
-            <p><strong>We are committed to ongoing dialogue with local communities.</strong></p>
-            <p>While we draw on our own comprehensive experience and the specialist insight of our consultant team, we know we can achieve a better development by engaging the local community and others who can help to refine and improve it further.</p>
-            <p>We would welcome any feedback you have about our proposals for the new Padel Club facility at Peddimore and the new building within Development Zone 1B.</p>
-            <p>If you would like to share your views then please use the form below and submit your comments to us by Friday 28th February.</p>
 
                 `,
                 

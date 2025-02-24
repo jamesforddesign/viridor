@@ -1,0 +1,95 @@
+<div class="{% if block.bgColour %}[ bg-{{ block.bgColour }}{{ '-opacity' if block.opacity }} ] {% endif %}{% if block.opacity %}[ bg-opacity-{{ block.opacity }} ] {% endif %}[ py-5 ]">
+    <div class="[ container-xl ]">
+        <div class="[ grid--1 grid--lg-12 ] [ gap-3 gap-lg-5 ]">
+            <!-- First div spans 2 columns -->
+            <div class="[ mb-2 mb-lg-0 my-2 mt-lg-4 ] [ ]" 
+                 style="grid-column: span {{ block.size if block.size else 12 }};">
+                <div class="{% if block.panelBgColour %}panel bg-{{ block.panelBgColour }}{% endif %}">
+
+                    <div class="[ wysiwyg ] [ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ block.content[page.lang] | safe }}</div>
+
+                    <form class="[ panel panel--form panel--outlined ] [ bg-grey-50 ]" action="https://catcherv2.jfd.co.uk/f/6b7f509184d909f34e805e721501a96c" method="POST" accept-charset="UTF-8">
+                        <h2 class="[ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ block.title[page.lang] }}</h2>
+
+
+                        <div class="form-group my-3">
+                            <label class="mb-3" for="comment">Do you have any thoughts on, or questions about, our plans for carbon capture at Viridor Runcorn?
+
+                            </label>
+                    
+                            <textarea maxlength="7000" class="form-control" id="comment" name="comment" rows="6" placeholder="Enter any comments" aria-label="Comments"></textarea>
+                        </div>
+             
+                        <div class="form-group mt-3 col col-md-6">
+                            <label class="form-group__label" for="first_name">First name<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="first_name" name="first_name" required pattern="^[a-zA-Z1-9].*" placeholder="Enter your first name">
+                            <div id="firstname-feedback" class="invalid-feedback email-feedback">Please enter your first name</div>
+                        </div>
+                    
+                        <div class="form-group mt-3 col col-md-6">
+                            <label class="form-group__label" for="surname">Surname<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="surname" name="surname" required pattern="^[a-zA-Z1-9].*" placeholder="Enter your surname">
+                            <div id="lastname-feedback" class="invalid-feedback email-feedback">Please enter your surname</div>
+                        </div>
+                                    
+                        <div class="form-group my-3 col col-md-6">
+                            <label class="mb-3" for="address">Address
+
+                            </label>
+                    
+                            <textarea maxlength="7000" class="form-control" id="address" name="address" rows="3" placeholder="Enter your address" aria-label="Address"></textarea>
+                        </div>
+                        
+                        <div class="form-group my-3">
+                            <label class="form-group__label" for="email">Email address<span class="text-danger">*</span></label>
+                            <input type="email" class="form-control need-validating" id="email" name="email" required placeholder="Enter your email address">
+                            <div id="email-feedback" class="invalid-feedback email-feedback">You have entered an invalid email address!</div>
+                        </div>
+    
+                        
+                        <div class="mb-3">
+                            <div data-sitekey="6LfCNrYUAAAAAOW8mR1JjCFiVHQsv0F1pNjOpP6b" class="g-recaptcha" data-callback="recaptchaCallback"></div>
+                        </div>
+                    
+                        <input name="dfd2ae66865aeb74835e869b07382bf9" style="position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;" type="text">
+                    
+                        <button aria-label="Send" type="submit" class="btn btn-primary btn--has-icon" data-save-button disabled id="captcha-enable">
+                            <span>Send</span>
+                        </button>
+                    
+                        <script>function recaptchaCallback() { document.getElementById("captcha-enable").disabled = false; }</script>
+                    </form>
+
+
+                    
+                </div>
+            </div>
+
+            <div class="[ wysiwyg ]" style="grid-column: span 12;">
+                
+                {% if block.panels | length %}
+                <div class="[ my-2 mt-lg-4 mb-lg-0 ] [ d-flex gap-3 flex-wrap ]">
+                    {% for panel in block.panels %}
+                    
+                        {% set panel = {
+                            title: panel.title[page.lang],
+                            content: panel.content[page.lang],
+                            url: panel.url[page.lang],
+                            external: panel.external,
+                            bgColour: panel.bgColour,
+                            textColour: panel.textColour,
+
+                            outline: panel.outline,
+                            ctas: panel.ctas,
+                            images: panel.images
+
+                        } %}    
+
+                        {% include "components/panel.html" %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

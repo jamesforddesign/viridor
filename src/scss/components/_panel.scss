@@ -10,4 +10,8 @@
     &__description {
         padding: $spacer;
     }
+
+    &--form {
+        padding: calc($spacer * 2);
+    }
 }

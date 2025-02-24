@@ -7,11 +7,7 @@ pagination:
 eleventyComputed:
     title: "{{ section.title['en'] }}"
     permalink: "{{ '/en/' ~ section.permalink['en'] if env.MULTILINGUAL == 'true' else section.permalink['en'] }}/"
-    eleventyNavigation:
-        key: "{{ section.permalink['en'] }}"
-        title: Feedback form
-        parent: "{{ section.parent['en'] }}"
-        lang: "en"
+
 ---
 
 {% set prevPage = page.lang ~ '/' ~ pagination.page.previous.permalink['en'] if env.MULTILINGUAL == 'true' else pagination.page.previous.permalink['en'] %}
