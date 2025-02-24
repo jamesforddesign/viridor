@@ -122,7 +122,7 @@ module.exports = {
             ],
             content: {
                 en: `
-                    <p>We will also be holding a webinar at 6pm on Tuesday 18 March. You can register by visiting our website <a class="fw-bold" href="www.runcornccs.com" target="_blank">www.runcornccs.com</a>.  </p>
+                    <p>We will also be holding a webinar at 6pm on Tuesday 18 March. You can register <a class="fw-bold" href="www.runcornccs.com" target="_blank">here</a>.  </p>
                     `,
                 cy: ``,
             },
