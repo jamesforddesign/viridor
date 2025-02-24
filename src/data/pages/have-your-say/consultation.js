@@ -40,7 +40,7 @@ module.exports = {
                 en: `
                     <div class="[ panel ] [ bg-secondary ] [ text-white ]">
                         <h3 class="text-white">What we’re consulting on</h3>
-                        <p>As this project develops, we’re keen to hear your views on our proposal for carbon capture at Runcorn. You can find more information on our plans on the ‘our proposals’ page of this website.  </p>
+                        <p>As this project develops, we’re keen to hear your views on our proposal for carbon capture at Runcorn. You can find more information on our plans on the <a class="text-white fw-bold" href="/our-proposals">our proposals</a> page of this website.  </p>
                         <p>Please note, this consultation is on our plans for carbon capture at Runcorn and not on the operations of the existing ERF facility. As such, these proposals will not impact or change the existing operations of our ERF.</p>  
                     </div>                
                     `,

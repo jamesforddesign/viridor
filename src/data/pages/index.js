@@ -1,3 +1,5 @@
+const { description } = require("../global");
+
 module.exports = {
     title: {
         en: "Home",
@@ -19,6 +21,17 @@ module.exports = {
     blocks: [
         {
             type: "hero",
+            variant: "square",
+            title: {
+                en: "Consultation on Viridor's carbon capture proposals open from Monday 3 to Sunday 30 March 2025.",
+                cy: ""
+            },
+            subtitle: {
+                en: "Viridor is holding a consultation on proposals to decarbonise the waste sector through the use of carbon capture at our Runcorn Energy Recovery Facility (ERF).",
+                cy: ""
+            },
+            background: "/home-2.webp"
+
 
         },
         {
@@ -94,7 +107,7 @@ module.exports = {
                     <p>Human activity has been the main driver of climate change since the 1800s. The production of greenhouse gases (including CO<sub>2</sub>) is the key reason why the earth is warming faster than ever before, and extreme weather events are becoming more common.</p>
                     <p>Waste is a major contributor to greenhouse gas emissions and even with improvements in recycling, the average person still throws away around 500kg of non-recycled waste each year. This is the weight of a small car! </p>
                     <p>However, our industry is well suited to capturing CO<sub>2</sub> and it could have a big impact. For example, we will capture the equivalent carbon to that which is emitted on 3000 commercial flights from London to New York! </p>
-                    <p>This project will make our site climate positive by producing negative emissions. This is where the total carbon we capture is more than the total fossil (man-made) carbon we produce. We will be capturing natural carbon so, so we’ll actually be removing carbon from the atmosphere and in doing so we’ll be helping this region to be at the forefront of e¬fforts to reduce the UK’s carbon emissions and reach net zero targets. You can find out more about negative emissions from the Coalition for Negative Emissions, <a class="fw-bold" href="https://coalitionfornegativeemissions.org/" target="_blank">here</a>. </p>
+                    <p>This project will make our site climate positive by producing negative emissions. This is where the total carbon we capture is more than the total fossil (man-made) carbon we produce. We will be capturing natural carbon so we’ll actually be removing carbon from the atmosphere and in doing so we’ll be helping this region to be at the forefront of efforts to reduce the UK’s carbon emissions and reach net zero targets. You can find out more about negative emissions from the Coalition for Negative Emissions, <a class="fw-bold" href="https://coalitionfornegativeemissions.org/" target="_blank">here</a>. </p>
 
 
                     `,
@@ -104,7 +117,7 @@ module.exports = {
             contentInvert: {
                 en: `
                     <div class="[ panel panel--no-padding ]  [ text-white ]">
-                        <h3 class="[ panel__heading bg-primary  ]">How does carbon capture work</h3>
+                        <h3 class="[ panel__heading bg-primary  ]">How does carbon capture work?</h3>
                         <div class="[ panel__description bg-primary-opacity  ]">
                             <ol>
                                 <li>Flue gas is diverted from the existing ERF stack into the proposed carbon capture infrastructure.</li>

@@ -1,11 +1,11 @@
 module.exports = {
     title: {
-        en: "Viridor consultation",
+        en: "Viridor carbon capture consultation",
         cy: "",
     },
 
     description: {
-        en: "Viridor consultation",
+        en: "Viridor carbon capture consultation",
         cy: ""
     },
 

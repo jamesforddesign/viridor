@@ -30,7 +30,7 @@ module.exports = {
         {
             type: "text",
             title: {
-                en: "Supporting the local economy",
+                en: "",
                 cy: ""
             },
             content: {

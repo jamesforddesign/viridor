@@ -41,7 +41,7 @@ module.exports = {
             content: [
                 {
                     title: {
-                        en: "Consultation – Spring 2025",
+                        en: "Consultation – <br>Spring 2025",
                         cy: ""
                     },
                     highlight: true, // Optional
@@ -53,7 +53,7 @@ module.exports = {
                 },
                 {
                     title: {
-                        en: "Application – Summer 2025 ",
+                        en: "Application – <br>Summer 2025 ",
                         cy: ""
                     },
                     reverse: false, // 
@@ -64,7 +64,7 @@ module.exports = {
                 },
                 {
                     title: {
-                        en: "Decision – Early 2026",
+                        en: "Decision – <br>Early 2026",
                         cy: ""
                     },
                     reverse: false, // 
@@ -75,7 +75,7 @@ module.exports = {
                 },
                 {
                     title: {
-                        en: "Construction – Spring 2027",
+                        en: "Construction – <br>Spring 2027",
                         cy: ""
                     },
                     reverse: false, // 
@@ -86,7 +86,7 @@ module.exports = {
                 },
                 {
                     title: {
-                        en: "Operation – Winter 2029",
+                        en: "Operation – <br>Winter 2029",
                         cy: ""
                     },
                     reverse: false, // 

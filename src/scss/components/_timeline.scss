@@ -89,7 +89,7 @@
 
     &__stage-year {
         @include fluid-type(xs, md, 30px, 40px);
-
+        margin-bottom: $spacer;
         color: $primary;
         font-weight: $font-weight-bold;
         line-height: 1;

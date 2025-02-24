@@ -9,7 +9,7 @@
         <div class="[ timeline__inner ]">
             {% for year in block.content %}
                 <div class="[ timeline__stage{% if year.reverse %} timeline__stage--reverse{% endif %} ]">
-                    <div class="[ timeline__stage-year ]">{{ year.title[page.lang] }}</div>
+                    <div class="[ timeline__stage-year ]">{{ year.title[page.lang] | safe }}</div>
 
                     <p class="[ timeline__stage-description ] [ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ year.description[page.lang] }}</p>
 
