@@ -56,7 +56,7 @@ module.exports = {
         
             // Optional
             title: {
-                en: "Consultation events",
+                en: '<span class="[ text-black ]">Consultation events</span>',
                 cy: "",
             },
         
@@ -137,7 +137,8 @@ module.exports = {
             },
             content: {
                 en: `
-                    <p>As part of this consultation, we are seeking feedback on our plans for carbon capture at Runcorn. You can submit your feedback by:</p>
+                    <h4 class="[ fw-normal text-grey-100 ]">As part of this consultation, we are seeking feedback on our plans for carbon capture at Runcorn.</h4> 
+                    <p>You can submit your feedback by:</p>
                     <p class="fw-bold">Email: <a href="mailto:info@runcornccs.com">info@runcornccs.com</a></p>
                     <p class="fw-bold">Freepost: <span class="[ text-primary ]">Freepost VIRIDOR CCS (it’s free and you don’t need a stamp)</span></p>
                     <p><span class="[ fw-bold ]">On this website:</span> using the feedback boxes on each page. </p>
