@@ -1,9 +1,7 @@
 // Font weights
-$font-weight-light: 300;
+$font-weight-light: 200;
 $font-weight-normal: 400;
-$font-weight-semibold: 600;
 $font-weight-bold: 700;
-$font-weight-heavy: 800;
 
 @font-face { 
     font-family:"Gotham A"; 
@@ -48,6 +46,5 @@ $font-weight-heavy: 800;
     font-weight:700; 
 } 
 
-$font-family-headings: '';
-
+$font-family-headings: "Gotham A", "Gotham B", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family-sans-serif: "Gotham A", "Gotham B", 'Helvetica Neue', Helvetica, Arial, sans-serif;
