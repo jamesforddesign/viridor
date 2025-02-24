@@ -41,10 +41,13 @@ module.exports = {
                 en: "Who is Viridor?",
                 cy: ""
             },
+            subtitle: {
+                en: "Viridor is a leading resource recovery and recycling business that transforms non-recycled waste into energy.",
+                cy: ""
+            },
             size: 8,
             content: {
                 en: `
-                    <p>Viridor is a leading resource recovery and recycling business that transforms non-recycled waste into energy.</p>
                     <p>We’ve invested over <span class="fw-bold">£1.2 billion</span> in developing a network of advanced Energy Recovery Facilities (ERFs) across the UK and we deliver innovative ways to reduce, reuse, recycle or recover energy from the things that you sort into your bins every day. We’re an active recycler ourselves, and work with our local authority customers to meet recycling and waste management targets. You can take a tour of our virtual ERF <a class="fw-bold" href="https://www.viridor.co.uk/erf-virtual-tour/" target="_blank">here</a>. </p>    
                     <div class="[ panel ] [ bg-secondary ] [ text-white ]">
                         <p class="fw-bold">During 2023/24, Viridor contributed nearly £1 million to the Halton Borough Council Environment Fund which supports community-focused projects in the local area. Recently, this has included a £650,000 donation to fund a new community café in Pickerings Pasture. </p>
@@ -56,11 +59,11 @@ module.exports = {
             },
             contentInvert: {
                 en: `
-                <div class="[ panel ] [ bg-grey-25 ]">
+                <div class="[ panel ] [ text-white ] [ bg-primary ]">
                     <h3>View our webinar</h3>
                     <p>Find out more about our webinar here.</p>
-                    <a href="" target="_blank" rel="noreferrer"class="[ btn btn-primary rounded-0 ] [ d-flex align-items-center justify-content-center gap-2 ]">
-                        <span class="text-white">Register here</span>
+                    <a href="#" target="_blank" rel="noreferrer"class="[ btn btn-white rounded-0 ] [ d-flex align-items-center justify-content-center gap-2 ]">
+                        <span class="text-primary">Register here</span>
                     </a>
                 </div>
 
