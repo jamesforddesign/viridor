@@ -132,8 +132,8 @@ module.exports = {
             contentInvert: {
                 en: `
                     <div class="[ panel panel--no-padding ]  [ text-white ]">
-                        <h3 class="[ panel__heading bg-primary  ]">How does carbon capture work?</h3>
-                        <div class="[ panel__description bg-primary-opacity  ]">
+                        <h3 class="[ panel__heading bg-primary ]">How does carbon capture work?</h3>
+                        <div class="[ panel__description text-black bg-primary-light ]">
                             <ol>
                                 <li>Flue gas is diverted from the existing ERF stack into the proposed carbon capture infrastructure.</li>
                                 <li>The flue gas is then passed through a piece of machinery called a scrubber which cleans it and cools it down. </li>
