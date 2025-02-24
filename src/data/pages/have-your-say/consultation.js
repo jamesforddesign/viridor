@@ -53,10 +53,11 @@ module.exports = {
         {
             type: "table",
             bgColour: "primary-light",
+            text: "black",
         
             // Optional
             title: {
-                en: '<span class="[ text-black ]">Consultation events</span>',
+                en: "Consultation events",
                 cy: "",
             },
         
