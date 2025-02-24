@@ -58,7 +58,7 @@ module.exports = {
                 en: `
                 <div class="[ panel ] [ bg-grey-25 ]">
                     <h3>View our webinar</h3>
-                    <p>Find out more about our webinary here.</p>
+                    <p>Find out more about our webinar here.</p>
                     <a href="" target="_blank" rel="noreferrer"class="[ btn btn-primary rounded-0 ] [ d-flex align-items-center justify-content-center gap-2 ]">
                         <span class="text-white">Register here</span>
 
