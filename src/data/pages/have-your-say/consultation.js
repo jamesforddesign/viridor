@@ -8,12 +8,12 @@ module.exports = {
 
     permalink: {
         en: "have-your-say/consultation",
-        cy: "dweud-eich-dweud/rhoi-eich-adborth"
+        cy: ""
     },
 
     parent: {
         en: "have-your-say",
-        cy: "dweud-eich-dweud"
+        cy: ""
     },
 
     blocks: [
