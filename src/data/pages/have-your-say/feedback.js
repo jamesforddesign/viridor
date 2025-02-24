@@ -20,12 +20,16 @@ module.exports = {
 
     blocks: [
         {
-            type: "form",
+            type: "hero",
+            variant: "square", // rounded, square, block, gradient
 
             title: {
                 en: "Have your say",
                 cy: "",
             },
+        },
+        {
+            type: "form",
 
             bgColour: "white",
             
