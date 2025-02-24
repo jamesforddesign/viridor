@@ -41,13 +41,10 @@ module.exports = {
                 en: "Who is Viridor?",
                 cy: ""
             },
-            subtitle: {
-                en: "Viridor is a leading resource recovery and recycling business that transforms non-recycled waste into energy.",
-                cy: ""
-            },
             size: 8,
             content: {
                 en: `
+                    <h2 class="">Viridor is a leading resource recovery and recycling business that transforms non-recycled waste into energy.</h2>
                     <p>We’ve invested over <span class="fw-bold">£1.2 billion</span> in developing a network of advanced Energy Recovery Facilities (ERFs) across the UK and we deliver innovative ways to reduce, reuse, recycle or recover energy from the things that you sort into your bins every day. We’re an active recycler ourselves, and work with our local authority customers to meet recycling and waste management targets. You can take a tour of our virtual ERF <a class="fw-bold" href="https://www.viridor.co.uk/erf-virtual-tour/" target="_blank">here</a>. </p>    
                     <div class="[ panel ] [ bg-secondary ] [ text-white ]">
                         <p class="fw-bold">During 2023/24, Viridor contributed nearly £1 million to the Halton Borough Council Environment Fund which supports community-focused projects in the local area. Recently, this has included a £650,000 donation to fund a new community café in Pickerings Pasture. </p>
@@ -66,7 +63,6 @@ module.exports = {
                         <span class="text-primary">Register here</span>
                     </a>
                 </div>
-
                 `,
             cy: ``,
             }
@@ -101,14 +97,20 @@ module.exports = {
             content: {
                 en: `
                     <p>Viridor is progressing the UK’s largest opportunity to decarbonise the waste sector, through the use of carbon capture at its Runcorn ERF facility, with CO<sub>2</sub> being captured and safely transported through the HyNet pipeline and then stored permanently, deep underneath Liverpool Bay.</p>
-                    <div class="[ panel ] [ bg-tertiary ] [ text-white ]">
-                        <p>The HyNet pipeline is a nationally significant infrastructure project that plans to take captured carbon dioxide from across our region and store it under the sea in Liverpool Bay. Our proposals for carbon capture at Runcorn would connect to the Runcorn Spur Pipeline and wider HyNet network, which is being developed by Eni. </p>
-                        <p>You can find out more by visiting the HyNet website, <a class="text-white fw-bold" href="https://hynethub.co.uk/index.php?contentid=982" target="_blank">here</a>.</p>
-                    </div>
                     <p>Viridor Runcorn will become one of the first ERFs in the world to introduce carbon capture – and capture around 900,000 tonnes of CO<sub>2</sub> each year. It will also see us create net zero power and heat from our facility, helping to decarbonise industry in the North West and contributing to the government’s target of reaching net zero by 2050.</p>
                     <p>This consultation invites you to find out more and provide feedback, ahead of a planning application being submitted to Halton Borough Council.</p>
                     `,
                 cy: ``,
+            },
+
+            contentInvert: {
+                en: `
+                    <div class="[ panel ] [ bg-tertiary ] [ text-white ]">
+                        <p>The HyNet pipeline is a nationally significant infrastructure project that plans to take captured carbon dioxide from across our region and store it under the sea in Liverpool Bay. Our proposals for carbon capture at Runcorn would connect to the Runcorn Spur Pipeline and wider HyNet network, which is being developed by Eni. </p>
+                        <p>You can find out more by visiting the HyNet website, <a class="text-white fw-bold" href="https://hynethub.co.uk/index.php?contentid=982" target="_blank">here</a>.</p>
+                    </div>
+                    `,
+            cy: ``,
             },
         },
         {
@@ -125,8 +127,6 @@ module.exports = {
                     <p>Waste is a major contributor to greenhouse gas emissions and even with improvements in recycling, the average person still throws away around 500kg of non-recycled waste each year. This is the weight of a small car! </p>
                     <p>However, our industry is well suited to capturing CO<sub>2</sub> and it could have a big impact. For example, we will capture the equivalent carbon to that which is emitted on 3000 commercial flights from London to New York! </p>
                     <p>This project will make our site climate positive by producing negative emissions. This is where the total carbon we capture is more than the total fossil (man-made) carbon we produce. We will be capturing natural carbon so we’ll actually be removing carbon from the atmosphere and in doing so we’ll be helping this region to be at the forefront of efforts to reduce the UK’s carbon emissions and reach net zero targets. You can find out more about negative emissions from the Coalition for Negative Emissions, <a class="fw-bold" href="https://coalitionfornegativeemissions.org/" target="_blank">here</a>. </p>
-
-
                     `,
                 cy: ``,
             },
