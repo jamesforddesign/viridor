@@ -47,8 +47,7 @@ module.exports = {
 
         {
             type: "table",
-
-            bgColour: "white",
+            bgColour: "primary-light",
         
             // Optional
             title: {
@@ -118,14 +117,14 @@ module.exports = {
             ],
             content: {
                 en: `
-                    <p>We will also be holding a webinar at 6pm on Tuesday 18 March. You can register <a class="fw-bold" href="www.runcornccs.com" target="_blank">here</a>.  </p>
+                    <p class="text-black">We will also be holding a webinar at 6pm on Tuesday 18 March. You can register <a class="fw-bold" href="#" target="_blank">here</a>.</p>
                     `,
                 cy: ``,
             },
         },
         {
             type: "text",
-            bgColour: "tertiary",
+            bgColour: "grey-25",
             opacity: "10",
             title: {
                 en: "How to provide feedback",
