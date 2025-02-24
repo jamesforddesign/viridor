@@ -63,6 +63,7 @@ module.exports = {
                         <span class="text-primary">Register here</span>
                     </a>
                 </div>
+                <img class="mt-3" src="/assets/images/home-2.webp">
                 `,
             cy: ``,
             }
