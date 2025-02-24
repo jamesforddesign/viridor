@@ -96,7 +96,7 @@ module.exports = {
             },
             content: {
                 en: `
-                    <p>Viridor is progressing the UK’s largest opportunity to decarbonise the waste sector, through the use of carbon capture at its Runcorn ERF facility, with CO<sub>2</sub> being captured and safely transported through the HyNet pipeline and then stored permanently, deep underneath Liverpool Bay.</p>
+                    <h4 class="[ fw-normal text-grey-100 ]">Viridor is progressing the UK’s largest opportunity to decarbonise the waste sector, through the use of carbon capture at its Runcorn ERF facility, with CO<sub>2</sub> being captured and safely transported through the HyNet pipeline and then stored permanently, deep underneath Liverpool Bay.</h4>
                     <p>Viridor Runcorn will become one of the first ERFs in the world to introduce carbon capture – and capture around 900,000 tonnes of CO<sub>2</sub> each year. It will also see us create net zero power and heat from our facility, helping to decarbonise industry in the North West and contributing to the government’s target of reaching net zero by 2050.</p>
                     <p>This consultation invites you to find out more and provide feedback, ahead of a planning application being submitted to Halton Borough Council.</p>
                     `,
@@ -123,7 +123,7 @@ module.exports = {
             },
             content: {
                 en: `
-                    <p>Human activity has been the main driver of climate change since the 1800s. The production of greenhouse gases (including CO<sub>2</sub>) is the key reason why the earth is warming faster than ever before, and extreme weather events are becoming more common.</p>
+                    <h4 class="[ fw-normal text-grey-100 ]">Human activity has been the main driver of climate change since the 1800s. The production of greenhouse gases (including CO<sub>2</sub>) is the key reason why the earth is warming faster than ever before, and extreme weather events are becoming more common.</h4>
                     <p>Waste is a major contributor to greenhouse gas emissions and even with improvements in recycling, the average person still throws away around 500kg of non-recycled waste each year. This is the weight of a small car! </p>
                     <p>However, our industry is well suited to capturing CO<sub>2</sub> and it could have a big impact. For example, we will capture the equivalent carbon to that which is emitted on 3000 commercial flights from London to New York! </p>
                     <p>This project will make our site climate positive by producing negative emissions. This is where the total carbon we capture is more than the total fossil (man-made) carbon we produce. We will be capturing natural carbon so we’ll actually be removing carbon from the atmosphere and in doing so we’ll be helping this region to be at the forefront of efforts to reduce the UK’s carbon emissions and reach net zero targets. You can find out more about negative emissions from the Coalition for Negative Emissions, <a class="fw-bold" href="https://coalitionfornegativeemissions.org/" target="_blank">here</a>. </p>
