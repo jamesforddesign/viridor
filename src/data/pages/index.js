@@ -41,6 +41,7 @@ module.exports = {
                 en: "Who is Viridor?",
                 cy: ""
             },
+            size: 8,
             content: {
                 en: `
                     <p>Viridor is a leading resource recovery and recycling business that transforms non-recycled waste into energy.</p>
@@ -49,10 +50,25 @@ module.exports = {
                         <p>During 2023/24, Viridor contributed nearly £1 million to the Halton Borough Council Environment Fund which supports community-focused projects in the local area. Recently, this has included a £650,000 donation to fund a new community café in Pickerings Pasture. </p>
                         <p>Local organisations have also benefited from Viridor’s We Share Community Fund, including our donations to Halton Haven Hospice and Weston Point Scout Group. We are also ongoing sponsors of Runcorn FC.</p>
                     </div>
+                    <img class="mt-3" src="/assets/images/antrobus-st-marks.jpg">
                     `,
                 cy: ``,
             },
-            image: "/antrobus-st-marks.jpg"
+            contentInvert: {
+                en: `
+                <div class="[ panel ] [ bg-grey-25 ]">
+                    <h3>View our webinar</h3>
+                    <p>Find out more about our webinary here.</p>
+                    <a href="" target="_blank" rel="noreferrer"class="[ btn btn-primary rounded-0 ] [ d-flex align-items-center justify-content-center gap-2 ]">
+                        <span class="text-white">Register here</span>
+
+                      
+                    </a>
+                </div>
+
+                `,
+            cy: ``,
+            }
         },
         {
             type: "text",

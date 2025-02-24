@@ -1,14 +1,13 @@
-<div class="{% if block.bgColour %}[ bg-{{ block.bgColour }}{{ '-opacity' if block.opacity }} ] {% endif %}{% if block.opacity %}[ bg-opacity-{{ block.opacity }} ] {% endif %}[ py-5 ]"{% if block.anchor %} id="{{ block.anchor[page.lang] }}"{% endif %}>
-    <div class="[ container-xl ]">
-        <div class="[ grid--1 {% if (block.image | length) or (block.contentInvert[page.lang] | length)  %}grid--lg-2{% endif %} ] [ gap-3 gap-lg-5 ]">
-            <div class="{% if block.invert %}[ order-lg-2 ] {% endif %}[ mb-2 mb-lg-0 ] [ d-flex align-items-center ]">
+<div class="{% if block.bgColour %} bg-{{ block.bgColour }}{{ '-opacity' if block.opacity }} {% endif %}{% if block.opacity %} bg-opacity-{{ block.opacity }} {% endif %} py-5"{% if block.anchor %} id="{{ block.anchor[page.lang] }}"{% endif %}>
+    <div class="container-xl">
+        <div class="row g-3 g-lg-5 ">
+            {% set size = block.size if block.size else 6 %}
+            <div class="col-12 col-lg-{{ size }} {% if  (not block.image | length) and (not block.contentInvert[page.lang] | length) %} col-lg-12 {% endif %} {% if block.invert %} order-lg-2 {% endif %}">
                 <div>
-                    <h2 class="[ text-primary ]">{{ block.title[page.lang] }}</h2>
-
-                    <div class="[ wysiwyg ] [ text-{{ block.textColour if block.textColour else 'black' }} ]">{{ block.content[page.lang] | safe }}</div>
-
+                    <h2 class="text-primary">{{ block.title[page.lang] }}</h2>
+                    <div class="wysiwyg text-{{ block.textColour if block.textColour else 'black' }}">{{ block.content[page.lang] | safe }}</div>
                     {% if block.ctas | length %}
-                        <div class="[ my-2 mt-lg-4 mb-lg-0 ] [ d-flex gap-3 flex-wrap ]">
+                        <div class="my-2 mt-lg-4 mb-lg-0 d-flex gap-3 flex-wrap">
                             {% for cta in block.ctas %}
                                 {% set button = {
                                     title: cta.title[page.lang],
@@ -17,7 +16,6 @@
                                     bgColour: cta.bgColour,
                                     outline: cta.outline
                                 } %}
-
                                 {% include "components/button.html" %}
                             {% endfor %}
                         </div>
@@ -25,14 +23,13 @@
                 </div>
             </div>
             {% if block.contentInvert[page.lang] | length %}
-            <div class="[ wysiwyg ] [ d-flex align-items-center ] {% if block.invert %}[ order-lg-1 ] [ mb-3 mb-lg-0 ] {% endif %}">
-                <div class="[ wysiwyg ] [ text-{{ block.textColour if block.textColour else 'black' }} ]">{{ block.contentInvert[page.lang] | safe }}</div>
+            <div class="col-12 col-lg-{{ 12 - size }} {% if block.invert %} order-lg-1 {% endif %}">
+                <div class="wysiwyg text-{{ block.textColour if block.textColour else 'black' }}">{{ block.contentInvert[page.lang] | safe }}</div>
             </div>
             {% endif %}
-
-            {% if block.image | length%}
-            <div class="[ wysiwyg ] [ d-flex align-items-center ] {% if block.invert %}[ order-lg-1 ] [ mb-3 mb-lg-0 ] {% endif %}" {% if block.zoomable %} data-module="image-zoom"{% endif %}>
-                <img src="{{ env.ASSETS_BASE_URL }}{{ block.image }}" alt="{{ block.title[page.lang] }}"  {% if block.zoomable %} data-zoomable="{{ block.image }}"{% endif %} />
+            {% if block.image | length %}
+            <div class="col-12 col-lg-{{ 12 - size }} {% if block.invert %} order-lg-1 {% endif %}" {% if block.zoomable %} data-module="image-zoom"{% endif %}>
+                <img class="w-100" src="{{ env.ASSETS_BASE_URL }}{{ block.image }}" alt="{{ block.title[page.lang] }}" {% if block.zoomable %} data-zoomable="{{ block.image }}"{% endif %} />
             </div>
             {% endif %}
         </div>
