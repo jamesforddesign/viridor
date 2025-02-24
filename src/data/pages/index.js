@@ -43,7 +43,14 @@ module.exports = {
                 en: `
                     <h4 class="[ fw-normal text-grey-100 ]">Viridor is a leading resource recovery and recycling business that transforms non-recycled waste into energy.</h4>
                     <p>We’ve invested over <span class="fw-bold">£1.2 billion</span> in developing a network of advanced Energy Recovery Facilities (ERFs) across the UK and we deliver innovative ways to reduce, reuse, recycle or recover energy from the things that you sort into your bins every day. We’re an active recycler ourselves, and work with our local authority customers to meet recycling and waste management targets. You can take a tour of our virtual ERF <a class="fw-bold" href="https://www.viridor.co.uk/erf-virtual-tour/" target="_blank">here</a>. </p>    
-
+                    
+                    <div class="[ panel ] [ text-white ] [ bg-primary ][ mt-3 ]">
+                        <h3 class="[ fw-normal text-white ]">View our webinar</h3>
+                        <p>Find out more about our webinar here.</p>
+                        <a href="#" target="_blank" rel="noreferrer"class="[ btn btn-white rounded-0 ] [ d-flex align-items-center justify-content-center gap-2 ]">
+                            <span class="text-primary">Register here</span>
+                        </a>
+                    </div> 
                     `,
                 cy: ``,
             },
@@ -57,23 +64,6 @@ module.exports = {
                 `,
             cy: ``,
             }
-        },
-
-        {
-            type: "text",
-            bgColour: "primary",
-            content: {
-                en: `
-                    <div class="[ panel ] [ text-white ] [ bg-primary ]">
-                        <h3 class="[ fw-normal text-white ]">View our webinar</h3>
-                        <p>Find out more about our webinar here.</p>
-                        <a href="#" target="_blank" rel="noreferrer"class="[ btn btn-white rounded-0 ] [ d-flex align-items-center justify-content-center gap-2 ]">
-                            <span class="text-primary">Register here</span>
-                        </a>
-                    </div>                    
-                `,
-                cy: ``,
-            },
         },
         {
             type: "text",
