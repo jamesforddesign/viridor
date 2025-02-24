@@ -32,54 +32,38 @@ module.exports = {
         {
             type: "text",
             bgColour: "white",
-            title: {
-                en: "Construction methodology",
-                cy: ""
-            },
             content: {
                 en: `
+                    <h4 class="[ fw-normal text-grey-100 ]">Construction methodology</h4>
                     <p>This section outlines the specifics of our proposals for carbon capture at Runcorn which, if consented, would include the following elements:</p>
-                    <ul>
-                        <li>Flue gas pre-treatment unit and pre-scrubber</li>
-                        <li>CO<sub>2</sub> absorber</li>
-                        <li>Wash water section</li>
-                        <li>Intercooler section</li>
-                        <li>Gas exchanger</li>
-                        <li>CO<sub>2</sub> stripper </li>
-                        <li>CO<sub>2</sub> compression </li>
-                        <li>Thermal reclaimer unit</li>
-                        <li>Control and ancillary equipment</li>
-                        <li>Flue gas connections to the ERF facility</li>
-                        <li>Drainage </li>
-                        <li>Utility connections within the site</li>
-                        <li>Internal and external RERF facility modifications, as required, to facilitate the new pipework</li>
-                        <li>Access, parking and welfare facilities</li>
-                        <li>Construction laydown areas</li>
+                    <div class="[ bg-secondary ] [ text-white ]">
+                        <ul>
+                            <li>Flue gas pre-treatment unit and pre-scrubber</li>
+                            <li>CO<sub>2</sub> absorber</li>
+                            <li>Wash water section</li>
+                            <li>Intercooler section</li>
+                            <li>Gas exchanger</li>
+                            <li>CO<sub>2</sub> stripper </li>
+                            <li>CO<sub>2</sub> compression </li>
+                            <li>Thermal reclaimer unit</li>
+                            <li>Control and ancillary equipment</li>
+                            <li>Flue gas connections to the ERF facility</li>
+                            <li>Drainage </li>
+                            <li>Utility connections within the site</li>
+                            <li>Internal and external RERF facility modifications, as required, to facilitate the new pipework</li>
+                            <li>Access, parking and welfare facilities</li>
+                            <li>Construction laydown areas</li>
+                        </ul>
+                    </div>
 
-                    </ul>
-                    `,
-                cy: ``,
-            },
-            
-        },
-        {
-            type: "text",
-            title: {
-                en: "Construction",
-                cy: ""
-            },
-            invert: true,
-            bgColour: "tertiary",
-            opacity: "10",
-            content: {
-                en: `
-                    <p>If our application is approved, we anticipate starting construction activities in Spring 2027, with carbon capture at Runcorn being operational by December 2029. </p>
+                    <h2 class="[ fw-bold text-primary ]">Construction</h2>
+                    <h4 class="[ fw-normal text-grey-100 ]">If our application is approved, we anticipate starting construction activities in Spring 2027, with carbon capture at Runcorn being operational by December 2029. </h4>
                     <p>This would require us to use construction laydown areas, where building materials and equipment would be stored, alongside the creation of staff parking and welfare units. We anticipate the main construction access to the laydown area being via Barlow Way, to the south of our site.</p>
                     <p>As part of our planning application, we will be submitting a Construction Environmental Management Plan (CEMP) which will set out the management measures to be employed during construction to avoid or minimise environmental impacts.</p>
                     `,
                 cy: ``,
             },
-
+            
         },
         {
             type: "text",
