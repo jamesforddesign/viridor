@@ -19,14 +19,8 @@ module.exports = {
     blocks: [
         {
             type: "hero",
-            variant: "rounded", // rounded, square, block, gradient
 
-            title: {
-                en: "Consultation",
-                cy: "",
-            },
 
-            background: "/placeholder.jpg"
         },
         {
             type: "text",
@@ -41,7 +35,6 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/placeholder.jpg"
         },
         {
             type: "text",
@@ -61,11 +54,12 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/placeholder.jpg"
         },
 
         {
             type: "table",
+
+            bgColour: "white",
         
             // Optional
             title: {
@@ -144,7 +138,6 @@ module.exports = {
             type: "text",
             bgColour: "tertiary",
             opacity: "10",
-            invert: true,
             title: {
                 en: "How to provide feedback",
                 cy: ""
@@ -159,7 +152,6 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/placeholder.jpg"
         }
     ]
 };

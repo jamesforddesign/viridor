@@ -21,14 +21,13 @@ module.exports = {
     blocks: [
         {
             type: "hero",
-            variant: "rounded", // rounded, square, block, gradient
+            variant: "square", // rounded, square, block, gradient
 
             title: {
                 en: "Next Steps",
                 cy: "",
             },
 
-            background: "/placeholder.jpg"
         },
         {
             type: "timeline",

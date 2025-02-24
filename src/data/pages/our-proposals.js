@@ -21,19 +21,17 @@ module.exports = {
     blocks: [
         {
             type: "hero",
-            variant: "rounded", // rounded, square, block, gradient
+            variant: "square", // rounded, square, block, gradient
 
             title: {
                 en: "Our proposals",
                 cy: "",
             },
 
-            background: "/placeholder.jpg"
         },
         {
             type: "text",
             bgColour: "white",
-            invert: true,
             title: {
                 en: "Construction methodology",
                 cy: ""
@@ -62,16 +60,17 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/placeholder.jpg"
             
         },
         {
             type: "text",
-            bgColour: "white",
             title: {
                 en: "Construction",
                 cy: ""
             },
+            invert: true,
+            bgColour: "tertiary",
+            opacity: "10",
             content: {
                 en: `
                     <p>If our application is approved, we anticipate starting construction activities in Spring 2027, with carbon capture at Runcorn being operational by December 2029. </p>
@@ -81,13 +80,10 @@ module.exports = {
                 cy: ``,
             },
 
-            image: "/placeholder.jpg"
         },
         {
             type: "text",
-            bgColour: "tertiary",
-            opacity: "10",
-            invert: true,
+            bgColour: "white",
             title: {
                 en: "Supporting the local economy",
                 cy: ""
@@ -98,7 +94,6 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/placeholder.jpg"
         },
         {
             type: "text",
@@ -115,7 +110,8 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/placeholder.jpg"
+            invert: true,
+
         },
         {
             type: "text",
@@ -124,7 +120,6 @@ module.exports = {
                 en: "Air quality impacts",
                 cy: ""
             },
-            invert: true,
 
             content: {
                 en: `
@@ -132,7 +127,6 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/placeholder.jpg"
         },
         {
             type: "text",
@@ -149,7 +143,7 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/placeholder.jpg"
+            invert: true,
         }
     ]
 };

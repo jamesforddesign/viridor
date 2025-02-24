@@ -19,14 +19,13 @@ module.exports = {
     blocks: [
         {
             type: "hero",
-            variant: "rounded", // rounded, square, block, gradient
+            variant: "square", // rounded, square, block, gradient
 
             title: {
                 en: "Contact",
                 cy: "",
             },
 
-            background: "/placeholder.jpg"
         },
         {
             type: "text",
@@ -43,7 +42,6 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            image: "/placeholder.jpg"
         },
 
     ]

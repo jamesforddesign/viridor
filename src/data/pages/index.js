@@ -20,8 +20,6 @@ module.exports = {
         {
             type: "hero",
 
-
-            background: "/placeholder.jpg"
         },
         {
             type: "text",
