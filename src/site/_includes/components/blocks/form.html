@@ -9,17 +9,12 @@
                     <div class="[ wysiwyg ] [ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ block.content[page.lang] | safe }}</div>
 
                     <form class="[ panel panel--form panel--outlined ] [ bg-grey-25 ]" action="https://catcherv2.jfd.co.uk/f/6b7f509184d909f34e805e721501a96c" method="POST" accept-charset="UTF-8">
-                        <h2 class="[ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ block.title[page.lang] }}</h2>
-
-
                         <div class="form-group my-3">
-                            <label class="mb-3" for="comment">Do you have any thoughts on, or questions about, our plans for carbon capture at Viridor Runcorn?
-
-                            </label>
-                    
+                            <label class="mb-3" for="comment"><h4 class="[ fw-normal text-grey-100 ]">Q: Do you have any thoughts on, or questions about, our plans for carbon capture at Viridor Runcorn?</h4></label>
                             <textarea maxlength="7000" class="form-control" id="comment" name="comment" rows="6" placeholder="Enter any comments" aria-label="Comments"></textarea>
                         </div>
-             
+
+                        <h4 class="[ text-{{ block.textColour if block.textColour else 'primary' }} ]">{{ block.subheader[page.lang] }}</h4>
                         <div class="form-group mt-3 col col-md-6">
                             <label class="form-group__label" for="first_name">First name<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="first_name" name="first_name" required pattern="^[a-zA-Z1-9].*" placeholder="Enter your first name">

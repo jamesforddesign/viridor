@@ -23,23 +23,19 @@ module.exports = {
             type: "hero",
             variant: "square", // rounded, square, block, gradient
 
-            title: {
-                en: "Have your say",
+            subheader: {
+                en: "Your details",
                 cy: "",
             },
         },
         {
             type: "form",
-
             bgColour: "white",
-            
+            textColour: "black",
             content: {
                 en: ``,
                 cy: ``,
             },
-
-       
-
         },
     ]
 };
