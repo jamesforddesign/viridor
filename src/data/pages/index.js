@@ -31,8 +31,6 @@ module.exports = {
                 cy: ""
             },
             background: "/home-2.webp"
-
-
         },
         {
             type: "text",
@@ -146,10 +144,20 @@ module.exports = {
                                 <li>The CO<sub>2</sub> captured at Viridor Runcorn is then handed over to the transport and storage operator as part of the HyNet Network, which would take the CO<sub>2</sub> for permanent sequestration below impermeable rock.</li>
                             </ol>
                         </div>
-                    </div>
-                    <p>You can find our more about carbon capture from the Carbon Capture, Utilisations and Storage Association, <a class="fw-bold" href="https://www.ccsassociation.org/" target="_blank">here</a>.</p>
-                `,
+                    </div>                `,
             cy: ``,
+            },
+
+            content: {
+                en: `
+                    <img class="mt-3" src="/assets/images/antrobus-st-marks.jpg">                    `,
+                cy: ``,
+            },
+            content: {
+                en: `
+                    <p>You can find our more about carbon capture from the Carbon Capture, Utilisations and Storage Association, <a class="fw-bold" href="https://www.ccsassociation.org/" target="_blank">here</a>.</p>
+                    `,
+                cy: ``,
             },
         }
     ]
