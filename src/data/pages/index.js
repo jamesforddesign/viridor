@@ -56,7 +56,7 @@ module.exports = {
             contentInvert: {
                 en: `
                 <div class="[ panel ] [ text-white ] [ bg-primary ]">
-                    <h3>View our webinar</h3>
+                    <h3 class="[ fw-normal text-white ]">View our webinar</h3>
                     <p>Find out more about our webinar here.</p>
                     <a href="#" target="_blank" rel="noreferrer"class="[ btn btn-white rounded-0 ] [ d-flex align-items-center justify-content-center gap-2 ]">
                         <span class="text-primary">Register here</span>
