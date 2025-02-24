@@ -98,7 +98,7 @@ module.exports = {
             content: {
                 en: `
                     <p>Viridor is progressing the UK’s largest opportunity to decarbonise the waste sector, through the use of carbon capture at its Runcorn ERF facility, with CO<sub>2</sub> being captured and safely transported through the HyNet pipeline and then stored permanently, deep underneath Liverpool Bay.</p>
-                    <div class="[ panel ] [ bg-secondary ] [ text-white ]">
+                    <div class="[ panel ] [ bg-tertiary ] [ text-white ]">
                         <p>The HyNet pipeline is a nationally significant infrastructure project that plans to take captured carbon dioxide from across our region and store it under the sea in Liverpool Bay. Our proposals for carbon capture at Runcorn would connect to the Runcorn Spur Pipeline and wider HyNet network, which is being developed by Eni. </p>
                         <p>You can find out more by visiting the HyNet website, <a class="text-white fw-bold" href="https://hynethub.co.uk/index.php?contentid=982" target="_blank">here</a>.</p>
                     </div>

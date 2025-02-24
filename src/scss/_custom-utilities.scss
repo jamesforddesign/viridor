@@ -19,13 +19,14 @@ $utilities: map-merge(
                 (
                     "transparent": transparent,
                     "primary": $primary,
-                    "primary-dark": $primary-dark,
+                    "primary-light": $primary-light,
                     "secondary": $secondary,
-                    "secondary-dark": $secondary-dark,
+                    "secondary-light": $secondary-light,
                     "tertiary": $tertiary,
                     "white": $white,
                     "grey-25": $grey-25,
                     "grey-50": $grey-50,
+                    "grey-75": $grey-75,
                     "primary-opacity": $primary-opacity,
                     "secondary-opacity": $secondary-opacity,
                 )

@@ -27,15 +27,16 @@ $font-weight-headings: $font-weight-bold;
 $line-height-headings: 1.3;
 
 // Colours
-$primary: #00853b;
-$secondary: #773a96;
-$tertiary: #149ece;
+$primary: #009A44;
+$secondary: #87189D;
+$tertiary: #E2188F;
 
-$primary-dark: #004d29;
-$secondary-dark: #462159;
+$primary-light: #B3E1C7;
+$secondary-light: #DBBAE2;
 
-$grey-25: #f2f2f2;
-$grey-50: #e0e0e0;
+$grey-25: #BBBBBB;
+$grey-50: #898A8D;
+$grey-75: #54565A;
 
 // Opacity
 $primary-opacity: rgba($primary, var(--bs-bg-opacity));
