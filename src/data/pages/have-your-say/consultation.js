@@ -18,11 +18,6 @@ module.exports = {
 
     blocks: [
         {
-            type: "hero",
-
-
-        },
-        {
             type: "text",
             bgColour: "white",
             opacity: "10",            
