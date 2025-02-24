@@ -18,13 +18,18 @@ module.exports = {
 
     blocks: [
         {
-            type: "text",
-            bgColour: "white",
-            opacity: "10",            
+            type: "hero",
+            variant: "square", // rounded, square, block, gradient
+
             title: {
                 en: "What we’re consulting on",
-                cy: ""
+                cy: "",
             },
+
+        },
+        {
+            type: "text",
+            bgColour: "white",
             content: {
                 en: `
                     <h4 class="[ fw-normal text-grey-100 ]">The Town and Country Planning Act (1990) Process</h4>
@@ -133,10 +138,10 @@ module.exports = {
             content: {
                 en: `
                     <p>As part of this consultation, we are seeking feedback on our plans for carbon capture at Runcorn. You can submit your feedback by:</p>
-                    <p>Email: <a class="fw-bold"  href="mailto:info@runcornccs.com">info@runcornccs.com</a></p>
-                    <p>Freepost: Freepost VIRIDOR CCS (it’s free and you don’t need a stamp)</p>
-                    <p>On this website: using the feedback boxes on each page. </p>
-                    <p>At events: there will be feedback postcards available at our in-person events which can be completed and handed to a member of the team or taken away and posted back to us, free of charge. </p>
+                    <p class="fw-bold">Email: <a href="mailto:info@runcornccs.com">info@runcornccs.com</a></p>
+                    <p class="fw-bold">Freepost: <span class="[ text-primary ]">Freepost VIRIDOR CCS (it’s free and you don’t need a stamp)</span></p>
+                    <p><span class="[ fw-bold ]">On this website:</span> using the feedback boxes on each page. </p>
+                    <p><span class="[ fw-bold ]">At events:</span> there will be feedback postcards available at our in-person events which can be completed and handed to a member of the team or taken away and posted back to us, free of charge. </p>
                     `,
                 cy: ``,
             },
