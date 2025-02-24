@@ -38,7 +38,7 @@ module.exports = {
                     <p>If you have any questions on our plans for carbon capture at Runcorn, you can get in touch with the project team by: </p>
                     <p>Freephone: <a class="fw-bold" href="tel:0800 860 6264">0800 860 6264</a></p>
                     <p>Email: <a class="fw-bold" href="mailto:info@runcornccs.com">info@runcornccs.com</a></p>
-                    <p>Freepost: <span class="fw-bold">Freepost VIRIDOR CCS (it’s free and you don’t need a stamp)</span></p>
+                    <p>Freepost: <span class="fw-bold text-primary">Freepost VIRIDOR CCS (it’s free and you don’t need a stamp)</span></p>
                     `,
                 cy: ``,
             },
