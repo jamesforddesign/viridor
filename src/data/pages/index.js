@@ -69,7 +69,7 @@ module.exports = {
         },
         {
             type: "text",
-            bgColour: "tertiary",
+            bgColour: "grey-25",
             opacity: "10",
             invert: true,
             title: {
@@ -78,7 +78,7 @@ module.exports = {
             },
             content: {
                 en: `
-                    <p>Viridor has been operating an ERF at Runcorn since 2014, treating approximately 1 million tonnes of non-recycled waste each year and generating enough energy to power over 211,000 homes.  </p>
+                    <h4 class="[ fw-normal text-grey-100 ]">Viridor has been operating an ERF at Runcorn since 2014, treating approximately 1 million tonnes of non-recycled waste each year and generating enough energy to power over 211,000 homes.  </h4>
                     <p>In May 2021, we announced our five-step action plan to achieve net zero emissions by 2040. Capturing the carbon produced by facilities such as our Runcorn ERF is a key part of this ambition. You can read more about our ambitions for carbon capture at Runcorn <a class="fw-bold" href="/assets/images/pdf/carbon-capture-a-waste-opportunity.pdf" target="_blank">here</a>.</p>
                     <p>In March 2023, the UK Government announced that our proposals for carbon capture in Runcorn had been shortlisted for the final stage in its <a class="fw-bold"  href="https://www.gov.uk/government/publications/cluster-sequencing-phase-2-eligible-projects-power-ccus-hydrogen-and-icc/cluster-sequencing-phase-2-shortlisted-projects-power-ccus-hydrogen-and-icc-august-2022" target="_blank">industrial carbon capture (ICC) sequencing process</a>.</p>
                     <p>As one of the first carbon capture projects on an ERF facility in the world, we agreed a statement of principles with the UK Government’s Department for Energy Security and Net Zero (DESNZ) in March 2024. You can read more on this decision <a class="fw-bold" href="https://www.viridor.co.uk/news-and-insights/viridor-runcorn-ccs-project-to-advance-to-next-stage/" target="_blank">here</a>.</p>
@@ -115,7 +115,7 @@ module.exports = {
         },
         {
             type: "text",
-            bgColour: "tertiary",
+            bgColour: "grey-25",
             opacity: "10",
             title: {
                 en: "Why we need carbon capture",
