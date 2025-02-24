@@ -34,9 +34,9 @@ module.exports = {
             bgColour: "white",
             content: {
                 en: `
-                    <h4 class="[ fw-normal text-grey-100 ]">Construction methodology</h4>
-                    <p>This section outlines the specifics of our proposals for carbon capture at Runcorn which, if consented, would include the following elements:</p>
-                    <div class="[ bg-secondary ] [ text-white ]">
+                    <div class="[ panel ] [ bg-secondary ] [ text-white ]">
+                        <h4 class="[ fw-normal ]">Construction methodology</h4>
+                        <p>This section outlines the specifics of our proposals for carbon capture at Runcorn which, if consented, would include the following elements:</p>
                         <ul>
                             <li>Flue gas pre-treatment unit and pre-scrubber</li>
                             <li>CO<sub>2</sub> absorber</li>
@@ -63,6 +63,12 @@ module.exports = {
                     `,
                 cy: ``,
             },
+            contentInvert:{
+                en: `
+                    <img src="/assets/images/svg/factory.svg" alt="Factory">
+                `,
+                cy: ``,
+                },
             
         },
         {
