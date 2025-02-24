@@ -34,7 +34,7 @@ module.exports = {
         
             // Optional
             title: {
-                en: "Next Steps",
+                en: "Project timeline",
                 cy: "",
             },
         
