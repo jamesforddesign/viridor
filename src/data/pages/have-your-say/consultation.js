@@ -32,15 +32,17 @@ module.exports = {
             bgColour: "white",
             content: {
                 en: `
-                    <h4 class="[ fw-normal text-grey-100 ]">The Town and Country Planning Act (1990) Process</h4>
-                    <p>In line with the Town and Country Planning Act (1990), our planning application will be decided by Halton Borough Council as the local planning authority. Once submitted, the planning officers at Halton Borough Council will run a separate consultation on our application before making a recommendation to the planning committee as to whether it should be approved. </p>
+                    <div class="[ panel ] [ bg-grey-100 ] [ text-white ]">
+                        <h3 class="[ fw-normal ]">The Town and Country Planning Act (1990) Process</h3>
+                        <p>In line with the Town and Country Planning Act (1990), our planning application will be decided by Halton Borough Council as the local planning authority. Once submitted, the planning officers at Halton Borough Council will run a separate consultation on our application before making a recommendation to the planning committee as to whether it should be approved. </p>
+                    </div>
                     `,
                 cy: ``,
             },
             contentInvert: {
                 en: `
                     <div class="[ panel ] [ bg-secondary ] [ text-white ]">
-                        <h3 class="[ fw-normal text-white ]">This consultation</h3>
+                        <h3 class="[ fw-normal ]">This consultation</h3>
                         <p>As this project develops, we’re keen to hear your views on our proposal for carbon capture at Runcorn. You can find more information on our plans on the <a class="text-white fw-bold" href="/our-proposals">our proposals</a> page of this website.  </p>
                         <p>Please note, this consultation is on our plans for carbon capture at Runcorn and not on the operations of the existing ERF facility. As such, these proposals will not impact or change the existing operations of our ERF.</p>  
                     </div>                
