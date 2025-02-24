@@ -22,9 +22,9 @@ module.exports = {
         {
             type: "hero",
             variant: "square", // rounded, square, block, gradient
-
-            subheader: {
-                en: "Your details",
+            
+            title: {
+                en: "Have your say",
                 cy: "",
             },
         },
@@ -32,6 +32,12 @@ module.exports = {
             type: "form",
             bgColour: "white",
             textColour: "black",
+            
+            subheader: {
+                en: "Your details",
+                cy: "",
+            },
+
             content: {
                 en: ``,
                 cy: ``,
