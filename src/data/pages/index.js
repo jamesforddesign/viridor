@@ -49,6 +49,7 @@ module.exports = {
                     <div class="[ panel ] [ bg-secondary ] [ text-white ]">
                         <p class="fw-bold">During 2023/24, Viridor contributed nearly £1 million to the Halton Borough Council Environment Fund which supports community-focused projects in the local area. Recently, this has included a £650,000 donation to fund a new community café in Pickerings Pasture. </p>
                         <p>Local organisations have also benefited from Viridor’s We Share Community Fund, including our donations to Halton Haven Hospice and Weston Point Scout Group. We are also ongoing sponsors of Runcorn FC.</p>
+                        <img class="mt-3" src="/assets/images/antrobus-st-marks.jpg">
                     </div>
                     `,
                 cy: ``,
@@ -62,7 +63,6 @@ module.exports = {
                         <span class="text-primary">Register here</span>
                     </a>
                 </div>
-                <img class="mt-3" src="/assets/images/antrobus-st-marks.jpg">
                 `,
             cy: ``,
             }
