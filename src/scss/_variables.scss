@@ -27,18 +27,18 @@ $font-weight-headings: $font-weight-heavy;
 $line-height-headings: 1.3;
 
 // Colours
-$primary: #004d29;
+$primary: #00853b;
 $secondary: #773a96;
 $tertiary: #149ece;
 
-$primary-light: #00853b;
+$primary-dark: #004d29;
 $secondary-dark: #462159;
 
 $grey-25: #f2f2f2;
 $grey-50: #e0e0e0;
 
 // Opacity
-$primary-opacity: rgba($primary-light, var(--bs-bg-opacity));
+$primary-opacity: rgba($primary, var(--bs-bg-opacity));
 $secondary-opacity: rgba($secondary, var(--bs-bg-opacity));
 $tertiary-opacity: rgba($tertiary, var(--bs-bg-opacity));
 
