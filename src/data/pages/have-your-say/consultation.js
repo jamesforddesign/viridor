@@ -8,7 +8,7 @@ module.exports = {
 
     permalink: {
         en: "have-your-say/consultation",
-        cy: ""
+        cy: "have-your-say/consultation"
     },
 
     parent: {

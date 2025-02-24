@@ -10,7 +10,7 @@ module.exports = {
 
     permalink: {
         en: "have-your-say/feedback",
-        cy: ""
+        cy: "have-your-say/feedback"
     },
 
     parent: {
