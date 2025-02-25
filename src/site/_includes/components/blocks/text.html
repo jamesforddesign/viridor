@@ -1,10 +1,12 @@
 <div class="{% if block.bgColour %} bg-{{ block.bgColour }}{{ '-opacity' if block.opacity }} {% endif %}{% if block.opacity %} bg-opacity-{{ block.opacity }} {% endif %} py-5"{% if block.anchor %} id="{{ block.anchor[page.lang] }}"{% endif %}>
     <div class="container-xl">
-        <div class="row g-3 g-lg-5 ">
+        <div class="row g-3 g-lg-5 align-items-{{ block.align }}">
             {% set size = block.size if block.size else 6 %}
-            <div class="col-12 col-lg-{{ size }} {% if  (not block.image | length) and (not block.contentInvert[page.lang] | length) %} col-lg-12 {% endif %} {% if block.invert %} order-lg-2 {% endif %}">
+            <div class="col-12 col-lg-{{ size }}  {% if  (not block.image | length) and (not block.contentInvert[page.lang] | length) %} col-lg-12 {% endif %} {% if block.invert %} order-lg-2 {% endif %}">
                 <div>
+                    {% if block.title[page.lang] | length %}
                     <h2 class="text-primary">{{ block.title[page.lang] }}</h2>
+                    {% endif %}
                     <div class="wysiwyg text-{{ block.textColour if block.textColour else 'black' }}">{{ block.content[page.lang] | safe }}</div>
                     {% if block.ctas | length %}
                         <div class="my-2 mt-lg-4 mb-lg-0 d-flex gap-3 flex-wrap">

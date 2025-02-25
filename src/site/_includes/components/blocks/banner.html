@@ -7,6 +7,10 @@
 
             <div class="[ flow-vertical--3 ]">
                 <h2>{{ block.title[page.lang] }}</h2>
+                
+                {% if block.subtitle %}
+                    <p class="[ hero__subtitle ]">{{ block.subtitle[page.lang] | safe }}</p>
+                {% endif %}
 
                 <p>{{ block.description[page.lang] }}</p>
 

@@ -47,7 +47,7 @@ module.exports = {
                     <div class="[ panel ] [ text-white ] [ bg-primary ][ mt-3 ]">
                         <h3 class="[ fw-normal text-white ]">View our webinar</h3>
                         <p>Find out more about our webinar here.</p>
-                        <a href="#" target="_blank" rel="noreferrer"class="[ btn btn-white rounded-0 ] [ d-flex align-items-center justify-content-center gap-2 ]">
+                        <a href="https://us06web.zoom.us/webinar/register/WN_tRBO5L_aRl66jftE4AUrJA" target="_blank" rel="noreferrer"class="[ btn btn-white rounded-0 ] [ d-flex align-items-center justify-content-center gap-2 ]">
                             <span class="text-primary">Register here</span>
                         </a>
                     </div> 
@@ -145,10 +145,25 @@ module.exports = {
                             </ol>
                         </div>
                     </div>   
-                    <p>You can find our more about carbon capture from the Carbon Capture, Utilisations and Storage Association, <a class="fw-bold" href="https://www.ccsassociation.org/" target="_blank">here</a>.</p>             
                     `,
             cy: ``,
             },
+        },
+        {
+            type: "text",
+            bgColour: "white",
+            title: {
+                en: "",
+                cy: ""
+            },
+            content: {
+                en: `
+                    <p>You can find our more about carbon capture from the Carbon Capture, Utilisations and Storage Association, <a class="fw-bold" href="https://www.ccsassociation.org/" target="_blank">here</a>.</p>             
+                    `,
+                cy: ``,
+            },
+
         }
+        
     ]
 };

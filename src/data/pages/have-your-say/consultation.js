@@ -30,6 +30,7 @@ module.exports = {
         {
             type: "text",
             bgColour: "white",
+            align: "center",
             content: {
                 en: `
                     <div class="[ panel ] [ bg-grey-100 ] [ text-white ]">
@@ -47,6 +48,7 @@ module.exports = {
                         <p>Please note, this consultation is on our plans for carbon capture at Runcorn and not on the operations of the existing ERF facility. As such, these proposals will not impact or change the existing operations of our ERF.</p>  
                     </div>                
                     `,
+            
             cy: ``,
             }
         },
@@ -55,11 +57,15 @@ module.exports = {
         {
             type: "table",
             bgColour: "primary-light",
-            text: "black",
+            textColour: "black",
         
             // Optional
             title: {
                 en: "Consultation events",
+                cy: "",
+            },
+            subtitle: {
+                en: "As part of this consultation, we are holding a combination of in-person and online events where you can meet members of the project team and ask any questions you may have.",
                 cy: "",
             },
         
@@ -125,7 +131,7 @@ module.exports = {
             ],
             content: {
                 en: `
-                    <p class="text-black">We will also be holding a webinar at 6pm on Tuesday 18 March. You can register <a class="fw-bold" href="#" target="_blank">here</a>.</p>
+                    <p class="text-black">We will also be holding a webinar at 6pm on Tuesday 18 March. You can register <a class="fw-bold" href="https://us06web.zoom.us/webinar/register/WN_tRBO5L_aRl66jftE4AUrJA" target="_blank">here</a>.</p>
                     `,
                 cy: ``,
             },

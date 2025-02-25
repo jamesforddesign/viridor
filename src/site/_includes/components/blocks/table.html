@@ -1,7 +1,11 @@
 <div class="{% if block.bgColour %}[ bg-{{ block.bgColour }}{{ '-opacity' if block.opacity }} ] {% endif %}{% if block.opacity %}[ bg-opacity-{{ block.opacity }} ] {% endif %}[ py-5 ]"{% if block.anchor %} id="{{ block.anchor[page.lang] }}"{% endif %}>
     <div class="[ container-xl ]">
         {% if block.title %}
-            <h2 class="[ text-{{ block.textColour if block.textColour else 'primary' }} ] [ mb-3 mb-lg-5 ]">{{ block.title[page.lang] }}</h2>
+            <h2 class="[ text-{{ block.textColour if block.textColour else 'primary' }} ] [ mb-2 mb-lg-4 ]">{{ block.title[page.lang] }}</h2>
+        {% endif %}
+
+        {% if block.subtitle[page.lang] %}
+            <h4 class="[ fw-normal mb-2 mb-lg-4 ]">{{ block.subtitle[page.lang] }}</h2>
         {% endif %}
 
         <table class="[ table table-bordered  ]">

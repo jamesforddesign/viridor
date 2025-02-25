@@ -6,7 +6,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding-block: map-get($spacers, 5);
+    padding-block: map-get($spacers, 4);
+
 
     &.has-image {
         &::before {
@@ -21,7 +22,6 @@
     }
 
     @include media-breakpoint-up(lg) {
-        padding-block: map-get($spacers, 8);
     }
 
     &__inner {

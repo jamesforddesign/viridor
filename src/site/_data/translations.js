@@ -175,17 +175,17 @@ module.exports = {
 
     // Footer
     companyNumber: {
-        en: "Company Number",
+        en: "",
         cy: "Rhif Cwmni"
     },
 
     vatNumber: {
-        en: "VAT Number",
+        en: "",
         cy: "Rhif TAW"
     },
 
     registeredOffice: {
-        en: "Registered Office",
+        en: "",
         cy: "Swyddfa Gofrestredig"
     },
 

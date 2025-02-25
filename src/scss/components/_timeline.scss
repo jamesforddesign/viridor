@@ -20,6 +20,7 @@
         overflow-x: auto;
         padding-block: map-get($spacers, 5);
         padding-inline-start: map-get($spacers, 5);
+        padding-top: 0px;
 
         @include media-breakpoint-up(sm) {
             padding-block-end: 0;
@@ -29,37 +30,42 @@
     &__stage {
         position: relative;
         min-width: 300px;
-        min-height: 350px;
+        min-height: 300px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding-top: 40px;
+        padding-bottom: 300px;
 
         @include media-breakpoint-up(sm) {
             min-width: 400px;
-            min-height: 300px;
+            min-height: 400px;
             width: 600px;
         }
 
         &--reverse {
-            flex-direction: column-reverse;
-            padding-bottom: map-get($spacers, 3);
+            justify-content: end;
+            padding-top: 375px;
+            padding-bottom: 0px;
 
             @include media-breakpoint-up(sm) {
-                padding-bottom: map-get($spacers, 5);
             }
         }
 
         &::after {
             content: "";
             position: absolute;
-            top: calc(0% - 20px);
+            top: 50%;
             left: 40px;
             width: 100%;
-            height: 2px;
+            height: 7.5px;
+            transform: translate(-5px,-50%);
             background: $primary;
+            border: 1px solid $grey-25;
+            outline: 5px solid $primary;
+            z-index: 0;
         }
+ 
     }
 
     &__stage-bullet {
@@ -72,18 +78,44 @@
         justify-content: center;
         left: 0;
         position: absolute;
-        top: calc(0% - 40px);
+        top: calc(50% - 20px);
         width: 40px;
+        z-index: 1;
+
+
+
+        &::before{
+            background-color: $primary-light;
+            opacity: 0.8;
+            content: "";
+            position: absolute;
+            margin-left: 250px;
+            width: 20px;
+            height: calc(( 3 * 5px ) + 3px);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 50% 50% , 0% 0%);
+        }
+        &::after{
+            background-color: $primary-light;
+            opacity: 0.8;
+            content: "";
+            position: absolute;
+            margin-left: 500px;
+            width: 20px;
+            height: calc(( 3 * 5px ) + 3px);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 100%, 50% 50% , 0% 0%);
+        }
+
+
     }
 
     &__stage-bullet-inner {
-        background: $white;
+        background: $primary-light;
         border-radius: 50%;
         height: 20px;
         width: 20px;
 
         &.highlight {
-            background: $primary;
+            background: $secondary;
         }
     }
 

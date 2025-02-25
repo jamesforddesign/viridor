@@ -45,7 +45,7 @@ module.exports = {
                         cy: ""
                     },
                     highlight: true, // Optional
-                    reverse: false, // 
+                    reverse: true, // 
                     description: {
                         en: "As part of the application process, we are conducting a public consultation with relevant stakeholders and members of the local community to inform them about, and collect feedback on, our proposals for carbon capture at Runcorn. ",
                         cy: ""
@@ -67,7 +67,7 @@ module.exports = {
                         en: "Decision – <br>Early 2026",
                         cy: ""
                     },
-                    reverse: false, // 
+                    reverse: true, // 
                     description: {
                         en: "We anticipate a decision on our application from Halton Borough Council at the beginning of 2026. ",
                         cy: ""
@@ -89,7 +89,7 @@ module.exports = {
                         en: "Operation – <br>Winter 2029",
                         cy: ""
                     },
-                    reverse: false, // 
+                    reverse: true, // 
                     description: {
                         en: "We anticipate being able to start capturing carbon at Runcorn at the end of 2029.",
                         cy: ""
