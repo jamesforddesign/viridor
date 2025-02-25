@@ -1,76 +1,46 @@
 .carousel {
-    $self: &;
-
+    height: 100%;
+    display: block;
+    overflow-x: hidden;
     position: relative;
-    z-index: 2;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
-    @include media-breakpoint-up(lg) {
-        overflow-x: hidden;
-    }
+    &__container {
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            opacity: 1;
+            width: 260px;
+            pointer-events: none;
+            z-index: 2;
 
-    &--map {
-        @extend .carousel--image;
-
-        .flickity-page-dots {
-            margin-top: $spacer;
-        }
-    }
-
-    &:focus-visible {
-        outline: none;
-    }
-
-    &__item {
-        #{$self}--text & {
-            padding: 40px 45px;
-            width: 100%;
-
-            @include media-breakpoint-up(lg) {
-                padding: 82px 92px 0;
+            @include media-breakpoint-up(xxxl) {
+                width: 560px;
             }
         }
 
-        #{$self}--image & {
-            width: 100%;
+        &:before {
+            left: 0;
 
-            img {
-                height: 100%;
-                max-height: 100%;
-                max-width: 100%;
-                width: 100%;
+            @include media-breakpoint-up(md) {
+                background: linear-gradient(90deg, $grey-25 0, transparent 100%);
             }
         }
 
-        #{$self}--map & {
-            img {
-                margin-bottom: $spacer;
+        &:after {
+            right: 0;
+
+            @include media-breakpoint-up(md) {
+                background: linear-gradient(90deg, transparent 0, $grey-25 100%);
             }
         }
-    }
 
-    &__title {
-        #{$self}--text & {
-            @include fluid-type(xs, lg, 24px, 40px);
-            color: $secondary;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 0;
-        }
-    }
-
-    &__text {
-        #{$self}--text & {
-            font-weight: 500;
-            color: $secondary;
-            letter-spacing: -.02em;
-            margin-bottom: 0;
-        }
-    }
-
-    &__text-container {
-        #{$self}--text & {
-            display: flex;
-            margin-top: 10px;
+        &:focus-visible {
+            outline: 0;
         }
     }
 }

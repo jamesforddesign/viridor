@@ -70,6 +70,7 @@ module.exports = {
                 },
             
         },
+        /*
         {
             type: "text",
             bgColour: "white",
@@ -156,6 +157,10 @@ module.exports = {
                 cy: ``,
                 },
             invert: true,
+        }
+            */
+        {
+            type: "carousel",
         }
     ]
 };

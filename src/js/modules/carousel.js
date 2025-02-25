@@ -1,4 +1,9 @@
+/*------------------------------------*\
+    MODULES
+\*------------------------------------*/
 import Flickity from "flickity";
+require("flickity-sync");
+require("flickity-as-nav-for");
 
 /*------------------------------------*\
     Carousel
@@ -8,17 +13,24 @@ class Carousel {
         let self = this;
 
         self.elem = passedElement;
+        self.carouselElem = self.elem.querySelector('[data-carousel]');
     }
 
     init() {
         let self = this;
 
-        const flkty = new Flickity(self.elem, {
-            adaptiveHeight: true,
-            autoPlay: false,
-            draggable: true,
-            prevNextButtons: false,
-            wrapAround: true
+        self.getCarousel();
+    }
+
+    getCarousel() {
+        let self = this;
+
+        const flktyPrimary = new Flickity(self.carouselElem, {
+            // autoPlay: true,
+            contain: true,
+            wrapAround: true,
+            draggable: false,
+            prevNextButtons: true
         });
     }
 }
