@@ -92,8 +92,8 @@
         }
 
         @include hover() {
-            color: $nav-dropdown-text-color;
-            background: $secondary;
+            background: $grey-100;
+            color: $white;
             font-weight: $font-weight-bold;
 
             @include media-breakpoint-up($navigation-breakpoint) {
@@ -104,7 +104,8 @@
         }
 
         &.is-active {
-            background: $secondary;
+            background: $grey-100;
+            color: $white;
 
             @include media-breakpoint-up($navigation-breakpoint) {
                 background: transparent;
