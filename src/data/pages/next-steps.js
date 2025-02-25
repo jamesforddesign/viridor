@@ -82,7 +82,8 @@ module.exports = {
                     description: {
                         en: "If our application is approved, we hope to begin construction of our carbon capture facility in April 2026.",
                         cy: ""
-                    }
+                    },
+
                 },
                 {
                     title: {

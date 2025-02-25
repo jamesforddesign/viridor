@@ -62,12 +62,9 @@ module.exports = {
                     `,
                 cy: ``,
             },
-            contentInvert:{
-                en: `
-                    <img src="/assets/images/svg/factory.svg" alt="Factory">
-                `,
-                cy: ``,
-                },
+            image: "/overview-map.webp",
+            zoomable: true
+
             
         },
         /*
