@@ -7,6 +7,7 @@ import TypeMate from 'typemate';
 import Accordion from './modules/accordion';
 import Carousel from './modules/carousel';
 import CharacterCount from './modules/character-count';
+import FancyBox from './modules/fancy-box';
 import FeedbackChangeTracker from './modules/feedback-change-tracker';
 import FeedbackProgress from './modules/feedback-progress';
 import FeedbackResponse from './modules/feedback-response';
@@ -81,6 +82,14 @@ const app = {
                         let characterCountInstance = new CharacterCount(item);
 
                         characterCountInstance.init();
+
+                        break;
+
+                    case 'fancy-box':
+
+                        let fancyBoxInstance = new FancyBox(item);
+
+                        fancyBoxInstance.init();
 
                         break;
 

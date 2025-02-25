@@ -36,6 +36,7 @@
     "@11ty/eleventy-navigation": "^0.3.5",
     "@babel/preset-env": "^7.24.7",
     "@bugsnag/js": "^7.23.0",
+    "@fancyapps/ui": "^5.0.36",
     "autoprefixer": "^10.4.19",
     "axios": "^1.7.2",
     "babel-loader": "^9.1.3",

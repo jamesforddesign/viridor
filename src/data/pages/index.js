@@ -158,10 +158,13 @@ module.exports = {
             },
             content: {
                 en: `
-                    <p>You can find our more about carbon capture from the Carbon Capture, Utilisations and Storage Association, <a class="fw-bold" href="https://www.ccsassociation.org/" target="_blank">here</a>.</p>             
+                    <h4 class="fw-normal">You can find our more about carbon capture from the Carbon Capture, Utilisations and Storage Association, <a class="fw-bold" href="https://www.ccsassociation.org/" target="_blank">here</a>.</h4>             
                     `,
                 cy: ``,
             },
+            image: "/infographic.webp",
+            zoomable: true,
+            size: 3,
 
         }
         
