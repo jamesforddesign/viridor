@@ -63,11 +63,11 @@
         @include fluid-type(xs, md, 11px, 14px);
 
         @include hover() {
-            color: $secondary;
+            color: $primary;
         }
 
         &.is-active {
-           color: $secondary;
+           color: $primary-light;
         }
     }
 
