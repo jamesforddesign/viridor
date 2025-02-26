@@ -1,0 +1,100 @@
+<div id="feedbackBox" class="[ feedback-box panel position-fixed bg-grey-25 ]">
+    <!-- Close Icon -->
+    <button id="closeButton" class="close-btn" aria-label="Close">
+        <span>&times;</span> <!-- Times symbol for close icon -->
+    </button>
+
+    <form id="feedbackForm">
+        <div class="form-group my-3">
+            <label class="mb-3 pt-3" for="comment">
+                <strong class="[ fw-bold text-grey-100 ]">
+                    Q: Do you have any thoughts on, or questions about, our plans for carbon capture at Viridor Runcorn?
+                </strong>
+            </label>
+            <textarea maxlength="7000" class="form-control bg-grey-25" id="comment" name="comment" rows="4" placeholder="Enter any comments" aria-label="Comments"></textarea>
+        </div>
+        <button type="submit" class="[ btn btn-primary text-white rounded-0 ] [ d-flex align-items-center justify-content-center gap-2 ]">
+            Submit
+        </button>
+    </form>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const fields = ["first_name", "surname", "email", "address", "comment"];
+        const feedbackBox = document.getElementById("feedbackBox");
+        const form = document.getElementById("feedbackForm");
+        const mainCommentField = document.getElementById("comment");
+        const closeButton = document.getElementById("closeButton");
+
+        // Hide the feedback box by default
+        if (feedbackBox) feedbackBox.style.display = "none";
+
+        // Check if feedback is already saved
+        const savedComment = localStorage.getItem("feedbackComment");
+
+        if (!savedComment) {
+            // If no saved comment, show the feedback box
+            if (feedbackBox) feedbackBox.style.display = "block";
+        } else if (mainCommentField) {
+            // If saved comment exists, prefill the main form field
+            mainCommentField.value = savedComment;
+        }
+
+        // Prefill form fields from localStorage
+        fields.forEach(field => {
+            const input = document.getElementById(field);
+            if (input) {
+                const storedValue = localStorage.getItem(field);
+                if (storedValue) {
+                    input.value = storedValue;
+                }
+
+                // Save input to localStorage when user types
+                input.addEventListener("input", function () {
+                    localStorage.setItem(field, input.value);
+                });
+            }
+        });
+
+        // Handle feedback form submission
+        if (form) {
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const comment = mainCommentField.value.trim();
+
+                if (comment) {
+                    localStorage.setItem("feedbackComment", comment);
+                    if (feedbackBox) feedbackBox.style.display = "none"; // Hide feedback box
+                    window.location.href = "/have-your-say"; // Redirect
+                } else {
+                    alert("Please enter a comment before submitting.");
+                }
+            });
+        }
+
+        // Close the feedback box when the close button is clicked
+        if (closeButton) {
+            closeButton.addEventListener("click", function () {
+                if (feedbackBox) feedbackBox.style.display = "none";
+            });
+        }
+    });
+</script>
+
+<style>
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .close-btn span {
+        font-weight: bold;
+        color: #333;
+    }
+</style>

@@ -1,0 +1,10 @@
+.feedback-box {
+    bottom: 25%;
+    right: 0px;
+    position: fixed;
+    margin: $spacer;
+    width: 300px;
+    display: none;
+    transform: translateY(50%);
+    box-shadow: 0 4px 8px 0 rgba($black, 0.15);
+}
