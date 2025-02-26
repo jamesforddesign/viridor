@@ -25,6 +25,7 @@ module.exports = {
                 en: "Contact us",
                 cy: "",
             },
+            background: "/contact-us-hero.webp",
 
         },
         {

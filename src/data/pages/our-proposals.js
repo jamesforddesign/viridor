@@ -27,6 +27,8 @@ module.exports = {
                 en: "Our proposals",
                 cy: "",
             },
+            background: "/our-proposals-hero.webp"
+
         },
         {
             type: "text",
