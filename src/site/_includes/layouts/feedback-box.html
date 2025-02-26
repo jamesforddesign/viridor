@@ -1,3 +1,4 @@
+{% if page.url != '/have-your-say/' %}
 <div id="feedbackBox" class="[ feedback-box panel position-fixed bg-grey-25 ]">
     <!-- Close Icon -->
     <button id="closeButton" class="close-btn" aria-label="Close">
@@ -18,6 +19,7 @@
         </button>
     </form>
 </div>
+{% endif %}
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
