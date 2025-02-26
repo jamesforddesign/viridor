@@ -33,6 +33,16 @@ module.exports = {
         {
             type: "text",
             bgColour: "white",
+            image: "/home-2.webp",
+            caption: "CGI showing what we anticipate our proposed carbon capture infrastructure to look like. Please note this is indicative and subject to change as our application progresses. ",
+            zoomable: true,
+            size: 2,
+
+            
+        },
+        {
+            type: "text",
+            bgColour: "white",
             content: {
                 en: `
                     <h2 class="[ fw-bold text-primary ]">Construction</h2>

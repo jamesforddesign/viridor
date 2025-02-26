@@ -30,7 +30,7 @@
             </div>
             {% endif %}
             {% if block.image | length %}
-            <div class="col-12 col-lg-{{ 12 - size }} {% if block.invert %} order-lg-1 {% endif %}" {% if block.zoomable %} data-module="fancy-box"{% endif %}>
+            <div class="col-12 col-lg-{{ 12 - size }} {% if not block.content | length %}col-lg-12{% endif %} {% if block.invert %} order-lg-1 {% endif %}" {% if block.zoomable %} data-module="fancy-box"{% endif %}>
                 <a class="position-relative d-block" {% if block.zoomable %} data-fancybox="" data-caption="{{ block.caption }}" href="{{ env.ASSETS_BASE_URL }}{{ block.image }}" {% endif %}>
                     <img class="w-100" src="{{ env.ASSETS_BASE_URL }}{{ block.image }}" alt="{{ block.title[page.lang] }}" {% if block.zoomable %} data-zoomable="{{ block.image }}"{% endif %} />
                     {% if block.zoomable %}
