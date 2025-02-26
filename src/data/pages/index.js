@@ -45,8 +45,8 @@ module.exports = {
                     <p>We’ve invested over <span class="fw-bold">£1.2 billion</span> in developing a network of advanced Energy Recovery Facilities (ERFs) across the UK and we deliver innovative ways to reduce, reuse, recycle or recover energy from the things that you sort into your bins every day. We’re an active recycler ourselves, and work with our local authority customers to meet recycling and waste management targets. You can take a tour of our virtual ERF <a class="fw-bold" href="https://www.viridor.co.uk/erf-virtual-tour/" target="_blank">here</a>. </p>    
                     
                     <div class="[ panel ] [ text-white ] [ bg-primary ][ mt-3 ]">
-                        <h3 class="[ fw-normal text-white ]">View our webinar</h3>
-                        <p>Find out more about our webinar here.</p>
+                        <h3 class="[ fw-normal text-white ]">Register to attend our webinar</h3>
+                        <p>We're holding a webinar on our proposals for carbon capture at Runcorn at 6pm on Tuesday 18 March. </p>
                         <a href="https://us06web.zoom.us/webinar/register/WN_tRBO5L_aRl66jftE4AUrJA" target="_blank" rel="noreferrer"class="[ btn btn-white rounded-0 ] [ d-flex align-items-center justify-content-center gap-2 ]">
                             <span class="text-primary">Register here</span>
                         </a>
@@ -76,7 +76,7 @@ module.exports = {
             },
             content: {
                 en: `
-                    <h4 class="[ fw-normal text-grey-100 ]">Viridor has been operating an ERF at Runcorn since 2014, treating approximately 1 million tonnes of non-recycled waste each year and generating enough energy to power over 211,000 homes.  </h4>
+                    <h4 class="[ fw-normal text-grey-100 ]">Viridor has been operating an ERF at Runcorn since 2014, and now treats approximately 1 million tonnes of non-recycled waste each year and generating enough energy to power over 211,000 homes.  </h4>
                     <p>In May 2021, we announced our five-step action plan to achieve net zero emissions by 2040. Capturing the carbon produced by facilities such as our Runcorn ERF is a key part of this ambition. You can read more about our ambitions for carbon capture at Runcorn <a class="fw-bold" href="/assets/images/pdf/carbon-capture-a-waste-opportunity.pdf" target="_blank">here</a>.</p>
                     <p>In March 2023, the UK Government announced that our proposals for carbon capture in Runcorn had been shortlisted for the final stage in its <a class="fw-bold"  href="https://www.gov.uk/government/publications/cluster-sequencing-phase-2-eligible-projects-power-ccus-hydrogen-and-icc/cluster-sequencing-phase-2-shortlisted-projects-power-ccus-hydrogen-and-icc-august-2022" target="_blank">industrial carbon capture (ICC) sequencing process</a>.</p>
                     <p>As one of the first carbon capture projects on an ERF facility in the world, we agreed a statement of principles with the UK Government’s Department for Energy Security and Net Zero (DESNZ) in March 2024. You can read more on this decision <a class="fw-bold" href="https://www.viridor.co.uk/news-and-insights/viridor-runcorn-ccs-project-to-advance-to-next-stage/" target="_blank">here</a>.</p>

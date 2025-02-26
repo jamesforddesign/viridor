@@ -58,7 +58,7 @@ module.exports = {
                     },
                     reverse: false, // 
                     description: {
-                        en: "We will be submitting our planning application to Halton Borough Council, as the relevant local planning authority, later this year. ",
+                        en: "We will be submitting our planning application to Halton Borough Council, as the local planning authority, later this year. ",
                         cy: ""
                     }
                 },
@@ -75,24 +75,24 @@ module.exports = {
                 },
                 {
                     title: {
-                        en: "Construction – <br>Spring 2027",
+                        en: "Construction – <br>Early 2027",
                         cy: ""
                     },
                     reverse: false, // 
                     description: {
-                        en: "If our application is approved, we hope to begin construction of our carbon capture facility in April 2026.",
+                        en: "If our application is approved, we hope to begin construction of our carbon capture facility in February 2027.",
                         cy: ""
                     },
 
                 },
                 {
                     title: {
-                        en: "Operation – <br>Winter 2029",
+                        en: "Operation – <br>2031",
                         cy: ""
                     },
                     reverse: true, // 
                     description: {
-                        en: "We anticipate being able to start capturing carbon at Runcorn at the end of 2029.",
+                        en: "We anticipate being able to start capturing carbon at Runcorn in 2031.",
                         cy: ""
                     }
                 }

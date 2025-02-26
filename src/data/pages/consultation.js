@@ -7,12 +7,12 @@ module.exports = {
     navOrder: 1,
 
     permalink: {
-        en: "have-your-say/consultation",
-        cy: "have-your-say/consultation"
+        en: "consultation",
+        cy: "consultation"
     },
 
     parent: {
-        en: "have-your-say",
+        en: "",
         cy: ""
     },
 
@@ -45,7 +45,7 @@ module.exports = {
                     <div class="[ panel ] [ bg-secondary ] [ text-white ]">
                         <h3 class="[ fw-normal ]">This consultation</h3>
                         <p>As this project develops, we’re keen to hear your views on our proposal for carbon capture at Runcorn. You can find more information on our plans on the <a class="text-white fw-bold" href="/our-proposals">our proposals</a> page of this website.  </p>
-                        <p>Please note, this consultation is on our plans for carbon capture at Runcorn and not on the operations of the existing ERF facility. As such, these proposals will not impact or change the existing operations of our ERF.</p>  
+                        <p>Please note, this consultation is on our plans for carbon capture at Runcorn and not on the operations of the existing ERF. As such, these proposals will not impact or change the existing operations of our ERF.</p>  
                     </div>                
                     `,
             

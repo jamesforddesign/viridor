@@ -1,0 +1,25 @@
+---
+eleventyComputed:
+    title: "{{ translations.formSuccessTitle[page.lang] }}"
+    description: "{{ translations.formSuccessText[page.lang] }}"
+permalink: success.html
+eleventyExcludeFromCollections: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% set home = "" %}
+
+{% if env.MULTILINGUAL == 'true' %}
+    {% set home = page.lang %}
+{% endif %}
+
+{% block content %}
+    <div class="[ container-xl ] [ my-5 ]">
+        <div class="[ wysiwyg ]">
+            <h1 class="[ heading ] [ text-primary ]">Form has been submitted successfully</h1>
+        </div>
+
+        <a href="/{{ home }}" class="[ btn btn-secondary ] [ mt-4 ]">{{ translations.backHome[page.lang] }}</a>
+    </div>
+{% endblock %}

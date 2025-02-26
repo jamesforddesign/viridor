@@ -54,7 +54,7 @@ module.exports = {
                             <li>Flue gas connections to the ERF facility</li>
                             <li>Drainage </li>
                             <li>Utility connections within the site</li>
-                            <li>Internal and external RERF facility modifications, as required, to facilitate the new pipework</li>
+                            <li>Internal and external Recycling and Energy Recovery Facility (RERF) modifications, as required, to facilitate the new pipework</li>
                             <li>Access, parking and welfare facilities</li>
                             <li>Construction laydown areas</li>
                         </ul>
@@ -63,6 +63,7 @@ module.exports = {
                 cy: ``,
             },
             image: "/overview-map.webp",
+            caption: "Red line boundary showing the land needed to complete this project. This is subject to change as the planning process progresses. ",
             zoomable: true
 
             
