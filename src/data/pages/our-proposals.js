@@ -36,7 +36,7 @@ module.exports = {
             content: {
                 en: `
                     <h2 class="[ fw-bold text-primary ]">Construction</h2>
-                    <h4 class="[ fw-normal text-grey-100 ]">If our application is approved, we anticipate starting construction activities in Spring 2027, with carbon capture at Runcorn being operational by December 2029. </h4>
+                    <h4 class="[ fw-normal text-grey-100 ]">If our application is approved, we anticipate starting construction activities in Early 2027, with carbon capture at Runcorn being operational in 2031. </h4>
                     <p>This would require us to use construction laydown areas, where building materials and equipment would be stored, alongside the creation of staff parking and welfare units. We anticipate the main construction access to the laydown area being via Barlow Way, to the south of our site.</p>
                     <p>As part of our planning application, we will be submitting a Construction Environmental Management Plan (CEMP) which will set out the management measures to be employed during construction to avoid or minimise environmental impacts.</p>
 

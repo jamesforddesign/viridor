@@ -76,7 +76,7 @@ module.exports = {
             },
             content: {
                 en: `
-                    <h4 class="[ fw-normal text-grey-100 ]">Viridor has been operating an ERF at Runcorn since 2014, and now treats approximately 1 million tonnes of non-recycled waste each year and generating enough energy to power over 211,000 homes.  </h4>
+                    <h4 class="[ fw-normal text-grey-100 ]">Viridor has been operating an ERF at Runcorn since 2014, and now treats approximately 1 million tonnes of non-recycled waste each year, generating enough energy to power over 211,000 homes.  </h4>
                     <p>In May 2021, we announced our five-step action plan to achieve net zero emissions by 2040. Capturing the carbon produced by facilities such as our Runcorn ERF is a key part of this ambition. You can read more about our ambitions for carbon capture at Runcorn <a class="fw-bold" href="/assets/images/pdf/carbon-capture-a-waste-opportunity.pdf" target="_blank">here</a>.</p>
                     <p>In March 2023, the UK Government announced that our proposals for carbon capture in Runcorn had been shortlisted for the final stage in its <a class="fw-bold"  href="https://www.gov.uk/government/publications/cluster-sequencing-phase-2-eligible-projects-power-ccus-hydrogen-and-icc/cluster-sequencing-phase-2-shortlisted-projects-power-ccus-hydrogen-and-icc-august-2022" target="_blank">industrial carbon capture (ICC) sequencing process</a>.</p>
                     <p>As one of the first carbon capture projects on an ERF facility in the world, we agreed a statement of principles with the UK Government’s Department for Energy Security and Net Zero (DESNZ) in March 2024. You can read more on this decision <a class="fw-bold" href="https://www.viridor.co.uk/news-and-insights/viridor-runcorn-ccs-project-to-advance-to-next-stage/" target="_blank">here</a>.</p>
@@ -104,6 +104,7 @@ module.exports = {
             contentInvert: {
                 en: `
                     <div class="[ panel ] [ bg-tertiary ] [ text-white ]">
+                        <h4 class="text-white">HyNet</h4>
                         <p>The HyNet pipeline is a nationally significant infrastructure project that plans to take captured carbon dioxide from across our region and store it under the sea in Liverpool Bay. Our proposals for carbon capture at Runcorn would connect to the Runcorn Spur Pipeline and wider HyNet network, which is being developed by Eni. </p>
                         <p>You can find out more by visiting the HyNet website, <a class="text-white fw-bold" href="https://hynethub.co.uk/index.php?contentid=982" target="_blank">here</a>.</p>
                     </div>
@@ -139,7 +140,7 @@ module.exports = {
                                 <li>The flue gas is then passed through a piece of machinery called a scrubber which cleans it and cools it down. </li>
                                 <li>The gas then moves to the absorber column, where the CO<sub>2</sub> is absorbed from the flue gas (while cold) by a CO<sub>2</sub> solvent (e.g. amine). The flue gas (minus the CO<sub>2</sub>) is vented through a stack into the atmosphere after being re-heated. </li>
                                 <li>The CO<sub>2</sub> rich solvent is then warmed up through a heat exchanger. A reclaimer is also used to continuously clean the solvent to keep it effective at removing as much CO<sub>2</sub> as possible. </li>
-                                <li>In a stripper, the solvent is further heated until it released the CO<sub>2</sub> as a pure gaseous stream. </li>
+                                <li>In a stripper, the solvent is further heated until it releases the CO<sub>2</sub> as a pure gaseous stream. </li>
                                 <li>The CO<sub>2</sub> is then passed into a compressor, which increases the pressure to pump it away from site. Before entering the transport system, the CO<sub>2</sub> is conditioned / treated to ensure it will not corrode the downstream system. </li>
                                 <li>The CO<sub>2</sub> captured at Viridor Runcorn is then handed over to the transport and storage operator as part of the HyNet Network, which would take the CO<sub>2</sub> for permanent sequestration below impermeable rock.</li>
                             </ol>
