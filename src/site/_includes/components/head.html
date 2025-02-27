@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/assets/css/global.css?{% assetVersion %}" media="all">
 
     {% if env.RELEASE_ENV == 'production' %}
+    <script src="{{ env.COOKIE_FIRST_URL }}"></script>
+
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -21,6 +23,8 @@
     {% endif %}
 
     {% if env.RELEASE_ENV == 'staging' %}
+    <script src="{{ env.COOKIE_FIRST_URL }}"></script>
+
         <script>
             window.markerConfig = {
                 project: '{{ env.MARKER_IO_KEY }}',
