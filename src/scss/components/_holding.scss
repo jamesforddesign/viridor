@@ -1,13 +1,17 @@
 .holding {
-    @extend %flex-center;
-    flex-direction: column;
-    gap: $spacer;
-    
-    height: 100vh;
-    background: $primary;
-    color: $secondary;
+
 
     &__logo{
 
+    }
+
+    &__inner{
+        @extend %flex-center;
+        flex-direction: column;
+        gap: $spacer;
+        
+        height: 100vh;
+        background: $primary;
+        color: $secondary;
     }
 }
