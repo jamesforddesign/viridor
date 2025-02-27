@@ -21,8 +21,8 @@ By default we should adhere to WCAG AA standard
 - [ ] Netlify configured for production
 
 ## Licencing
-- [ ] Craft CMS licence purchased and registered
-- [ ] Craft Plugin licences purchased and registered (List all plugins here)
+- [-] Craft CMS licence purchased and registered
+- [-] Craft Plugin licences purchased and registered (List all plugins here)
 - [ ] Image licencing - are all images correctly licenced?
 
 ## SEO and Analytics
@@ -95,4 +95,4 @@ Select 3 pages including:
 - [ ] Project added to maintenance spreadsheet
 
 ## Backups
-- [ ] Set up a backup configuration (if hosted on Digital Ocean/Forge)
+- [-] Set up a backup configuration (if hosted on Digital Ocean/Forge)
