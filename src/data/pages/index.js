@@ -117,7 +117,7 @@ module.exports = {
             bgColour: "grey-25",
             opacity: "10",
             title: {
-                en: "Why we need carbon capture",
+                en: "Why do we need carbon capture?",
                 cy: ""
             },
             content: {
