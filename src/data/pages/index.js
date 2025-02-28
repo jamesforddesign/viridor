@@ -58,7 +58,7 @@ module.exports = {
                 en: `
                     <div class="[ panel ] [ bg-secondary ] [ text-white ]">
                         <p class="fw-bold">During 2023/24, Viridor contributed nearly £1 million to the Halton Borough Council Environment Fund which supports community-focused projects in the local area. Recently, this has included a £650,000 donation to fund a new community café in Pickerings Pasture. </p>
-                        <p>Local organisations have also benefited from Viridor’s We Share Community Fund, including our donations to Halton Haven Hospice and Weston Point Scout Group. We are also ongoing sponsors of Runcorn FC.</p>
+                        <p>Local organisations have also benefited from Viridor’s We Share Community Fund, which is our corporate fund run by people who choose to support well deserving causes in areas surrounding our ERFs. In Runcorn, these include donations to Halton Haven Hospice and Weston Point Scout Group. We are also ongoing sponsors of Runcorn FC.</p>
                         <img class="mt-3" src="/assets/images/antrobus-st-marks.jpg" alt="Antrobus St Marks image">
                     </div>
                 `,
@@ -78,7 +78,7 @@ module.exports = {
                 en: `
                     <h4 class="[ fw-normal text-grey-100 ]">Viridor has been operating an ERF at Runcorn since 2014, and now treats approximately 1 million tonnes of non-recycled waste each year, generating enough energy to power over 211,000 homes.  </h4>
                     <p>In May 2021, we announced our five-step action plan to achieve net zero emissions by 2040. Capturing the carbon produced by facilities such as our Runcorn ERF is a key part of this ambition. You can read more about our ambitions for carbon capture at Runcorn <a class="fw-bold" href="/assets/images/pdf/carbon-capture-a-waste-opportunity.pdf" target="_blank">here</a>.</p>
-                    <p>In March 2023, the UK Government announced that our proposals for carbon capture in Runcorn had been shortlisted for the final stage in its <a class="fw-bold"  href="https://www.gov.uk/government/publications/cluster-sequencing-phase-2-eligible-projects-power-ccus-hydrogen-and-icc/cluster-sequencing-phase-2-shortlisted-projects-power-ccus-hydrogen-and-icc-august-2022" target="_blank">industrial carbon capture (ICC) sequencing process</a>.</p>
+                    <p>In March 2023, the UK Government announced that our proposals for carbon capture in Runcorn had been shortlisted for the final stage in its <a class="fw-bold"  href="https://www.gov.uk/government/publications/cluster-sequencing-phase-2-eligible-projects-power-ccus-hydrogen-and-icc/cluster-sequencing-phase-2-shortlisted-projects-power-ccus-hydrogen-and-icc-august-2022" target="_blank">industrial carbon capture (ICC) sequencing process</a> - a centralised plan for choosing locations and projects to capture and store carbon in the UK.</p>
                     <p>As one of the first carbon capture projects on an ERF facility in the world, we agreed a statement of principles with the UK Government’s Department for Energy Security and Net Zero (DESNZ) in March 2024. You can read more on this decision <a class="fw-bold" href="https://www.viridor.co.uk/news-and-insights/viridor-runcorn-ccs-project-to-advance-to-next-stage/" target="_blank">here</a>.</p>
                     `,
                 cy: ``,
@@ -124,7 +124,7 @@ module.exports = {
                 en: `
                     <h4 class="[ fw-normal text-grey-100 ]">Human activity has been the main driver of climate change since the 1800s. The production of greenhouse gases (including CO<sub>2</sub>) is the key reason why the earth is warming faster than ever before, and extreme weather events are becoming more common.</h4>
                     <p>Waste is a major contributor to greenhouse gas emissions and even with improvements in recycling, the average person still throws away around 500kg of non-recycled waste each year. This is the weight of a small car! </p>
-                    <p>However, our industry is well suited to capturing CO<sub>2</sub> and it could have a big impact. For example, we will capture the equivalent carbon to that which is emitted on 3000 commercial flights from London to New York! </p>
+                    <p>However, our industry is well suited to capturing CO<sub>2</sub> and it could have a big impact. For example, in Runcorn alone, we will capture the equivalent carbon to that which is emitted on 3000 commercial flights from London to New York each year! </p>
                     <p>This project will make our site climate positive by producing negative emissions. This is where the total carbon we capture is more than the total fossil (man-made) carbon we produce. We will be capturing natural carbon so we’ll actually be removing carbon from the atmosphere and in doing so we’ll be helping this region to be at the forefront of efforts to reduce the UK’s carbon emissions and reach net zero targets. You can find out more about negative emissions from the Coalition for Negative Emissions, <a class="fw-bold" href="https://coalitionfornegativeemissions.org/" target="_blank">here</a>. </p>
                     `,
                 cy: ``,
