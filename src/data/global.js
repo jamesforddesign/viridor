@@ -9,7 +9,7 @@ module.exports = {
         cy: ""
     },
 
-    socialImage: "https://placehold.co/600x400",
+    socialImage: ""/assets/images/home-2.webp",
 
     company: {
         address: "",

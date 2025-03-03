@@ -6,7 +6,7 @@ module.exports = {
         cy: "Cartref",
     },
 
-    socialImage: "https://placehold.co/700x400",
+    socialImage: "/assets/images/home-2.webp",
 
     permalink: {
         en: "",

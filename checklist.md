@@ -27,7 +27,7 @@ By default we should adhere to WCAG AA standard
 
 ## SEO and Analytics
 - [x] `<title>` set correctly on each page
-- [ ] `<meta description="">` set correctly on each page
+- [x] `<meta description="">` set correctly on each page
 - [x] `<link rel="canonical" href="https://URL/" />` set correctly for each page
 - [x] `<link rel="alternate" href="https://WEBSITE/" hreflang="en-gb" />` set correctly on all pages
 - [x] Facebook Open Graph and Twitter Card tags set correctly on each page

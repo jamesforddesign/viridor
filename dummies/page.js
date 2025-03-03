@@ -8,7 +8,7 @@ module.exports = {
 
     navOrder: 1,
 
-    socialImage: "https://placehold.co/600x400",
+    socialImage: "/assets/images/home-2.webp",
 
     permalink: {
         en: "",
