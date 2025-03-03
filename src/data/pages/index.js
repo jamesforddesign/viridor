@@ -159,7 +159,7 @@ module.exports = {
             },
             content: {
                 en: `
-                    <h4 class="fw-normal">You can find our more about carbon capture from the Carbon Capture, Utilisations and Storage Association, <a class="fw-bold" href="https://www.ccsassociation.org/" target="_blank">here</a>.</h4>             
+                    <h4 class="fw-normal">You can find out more about carbon capture from the <a class="fw-bold" href="https://www.ccsassociation.org/" target="_blank">CCSA</a> - the lead European association for carbon capture, utilisation and storage (CCUS).</h4>             
                     `,
                 cy: ``,
             },
