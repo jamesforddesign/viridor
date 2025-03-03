@@ -4,8 +4,11 @@
 
     <body>
         {% if env.RELEASE_ENV === 'production' %}
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ env.TAG_MANAGER_KEY }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        {% endif %}
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M69P5DVQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+             {% endif %}
 
         <a class="skip-link" href="#main">Skip to content</a>
 
