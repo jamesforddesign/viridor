@@ -58,7 +58,7 @@ module.exports = {
                 en: `
                     <div class="[ panel ] [ bg-secondary ] [ text-white ]">
                         <p class="fw-bold">During 2023/24, Viridor contributed nearly £1 million to the Halton Borough Council Environment Fund which supports community-focused projects in the local area. Recently, this has included a £650,000 donation to fund a new community café in Pickerings Pasture. </p>
-                        <p>Local organisations have also benefited from Viridor’s We Share Community Fund, which is our corporate fund run by people who choose to support well deserving causes in areas surrounding our ERFs. In Runcorn, these include donations to Halton Haven Hospice and Weston Point Scout Group. We are also ongoing sponsors of Runcorn FC.</p>
+                        <p>Local organisations have also benefited from Viridor’s We Share Community Fund, which is our corporate fund run by our people who choose to support well deserving causes in areas surrounding our ERFs. In Runcorn, these include donations to Halton Haven Hospice and Weston Point Scout Group. We are also ongoing sponsors of Runcorn FC.</p>
                         <img class="mt-3" src="/assets/images/antrobus-st-marks.jpg" alt="Antrobus St Marks image">
                     </div>
                 `,
