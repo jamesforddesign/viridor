@@ -1,0 +1,87 @@
+---
+title: Data privacy notice
+description: In this notice we explain how we hold, process and retain your personal data.
+permalink: privacy.html
+eleventyExcludeFromCollections: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <div class="[ content-block ] [ bg-grey-25 ] [ py-3 py-lg-5 ]">
+        <div class="[ container-xl ]">
+            <div class="[ row ]">
+                <div class="[ col-12 col-lg-3 ] [ mb-3 mb-lg-0 ]">
+                    <div class="[ intro-title ]">
+                        <h2 class="[ intro-title__text ] [ text-primary ] [ mb-3 ]"><strong>{{ title }}</strong></h2>
+                    </div>
+                </div>
+
+                <div class="[ col-12 col-lg-9 ]">
+                    <div>
+                        <h3 class="[ text-primary ] [ mb-3 ]"><strong>{{ description }}</strong></h3>
+                        <div class="[ wysiwyg ] [ text-primary ]">
+                            <p>Camargue Group Limited is supporting {{ api.global.title[page.lang] }} with its consultation process on the {{ api.global.title[page.lang] }}. Camargue Group Limited ("we" or "us") is committed to ensuring the privacy of your personal information.</p>
+                            <p>In this notice we explain how we hold, process and retain your personal data.</p>
+
+                            <p><strong>How we use your personal data</strong></p>
+                            <p>We may process information that you provide to us. This data may include the following:</p>
+                            <ul>
+                                <li>Your name;</li>
+                                <li>Your address;</li>
+                                <li>Your telephone number;</li>
+                                <li>Your email address;</li>
+                                <li>Your employer or any group on whose behalf you are authorised to respond; and,</li>
+                                <li>Your feedback in response to {{ api.global.title[page.lang] }} consultation (Consultation).</li>
+                            </ul>
+                            <p>We will use your personal data for the following purposes:</p>
+                            <ul>
+                                <li>To record accurately and analyse any questions you raise during the consultation or feedback you have provided in response to the consultation.</li>
+                                <li>To report on our consultation, detailing what issues have been raised and how we have responded to that feedback (please note that the information contained in the consultation report will be aggregated and will not identify specific individuals).</li>
+                                <li>To personalise communications with individuals we are required to contact as part of future consultation or communications.</li>
+                                <li>The legal basis for processing this data is that it is necessary for our legitimate interest, namely for the purpose of ensuring the consultation process, analysis and reporting are accurate and comprehensive.</li>
+                                <li>In addition to the specific purposes for which we may process your personal data set out above, we may also process any of your personal data where such processing is necessary for compliance with a legal obligation to which we are subject.</li>
+                            </ul>
+
+                            <p><strong>Providing your personal data to others</strong></p>
+                            <p>We may provide your personal data to the following recipients:</p>
+                            <ul>
+                                <li>{{ api.global.title[page.lang] }} on whose behalf we are collecting your feedback in order to analyse and report on the responses received.</li>
+                                <li>Third party service providers and professional advisors who provide services to {{ api.global.title[page.lang] }} in connection with the consultation.</li>
+                                <li>The Planning Inspectorate.</li>
+                                <li>Our insurers/ professional advisers. We may disclose your personal data to our insurers and/or professional advisers insofar as reasonably necessary for the purposes of obtaining and maintaining insurance cover, managing risks, obtaining professional advice and managing legal disputes.</li>
+                            </ul>
+
+                            <p><strong>Retaining and deleting personal data</strong></p>
+                            <p>Personal data that we process for any purpose shall not be kept for longer than is necessary for that purpose.</p>
+                            <p>Unless we contact you and obtain your consent for us to retain your personal data for a longer period, we will delete your personal data as soon as practicable following the outcome of the consultation process.</p>
+                            <p>We may retain your personal data where such retention is necessary for compliance with a legal obligation to which we are subject.</p>
+
+                            <p><strong>Your rights</strong></p>
+                            <p>The rights you have in relation to your personal information under data protection law are:</p>
+                            <ul>
+                                <li>The right to access;</li>
+                                <li>The right to rectification;</li>
+                                <li>The right to erasure;</li>
+                                <li>The right to restrict processing;</li>
+                                <li>The right to object to processing;</li>
+                                <li>The right to data portability; and,</li>
+                                <li>The right to complain to a supervisory authority.</li>
+                            </ul>
+                            <p>You may exercise any of your rights in relation to your personal data by writing to us using the details below.</p>
+
+                            <p><strong>Our details</strong></p>
+                            <p>We are registered in England and Wales under registration number 3954008, and our registered office is at Eagle Tower, Montpellier Drive, Cheltenham GL50 1TA.</p>
+                            <p>You can contact us by:</p>
+                            <ul>
+                                <li>Email: <a href="mailto:{{ api.global.email }}">{{ api.global.email }}</a></li>
+                            </ul>
+
+                            <p><strong>If you would this document in large text or an alternative format, please contact us on <a href="tel:{{ api.global.componany.phoneNumber }}">{{ api.global.componany.phoneNumber }}</a> or send an email to us at: <a href="mailto:{{ api.global.email }}">{{ api.global.email }}</a></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

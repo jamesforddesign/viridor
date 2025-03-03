@@ -1,0 +1,38 @@
+---
+title: Cookies
+description: In this notice we explain how we hold, process and retain your personal data.
+permalink: cookies.html
+eleventyExcludeFromCollections: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% set home = "" %}
+
+{% if env.MULTILINGUAL == 'true' %}
+    {% set home = page.lang %}
+{% endif %}
+
+{% block content %}
+    <div class="[ content-block ] [ bg-grey-25 ] [ py-3 py-lg-5 ]">
+        <div class="[ container-xl ]">
+            <div class="[ row ]">
+                <div class="[ col-12 col-lg-3 ] [ mb-3 mb-lg-0 ]">
+                    <div class="[ intro-title ]">
+                        <h2 class="[ intro-title__text ] [ text-primary ] [ mb-3 ]"><strong>{{ title }}</strong></h2>
+                    </div>
+                </div>
+
+                <div class="[ col-12 col-lg-9 ]">
+                    <div>
+                        <h3 class="[ text-primary ] [ mb-3 ]"><strong>{{ description }}</strong></h3>
+                        <div class="[ wysiwyg ] [ text-primary ]">
+                            <div id="cookiefirst-policy-page"></div>
+                            <div>This cookie policy has been created and updated by <a href="https://cookiefirst.com/cookie-banner/">Cookie banner tool | CookieFirst</a>.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
