@@ -7,18 +7,18 @@ Put an `x` in between the `[ ]` to mark an item as complete, e.g. `[x]`.
 - [ ] Form submissions stored in database
 - [ ] Form - whitelist domain/IP in catcher
 - [ ] Browser testing
-- [ ] A 404 template has been created
-- [ ] SVG icons have been optimised
+- [x] A 404 template has been created
+- [x] SVG icons have been optimised
 
 ## Accessibility
 By default we should adhere to WCAG AA standard
-- [ ] Contrast ratio checked
-- [ ] Check issues in Accessbility Tools (Firefox/Chrome) - are there any remaining issues that need to be documented?
+- [x] Contrast ratio checked
+- [x] Check issues in Accessbility Tools (Firefox/Chrome) - are there any remaining issues that need to be documented?
 
 ## Development and Deployment
-- [ ] A DDEV config has been added to the project (see [instructions here](https://github.com/jamesforddesign/wiki/wiki/DDEV))
-- [ ] Netlify configured for staging
-- [ ] Netlify configured for production
+- [x] A DDEV config has been added to the project (see [instructions here](https://github.com/jamesforddesign/wiki/wiki/DDEV))
+- [x] Netlify configured for staging
+- [x] Netlify configured for production
 
 ## Licencing
 - [-] Craft CMS licence purchased and registered
@@ -35,11 +35,11 @@ By default we should adhere to WCAG AA standard
 - [ ] Google Tag Manager - download tracking
 - [ ] XML sitemap
 - [ ] Google Search Console - domain property setup and XML sitemap submitted
-- [ ] robots.txt file configured for each environment (see [instructions here](https://github.com/jamesforddesign/wiki/wiki/robots.txt))
+- [x] robots.txt file configured for each environment (see [instructions here](https://github.com/jamesforddesign/wiki/wiki/robots.txt))
 
 ## Social
-- [ ] Twitter link (if present) linked to client account
-- [ ] Facebook link (if present) linked to client account
+- [-] Twitter link (if present) linked to client account
+- [-] Facebook link (if present) linked to client account
 
 ## Legal
 - [ ] The site has a (correct) cookie and/or privacy policy
