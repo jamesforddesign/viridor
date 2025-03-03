@@ -27,7 +27,7 @@ module.exports = {
                 en: "Our proposals",
                 cy: "",
             },
-            background: "/our-proposals-hero.webp"
+            background: "/hero-2.webp"
 
         },
         {

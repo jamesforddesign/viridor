@@ -27,7 +27,7 @@ module.exports = {
                 en: "Next Steps",
                 cy: "",
             },
-            background: "/next-steps-hero.webp"
+            background: "/hero-3.webp"
 
 
         },
