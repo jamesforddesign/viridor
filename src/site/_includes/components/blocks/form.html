@@ -88,8 +88,6 @@
         </div>
     </div>
 </div>
-
-
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         // List of input fields to store
@@ -110,5 +108,16 @@
                 });
             }
         });
+
+        // Clear localStorage when form is submitted
+        const form = document.querySelector("form");
+        if (form) {
+            form.addEventListener("submit", function () {
+                fields.forEach(field => {
+                    localStorage.removeItem(field);
+                });
+            });
+        }
     });
 </script>
+
