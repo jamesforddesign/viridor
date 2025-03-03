@@ -9,7 +9,7 @@ module.exports = {
         cy: ""
     },
 
-    socialImage: ""/assets/images/home-2.webp",
+    socialImage: "/assets/images/home-2.webp",
 
     company: {
         address: "",
