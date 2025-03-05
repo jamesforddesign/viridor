@@ -75,7 +75,7 @@ module.exports = {
                 cy: ``,
             },
             image: "/overview-map.webp",
-            caption: "The image above shows the current red line boundary for the planning application. This is the perimeter of land necessary to carry out the proposed project, including areas like access points, parking and landscaping and temporary construction laydown areas.",
+            caption: "The image above shows the current red line boundary for the planning application. This is the perimeter of land necessary to carry out the proposed project, including areas like access points, parking and landscaping and temporary construction laydown areas. Please note this is subject to change and development as we move through the planning process.",
             zoomable: true
 
             
